@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "JosefinVariableItalic";
+  src: url(../assets/fonts/JosefinSans-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "JosefinVariable";
+  src: url(../assets/fonts/JosefinSans-VariableFont_wght.ttf);
+}
+
+
+
+.sect {
+
+  &__title {
+    font-family: "JosefinVariable";
+    font-weight: 600;
+    line-height: 110%;
+    font-size: 91px;
+
+    &--2{
+      font-size: 51px;
+    }
+
+    &--ecart{
+      margin: 0 0 38px 0;
+    }
+    &--italic{
+      font-family: 'JosefinVariableItalic';
+    }
+    &--medium{
+      font-weight: 500;
+    }
+    &--margeLeftMin{
+      margin: 0 0 0 -10px;
+    }
+    &--lineHSmall{
+      line-height: 90%;
+    }
+    &--thin{
+      font-weight: 300;
+    }
+    &--margeColDr{
+      margin: 91px 0 51px;
+    }
+    &--big{
+      font-size: 10vw;
+    }
+    &--white{
+      color: #FDF2DE;
+      
+    }
+    &--link{
+      transition: 0.3s;
+      &:hover{
+        color: #F9B949;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+    }
+    
+
+  }
+
+  &__txt {
+    font-family: 'JosefinVariable';
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 130%;
+    //color: #000000;
+    max-width: 68ch;
+    &--italic{
+      font-family: 'JosefinVariableItalic';
+    }
+    &--thin{
+      font-weight: 300;
+      line-height: 150%;
+    }
+    &--ecart{
+      margin: 28px 0 0 0 ;
+    }
+    &--big{
+      font-size: 120px;
+
+    }
+    &--jaune{
+      color: #F9B949;
+    }
+    &--smallLength{
+      width: 40ch;
+    }
+    &--margeRight{
+      margin: 0 0 0 5vw;
+    }
+    &--margeTop{
+      margin: 20vh 0 0 3vw;
+    }
+   &--bold{
+    font-weight: 700;
+   }
+    
+  }
+}

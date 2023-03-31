@@ -1,0 +1,20 @@
+
+
+.homepage{
+
+    &__sect1{
+        width: 100%;
+        height: calc(100vh - 60px);
+        display: flex;
+        flex-direction: row;
+        padding: 0 3vw;
+        margin: 0 0 5vh 0;
+        justify-content: space-between;
+        background-color: #FFF5E2;
+        position: relative;
+        z-index: 3;
+
+        
+    }
+}
+

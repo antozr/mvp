@@ -1,0 +1,42 @@
+
+.nav{
+    width: 100%;
+    padding: 14px 3vw ;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    &__box{
+        width: 40%;
+        height: 100%;
+    }
+    &__list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 38px;
+        font-family: "JosefinVariable";
+        font-size:21px;
+        
+        font-weight: 400;
+
+    }
+    &__el{
+        color: #1d1d1d;
+    }
+    &__a{
+        color: inherit;
+        &:hover{
+            font-weight: 600;
+            transition: 0.3s;
+        }
+    }
+
+    &__logo{
+        font-size: 21px;
+        font-family: "JosefinVariable";
+        color: #1d1d1d;
+    }
+}
