@@ -1,0 +1,102 @@
+
+
+
+.adventure{
+
+    &--client{
+        padding: 10vh 0 0 0;
+        position: relative;
+        z-index: 3;
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+    }
+
+    &__imgBox{
+        width: 40vw;
+        height: 100%;
+
+        &--small{
+            width: 25vw;
+            overflow: hidden;
+        }
+        //overflow: hidden;
+        //border: 2px blue solid;
+    }
+
+    &__boxDroite{
+        width: 60vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        //align-items: center;
+        padding: 20vh 0 0 10vw;
+
+        &--full{
+            width: 75vw;
+            padding: 10vh 0 0 2vw;
+            
+        }
+    }
+    &__img{
+
+        width: 100%;
+        height: 100%;
+        object-fit:contain;
+        scale: 1.4;
+        padding: 10% 30% 0 0 ;
+        
+        
+    }
+
+    &__boxTitle{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+
+    }
+    &__decorTitle{
+        position: absolute;
+        left: 540px;
+        top: 20px;
+        z-index: -2;
+    }
+    &__listLien{
+        width: 100%;
+        height: 41px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        column-gap: 12px;
+    }
+
+    &__link{
+        font-family: 'JosefinVariable';
+        font-weight: 800;
+        font-size: 38px;
+        line-height: 130%;
+        color: #1d1d1d50;
+        padding: 6px 12px ;
+        transition: 0.3s;
+
+        &:hover{
+            color: #F9B949;
+            font-family: 'JosefinVariableItalic';
+            transition: 0.3s;
+        }
+
+        &--actif{
+            color: #F9B949;
+            transition: 0.3s;
+        }
+    }
+    &__SliderBox{
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        margin: 51px 0 0 0;
+    }
+
+
+
+}

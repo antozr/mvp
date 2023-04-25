@@ -4,15 +4,24 @@
 
     &__sect1{
         width: 100%;
-        height: calc(100vh - 60px);
+        height: calc(100vh + 40px);
         display: flex;
         flex-direction: row;
-        padding: 0 3vw;
-        margin: 0 0 5vh 0;
+        padding: 8vh 3vw ;
+        //margin: 0 0 5vh 0;
         justify-content: space-between;
         background-color: #FFF5E2;
         position: relative;
-        z-index: 3;
+        z-index: 8;
+        &--bgImg{
+            background-image: url(../assets/img/fondPapierBig.jpg);
+            background-position: center;
+            background-size: cover;
+            object-fit: cover;
+            background-repeat: no-repeat;
+            
+
+        }
 
         
     }

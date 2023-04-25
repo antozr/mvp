@@ -19,7 +19,7 @@ function AnimColGauche() {
                 trigger: ".sect__colGauche",
                 markers: false,
                 start: "top center",
-                end: "+=800",
+                end: "+=1000",
                 scrub: true,
                 toggleActions: 'play none reverse none',
             }

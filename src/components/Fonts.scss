@@ -15,8 +15,8 @@
     font-family: "JosefinVariable";
     font-weight: 600;
     line-height: 110%;
-    font-size: 91px;
-
+    //font-size: 91px;
+    font-size: 5dvw;
     &--2{
       font-size: 51px;
     }
@@ -87,6 +87,9 @@
     }
     &--smallLength{
       width: 40ch;
+    }
+    &--ecartnv2{
+      margin: 51px 0 0 0 ;
     }
     &--margeRight{
       margin: 0 0 0 5vw;

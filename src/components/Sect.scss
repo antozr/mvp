@@ -8,9 +8,53 @@
         height: 100vh;
         width: 100vw;
     }
+    &--japInter{
+        background-image: url('../assets/img/japan/japanPatern.svg');
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        background-repeat: repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+    }
+    &__interColor{
+        background-image: url('../assets/img/japan/japanPatern.svg');
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        background-repeat: repeat;
+        height: 50vh;
 
+        &--oldSchool{
+            background-image: url("../assets/img/svg/oldSchool/paternOldSchool.svg");
+            background-size: contain;
+            
+
+        }
+    }
+    &--snap{
+        scroll-snap-type: y mandatory;
+    }
+    &__changePage{
+        height: 20vh;
+        background-color: #FFF5E2;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: -20;
+        &--close{
+            animation:animeChangePage 4s both;
+        }
+    }
+&--homeAD{
+   
+    padding: 5vh 0;
+}
     &__boxImg {
-        width: calc(100% - 500px);
+        width: min(1200px, 100%);
         height: calc(100vh - 70px);
         // border-top: 6px solid #1d1d1d;
         // border-right: 6px solid #1d1d1d;
@@ -18,13 +62,32 @@
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
         overflow: hidden;
+        position: relative;
+        z-index: 2;
+        &--big{
+            width: 100vw;
+            background-image: url('../assets/img/homeImg.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: repeat;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            padding: 10vh 5vw;
+            color: #FFF5E2;
+        }
 
     }
 
     &__boxTxt {
-        max-width: 500px;
-        width: 20vw;
-        margin: 165px 0 0 0;
+        // max-width: 500px;
+       
+        height: 100%;
+        width: clamp(500px, 25vw, 100%);
+        margin: 3cqh 0 0 -5vw;
+        position: relative;
+        z-index: 4;
+        
     }
 
     &__img {
@@ -84,7 +147,7 @@
             transform: rotateY(180deg);
         }
         &--spaceLeft{
-            margin: 0 15vw 0 0 ;
+            margin: 26vh 8vw 0 0 ;
         }
     }
     &__boxIntro{
@@ -98,24 +161,26 @@
     &__firstContenut{
         padding: 0 5vw 0 0;
         width: 100%;
-        height: 140vh;
+        height: 100vh;
         
     }
 
     &__colGauche{
-        width: 75%;
+        width: 65%;
         height:100vh;
         //background-color: red;
         padding: 5vh 2vw ;
         
     }
     &__colDroite{
-        width: 25%;
+        width: 35%;
         height: 100%;
     }
     &__imgHirondelle{
         width: 410px;
         fill: #FFF5E2;
+        position: relative;
+        z-index: 2;
         &>g>path{
             fill: #FFF5E2;
         }
@@ -131,6 +196,8 @@
         transform-origin: top left;
         overflow-x: hidden;
         margin: 0vw 0 0  0;
+        scroll-snap-align: start;
+  scroll-snap-stop: normal;
         // background-color: red;
     }
     &__motif{
@@ -159,6 +226,20 @@
         color: #FFF5E2;
         font-size: 120px;
         margin: -55vw 0 0 0;
+        &--fondImg{
+            background-image: url('../assets/img/oldSchool/fondPeauNoir.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: repeat;
+            background-attachment: fixed;
+        }
+        &--fondImgJap1{
+            background-image: url('../assets/img/japan/irezumiBack2.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: repeat;
+            background-attachment: fixed;
+        }
     }
 
     &__illu{
@@ -193,9 +274,9 @@
         width: 50vw;
         height: 60px;
         border-radius: 10px 10px 0 0;
-        background-color: #FFF5E2;
+        background-color: #F9B949;
         position: fixed;
-        z-index: 2;
+        z-index: 0;
         bottom: 0;
         left: 25%;
         font-family: "JosefinVariable";
@@ -206,6 +287,27 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.15);
+        pointer-events: none;
+       // box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.15);
+    }
+}
+
+
+@keyframes animeChangePage{
+    0%{
+        z-index: 20;
+    }
+    40%{
+        background-color: #F9B949;
+    }
+    60%{
+        height: 160vh;
+        background-color: #F9B949;
+    }
+    to{
+        height: 100%;
+        transform: translateY(-200%);
+        background-color: #FFF5E2;
+        z-index: 20;
     }
 }

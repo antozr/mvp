@@ -13,7 +13,7 @@ function NavBar() {
               <Link rel="stylesheet" href="#" className="nav__a" > Les Styles </Link>
             </li>
             <li className="nav__el">
-              <Link rel="stylesheet" href="#" className="nav__a" > Mon aventure </Link>
+              <Link rel="stylesheet" to="/ton-aventure" className="nav__a" > Mon aventure </Link>
             </li>
           </ul>
         </nav>

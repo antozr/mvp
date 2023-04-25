@@ -3,7 +3,7 @@ import './BoutonComp.scss'
 
 function BoutonNormal({nameBtn, linkBtn}) {
   return (
-    <a href={linkBtn} className="sect__btn">
+    <a href={linkBtn} className="sect__btn" >
         {nameBtn}
     </a>
   )
