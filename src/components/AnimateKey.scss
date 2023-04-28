@@ -1,0 +1,29 @@
+
+
+@keyframes animeChangePagetoLink{
+    0%{
+        z-index: 20;
+       
+    }
+    40%{
+        background-color: #F9B949;
+        transform: translateX(-20%);
+    }
+    60%{
+        width:160vw;
+        
+    }
+    to{
+        width: 120vw;
+        transform: translateX(200%);
+        background-color: #FFF5E2;
+        z-index: 20;
+    }
+}
+
+
+@keyframes openBoxImageTop{
+    to{
+        transform: translateY(0vh);
+    }
+}

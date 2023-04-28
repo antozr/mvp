@@ -3,6 +3,7 @@ import ContentBoxHori from '../components/ContentBoxHori';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Timeline } from 'gsap/gsap-core';
+import { Tween } from 'gsap/gsap-core';
 import PresentationMotif from './PresentationMotif';
 import { Link } from 'react-router-dom';
 import { ChangeStateDataVisited } from '../logic/_status-map.js';
@@ -12,149 +13,124 @@ import { ChangeStateDataVisited } from '../logic/_status-map.js';
 
 
 
-gsap.registerPlugin(ScrollTrigger, Timeline);
+gsap.registerPlugin(ScrollTrigger, Timeline, Tween);
 
-function SectionMotifHori({ Img01, Img02, Img03, title01, title02, title03, txt01, txt02, txt03, nameIllu }) {
-
-
+function SectionMotifHori({ Img01, Img012, Img02, Img021, Img03, Img032, title01, title02, title03, txt01, txt02, txt03, nameIllu }) {
 
 
+
+    function HelloMybox() {
+        console.log(window.screenY);
+        console.log('heu je suis con');
+        alert('JOOJO')
+
+    };
     ///anim
 
     const boxRef = useRef();
 
     useEffect(() => {
-        let tl = gsap.timeline({
-            duration: 3,
-            repeat: -1,
-            repeatDelay: 2
-            // scrollTrigger: {
-            //     trigger: boxRef.current,
-            //     markers: false,
-            //     start: "top center",
-            //     end: "+=400",
-            //     scrub: true,
-            //     toggleActions: 'play none reverse none',
-            // }
 
+        let tlScroll = gsap.timeline({
+            duration: 0.2,
+            scrollTrigger: {
+                trigger: "#rowMotf",
+                markers: true,
+                start: "200px",
+                end: "+=600",
+                toggleActions: 'play none reverse none',
+                //scrub: true,
+            }
+        });
+        let tlScroll2 = gsap.timeline({
+            duration: 2,
+            scrollTrigger: {
+                trigger: "#Motif01",
+                markers: true,
+                start: "200px",
+                end: "+=600",
+                toggleActions: 'play none reverse none',
+                //scrub: true,
+            }
+        });
+        let tlScroll3 = gsap.timeline({
+            duration: 3,
+            scrollTrigger: {
+                trigger: "#Motif03",
+                markers: true,
+                start: " +=200",
+                end: "+=600",
+                toggleActions: 'play none reverse none',
+                //scrub: true,
+            }
         });
 
-        tl.to("#hirondelle", {
-            //duration:2,
-            translateX: 100,
-            translateY: 160,
-            translateZ: -10,
-            scale: 0.4,
-            rotate: -30
-        })
-            // inter
 
-            .to("#hirondelle", {
-                duration: 4,
-                translateY: 100,
-                translateX: 180,
 
-                rotate: -20
-            }, ">")
-            .to("#hirondelle", {
-                duration: 2,
-                translateY: -140,
-                translateX: 240,
-                //scale: 0.5,
-                rotate:-60
 
-            }, ">")
+        // gsap.set("#Motif01", {
+        //     position: 'relative',
+           
+        // })
 
-            // critic point
-            .to("#hirondelle", {
-                //duration:2,
-                translateY: -200,
-                translateX: 300,
-                scale: 0.6,
-                rotate: 0
-            }, ">")
-            //iner
-            .to("#hirondelle", {
-                duration: 1.8,
-                translateY: -240,
-                translateX: 380,
-                //scale: 0.6,
-                rotate: 10
-            }, ">+0.6")
-            .to("#hirondelle", {
-                duration: 1,
-                translateY: -280,
-                translateX: 400,
-                //scale: 0.6,
-                rotate: 10
-            }, ">")
-            .to("#hirondelle", {
-                duration: 0.2,
-                translateY: -200,
-                translateX: 480,
-                //scale: 0.6,
-                rotate: 10
-            }, ">")
-            // critic point
-            .to("#hirondelle", {
-                duration: 1.8,
-                translateY: -160,
-                translateX: 600,
-                scale: 0.3,
-                
-            }, ">")
-            .to("#hirondelle", {
-                rotateY: 180,
-                //scale: 0.4,
-                duration: 0.2
-            }, ">")
-            // critic point
-            .to("#hirondelle", {
-                translateX: 300,
-                translateY: 100,
-                scale: 0.6,
-                rotate: 60,
+        // tlScroll.from("#Motif01", {
+        //     position: "relative"
+        // })
 
-            }, ">")
-            .to("#hirondelle", {
-                translateX: 200,
-                translateY: -200,
-                //scale: 0.3,
-                rotate: 40,
+        // tlScroll.to("#Motif01", {
+        //     x: '0vw',
+        //     opacity: 1,
+        //     top: 0,
+        //     left: 0,
+        //     zIndex: 9,
+        // })
+        //     .from("window", {
+        //         overflowY: "hidden"
+        //     })
 
-            }, ">")
-            // position final
-            .to("#hirondelle", {
-                translateX: 0,
-                translateY: 0,
-                scale: 1,
-                rotate: 0,
-                duration: 4
 
-            }, ">")
-            .to("#hirondelle", {
-                rotateY: 0,
-                duration: 0.2
+        // tlScroll2.to("#Motif01", {
+        //     x: "-90vw",
+        //     opacity: 0,
+        //     position: "absolute",
 
-            }, ">")
+        // })
+        // tlScroll2.from("#Motif02", {
+        //     position: "relative"
+        // }, '<')
+        // tlScroll2.to('#Motif02', {
+        //     left: 0,
+        //     position: "fixed",
+        //     opacity: 1,
+        //     zIndex: 10,
+        //     top: 0,
+
+        // }, '<-0.6')
+        // tlScroll3.to('#motif02', {
+        //     x: "-100vw",
+        //     opacity: 0,
+        //     position: 'absolute',
+        // })
+
+
 
     }, []);
     return (
-        <section className="sect sect__motif hori">
-            <div className="hori__rowContainer hori__rowContainer--white" ref={boxRef}>
-                <div className="hori__box ">
-                    <PresentationMotif Img01={Img01} title1={title01} txt1={txt01} style2={{ width: '50%', objectFit: 'contain' }} nameIllu={nameIllu} />
+        <section className="sect sect__motif sect__motif--GsapScroll hori" ref={boxRef} id='rowMotf' >
+            <div className="hori__rowContainer  hori__rowContainer--white"  >
+                <div className="hori__box " id='Motif01' >
+                    <PresentationMotif Img01={Img01} Img02={Img012} title1={title01} txt1={txt01} style2={{ width: '50%', objectFit: 'contain' }} nameIllu={nameIllu} />
 
                 </div>
-                <div className="hori__box " >
-                    <PresentationMotif Img01={Img02} title1={title02} txt1={txt02} />
+                <div className="hori__box hori__box--absBox" id='Motif02'>
+                    <PresentationMotif Img01={Img02} Img02={Img021} title1={title02} txt1={txt02} />
 
                 </div>
-                <div className="hori__box  " >
-                    <PresentationMotif Img01={Img03} title1={title03} txt1={txt03} />
+                <div className="hori__box  hori__box--absBox" id='Motif03'>
+                    <PresentationMotif Img01={Img03} Img02={Img032} title1={title03} txt1={txt03} />
 
                 </div>
-                <div className="hori__box hori__box--black sect__nameBigBox--fondImg">
+                <div className="hori__box hori__box--black sect__nameBigBox--fondImg hori__box--absBox" id='Motif04'>
                     <Link to='/#mapWorld' onClick={ChangeStateDataVisited()}>
                         <h2 className='sect__title  sect__title--italic sect__title--white sect__title--link'>
                             Part voir d'autre motif.

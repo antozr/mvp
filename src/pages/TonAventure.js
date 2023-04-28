@@ -1,48 +1,38 @@
 import React, { useEffect, useState } from 'react';
-import { ViewStateVisited, GetItemStateTrue } from "../logic/_status-map.js";
+import { ViewStateVisited, GetItemStateTrue , loadDataMapAdventure} from "../logic/_status-map.js";
 import './TonAdventure.scss';
-
+/// import des maps 
 import CarteNordic from "../assets/img/svg/nordic.svg"
+import CarteUS from "../assets/img/svg/amerique.svg";
+import CarteJapon from '../assets/img/svg/japon.svg';
+import CarteEu from '../assets/img/svg/europe.svg';
+import CarteRussie from '../assets/img/svg/russie.svg';
+//
 import TextColDroite from '../components/TextColDroite.js';
+import BoutonComp from '../components/BoutonComp.js';
 import { Link } from 'react-router-dom';
 
 function TonAventure() {
 
-  console.log(ViewStateVisited);
+  // console.log("je suis chevre");
+  // console.log(ViewStateVisited);
   ViewStateVisited();
-
-  const [dataNameCountry, setDataNameCountry] = useState([]);
-  //let arrayListName = [];
-  // window.addEventListener('load', (el)=>{
-  //   //localStorage.getItem('')
-  //   setDataNameCountry(arrayListName.push('Old school'));
-  //   //setDataNameCountry(['Old school']);
-  // });
-
-  useEffect(()=>{
-    RecapTrueState();
-
-    
-    
-  })
-
-
-  function RecapTrueState() {
-
-    let arrayListData = [];
-    console.log("heu");
-    setTimeout(() => {
-      console.log('jio');
-      if (localStorage.getItem('US') === true) {
-        arrayListData.push('Old school');
-        console.log(arrayListData);
-      }
-    }, 1000)
-  }
+  const tabDataNameUse = loadDataMapAdventure();
   
-  //let arrayListPathName = ["/oldschool", "/japan", "/nordic", "/russie", "/europe", "/pacifique"];
-  //const MapDataLink = dataNameCountry.map((value)=>(<p>hello {value}</p>))
-  const MapDataLink = dataNameCountry.map((value) => (<li className="adventure__el"><Link to='' className='adventure__link'>{value}</Link></li>))
+  /// tri des données pour affichage 
+  let arrayListMapLink = [CarteUS, CarteJapon, CarteNordic, CarteEu, CarteRussie, CarteNordic];
+
+  if(tabDataNameUse[0]){
+    var linkMap = arrayListMapLink[0]
+  }
+
+  // const [dataNameCountry, setDataNameCountry] = useState([]);
+  
+  
+
+ 
+  
+  const MapDataLink = tabDataNameUse.map((value) => (<li className="adventure__el"><Link to='' className='adventure__link'>{value}</Link></li>))
 
   return (
     <div className="yourAdventure">
@@ -63,25 +53,26 @@ function TonAventure() {
             Tu retrouvera ici le suivis de ton aventure, entre les différents pays que tu auras visité. Viens y jeter un coup d’œil pour avoir un avis sur ce que tu as déjà vus, tu verras quelque exemples de motifs présents dans leur univers.
             <br /><br />
             <span className="sect__txt sect__txt--italic sect__txt--bold sect__txt--ecart">Bonne aventure ! </span>
-            {dataNameCountry}
+            
           </p>
+          {/* <BoutonComp  nameBtn={"Regarde ton voyage "} linkBtn={"#hollidays"}/> */}
         </div>
 
       </section>
       <div className="sect__interColor sect--heigth100">
 
       </div>
-      <section className="sect--heigth100 adventure--client ">
+      <section className="sect--heigth100 adventure--client " id='hollidays'>
 
         <div className="adventure__imgBox adventure__imgBox--small">
-          <img src={CarteNordic} alt="Carte de pays ou d'une régions du monde. " className="adventure__img" />
+          <img src={linkMap} alt="Carte de pays ou d'une régions du monde. " className="adventure__img" />
         </div>
 
         <div className="adventure__boxDroite adventure__boxDroite--full">
           <ul className="adventure__listLien">
             {MapDataLink}
           </ul>
-          <div className="adventure__SliderBox">
+          <div className="adventure__SliderBox sect__nameBigBox--fondImg">
             <img src="" alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel." className="adventure__imgSlider" />
           </div>
         </div>

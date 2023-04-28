@@ -48,6 +48,12 @@
         &--close{
             animation:animeChangePage 4s both;
         }
+        &--closeNav{
+            animation: animeChangePagetoLink 3s  both;
+            top: 0;
+            width: 20vw;
+            height: 100vh;
+        }
     }
 &--homeAD{
    
@@ -203,9 +209,16 @@
     &__motif{
         width: 100vh;
         height: 100vw;
-        transform: rotate(-90deg) translateX(-100vh);
+        //transform: rotate(-90deg) translateX(-100vh);
         transform-origin: top left;
-        overflow-x: hidden;
+        //overflow-x: hidden;
+
+        &--GsapScroll{
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            border: #F9B949 solid 6px;
+        }
     }
 
     &__attente{
@@ -245,10 +258,16 @@
     &__illu{
         display: flex;
         flex-direction: row;
+        align-items: center;
         height: 70vh;
         width: 100%;
         margin: 10vh 0;
+        position: relative;
     }
+}
+
+.oldschool{
+    border: 6px solid red;
 }
 
 .map {

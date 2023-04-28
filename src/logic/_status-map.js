@@ -18,14 +18,6 @@ export function ViewStateVisited() {
 };
 
 export function initStatDataView() {
-    // localStorage.setItem('US', false);
-    // localStorage.setItem('UK', false);
-    // localStorage.setItem('Nordic', false);
-    // localStorage.setItem('Russia', false);
-    // localStorage.setItem('Japan', false);
-    // localStorage.setItem('Maori', false);
-    // localStorage.setItem('EU', false);
-
     
     if(localStorage.getItem('ViewCheckPageStart') === false){
         localStorage.setItem('US', false);
@@ -42,6 +34,7 @@ export function initStatDataView() {
 export function ChangeStateDataVisited() {
     let arrayListPathName = ["/oldschool", "/japan", "/nordic", "/russie", "/europe", "/pacifique"];
     let pathNamePage = window.location.pathname;
+    console.log(pathNamePage);
     localStorage.setItem('ViewCheckPageStart',false);
     let SecondVisiteSelect = false;
 
@@ -105,3 +98,36 @@ export function GetItemStateTrue() {
 
 }
 
+export  function loadDataMapAdventure (){
+    
+    console.log('heu');
+    /// récupérer les données localStorage 
+    let USdataLoad = localStorage.getItem('US');
+    let JapandataLoad = localStorage.getItem('Japan');
+    let NordicdataLoad = localStorage.getItem('Nordic');
+    let EUdataLoad = localStorage.getItem('EU');
+    let RussiadataLoad = localStorage.getItem('Russia');
+    let MaoridataLoad = localStorage.getItem('Maori');
+    console.log(USdataLoad);
+    //// tableau donnee recuperee 
+    let arrayAllDataLoad = [USdataLoad, JapandataLoad, NordicdataLoad, EUdataLoad, RussiadataLoad, MaoridataLoad];
+    console.table(arrayAllDataLoad);
+    //// tableau contenant le retour pour les liens 
+    let tableVisitedand = []
+    console.table(tableVisitedand)
+    //// tableau avec les noms des lieux 
+    let tabLandName = ["Us old-school", "Japon", "Nordic & Celte", "Tradi européens", "Russie & prisons ", "Maori"];
+    let i = 0;
+
+    arrayAllDataLoad.forEach((el)=>{
+        console.log(el)
+        if(el === 'true'){
+            tableVisitedand.push(tabLandName[i])
+            console.table(tableVisitedand)
+        }
+        i++
+    });
+    console.table(tableVisitedand)
+    return tableVisitedand
+
+}

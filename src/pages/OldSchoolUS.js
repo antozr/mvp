@@ -10,7 +10,8 @@ import ContentBoxHori from '../components/ContentBoxHori';
 import SailorJerry02 from '../assets/img/oldSchool/sailor02.jpg';
 import DonEdHardy01 from '../assets/img/oldSchool/donEdHardy01.jpg';
 import Hirondelle from '../assets/img/svg/hirondelle_2.svg';
-import PinUp01 from '../assets/img/oldSchool/pinup.png';
+import PinUp01 from '../assets/img/oldSchool/pinup1.jpg';
+import Pinup2 from '../assets/img/oldSchool/pinup2.jpg'
 import Navire from '../assets/img/oldSchool/navire.png';
 import AncreSvg from '../assets/img/svg/oldSchool/ancre.svg';
 import SectHoriFull from '../components/SectHoriFull';
@@ -83,7 +84,8 @@ function OldSchoolUS() {
       <PresentationMotif Img01={PinUp01} title1={texteTitleCol[4]} txt1={texteCol[7]} />
       <PresentationMotif Img01={Navire} title1={texteTitleCol[5]} txt1={texteCol[7]} /> */}
       <div className="sect--heigth100">
-        <SectionMotifHori Img01={Hirondelle} nameIllu={"hirondelle"} Img02={PinUp01} Img03={Navire} title01={texteTitleCol[3]} title02={texteTitleCol[4]} title03={texteTitleCol[5]} txt01={texteCol[6]} txt02={texteCol[7]} txt03={texteCol[8]} />
+        <SectionMotifHori Img01={Hirondelle} Img012={Hirondelle} nameIllu={"hirondelle"} 
+        Img02={PinUp01} Img021={Pinup2} Img03={Navire} title01={texteTitleCol[3]} title02={texteTitleCol[4]} title03={texteTitleCol[5]} txt01={texteCol[6]} txt02={texteCol[7]} txt03={texteCol[8]} />
 
       </div>
     </div>

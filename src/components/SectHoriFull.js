@@ -57,7 +57,7 @@ function SectHoriFull({BigTitle1, BigTitle2, imgArtiste1, imgArtiste2, textcol1,
     }, []);
     return (
         <section className="sect sect__artiste hori">
-            <div className="hori__rowContainer" ref={boxRef}>
+            <div className="hori__rowContainer hori__rowContainer--artiste" ref={boxRef}>
                 <div className="hori__box ">
                     <h2 className='sect__title sect__title--big'>
                         {BigTitle1}

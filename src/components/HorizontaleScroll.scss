@@ -6,7 +6,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        //border: 2px solid saddlebrown;
+        border: 2px solid saddlebrown;
         padding: 2vh 5vw;
         background-color: #FDF2DE;
         position: relative;
@@ -14,6 +14,18 @@
         &--black {
             background-color: #000;
             z-index: 8;
+        }
+
+        &--absBox{
+            //position: absolute;
+            position: relative;
+            top: 0px;
+            //left: 100vw;
+
+
+        }
+        &--absVisi{
+            opacity: 0;
         }
 
     }
@@ -26,13 +38,26 @@
     &__rowContainer {
         display: flex;
         flex-direction: row;
+        //flex-direction: column;
         width: 400vw;
-        transform: rotate(90deg) translateY(-100vh);
+        height: 100vh;
+        
+        //transform: rotate(90deg) translateY(-100vh);
         transform-origin: top left;
         background-color: #000;
-        &--white{
+        border: 3px solid blue;
+        position: relative;
+
+        &--white {
             background-color: #FDF2DE;
         }
+
+        &--artiste {
+            transform: rotate(90deg) translateY(-100vh);
+            //flex-direction: row;
+        }
+
+        
     }
 
     &__img {
@@ -44,13 +69,14 @@
 
 
     }
-    &__colGaucheImg{
+
+    &__colGaucheImg {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         position: relative;
-        margin: 0 2vw  ;
+        margin: 0 2vw;
         width: 60%;
 
     }
@@ -66,13 +92,14 @@
             }
         }
     }
-    &__hirondelle{
+
+    &__hirondelle {
         scale: 0.4;
         position: absolute;
         z-index: 2;
     }
 }
 
-::-webkit-scrollbar{
-    display: none;
+::-webkit-scrollbar {
+   // display: none;
 }
