@@ -87,3 +87,19 @@
 
 
 }
+
+@keyframes closeBoxfULLiMG {
+    0% {
+        transform: translateY(0);
+    }
+
+    99% {
+        transform: translateY(100vh);
+        top: 100vh;
+        left: 0;
+       
+    }
+    100%{
+       
+    }
+}

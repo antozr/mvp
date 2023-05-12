@@ -64,6 +64,8 @@
 @media (min-width:900px){
     .sect{
         &__divImgAnim{
+            
+            //height: calc(150vh - 220px);
             width: clamp(350px, 50vw, 1000px);
             // top: 3vh;
             //left: 0;

@@ -13,6 +13,7 @@ import Pinup from '../assets/img/oldSchool/pinup1.jpg';
 import TextColDroite from '../components/TextColDroite.js';
 import BoutonComp from '../components/BoutonComp.js';
 import { Link } from 'react-router-dom';
+import InterSectionBox from '../components/InterSectionBox.js';
 
 function TonAventure() {
   if (window.location.pathname !== '/japon') {
@@ -69,9 +70,10 @@ function TonAventure() {
         </div>
 
       </section>
-      <div className="sect__interColor sect--heigth100">
+      {/* <div className="sect__interColor sect--heigth100">
 
-      </div>
+      </div> */}
+      <InterSectionBox />
       <section className="sect--heigth100 adventure--client " id='hollidays'>
 
         <div className="adventure__imgBox adventure__imgBox--small">

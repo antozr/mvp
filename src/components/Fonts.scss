@@ -6,8 +6,10 @@
   font-family: "JosefinVariable";
   src: url(../assets/fonts/JosefinSans-VariableFont_wght.ttf);
 }
-
-
+@font-face{
+  font-family: "Druzokh";
+  src: url(../assets/fonts/DRUZHOK.otf);
+}
 
 .sect {
 
@@ -57,6 +59,10 @@
         font-weight: 600;
         transition: 0.3s;
       }
+    }
+    &--druzokh{
+      font-family:"Druzokh";
+     
     }
     
 
@@ -122,6 +128,12 @@
   .sect{
     &__title{
       font-size: 3dvw;
+      &--druzokh{
+        font-family:"Druzokh";
+        font-size: 10dvw;
+        text-align: center;
+        opacity: 0.7;
+      }
     }
     &__txt{
       font-size: 21px;
@@ -131,6 +143,7 @@
       &--margeTop{
         margin: 20vh 0 0 3vw;
       }
+     
     }
   }
 }

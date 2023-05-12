@@ -37,6 +37,7 @@ function HomePage() {
       <div className="homepage__sect1 homepage__sect1--bgImg sect">
         <div className="sect__boxImg--big sect__boxImg">
           <div className="sect__boxTxt ">
+            {/* Changer le titre  */}
             <h2 className=" sect__title sect__title--2 sect__title--ecart">
               Découvre les<br />tatouages du<br />monde
             </h2>

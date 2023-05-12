@@ -333,6 +333,7 @@
         margin: 10vh 0;
         position: relative;
     }
+    
 }
 
 
@@ -440,10 +441,16 @@
             //position: sticky;
     
         }
+        &__illu {
+           
+            height: 100vh;
+            margin: 4vh 0;
+            align-items: flex-start;
+        }
         &__illuGrid {
             display: grid;
             grid-template-rows: 50vh 50vh;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: 1.5fr 1fr;
             grid-template-areas:
             "i1 t1"
             "i1 i2" ;

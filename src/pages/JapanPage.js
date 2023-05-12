@@ -17,6 +17,7 @@ import Meiji1 from '../assets/img/japan/meiji1.jpg';
 import Meiji2 from '../assets/img/japan/meiji2.jpg';
 import BackImgJap from '../assets/img/japan/irezumiBack2.jpg';
 import backImgjap02 from '../assets/img/japan/arrierePlanYakuza.jpg';
+import BackImg3 from '../assets/img/japan/horishiFullWork.jpg';
 import Ryu01 from "../assets/img/japan/dragon2.jpg";
 import Ryu02 from "../assets/img/japan/dragon02.jpg";
 import Koi01 from "../assets/img/japan/koi1.jpg";
@@ -64,7 +65,8 @@ function JapanPage() {
                 </h2>
 
             </section> */}
-            <InterSectionBox WhitThext={true} textTitle={<>Une transmission entre <br /><br /><span className=" sect__title--thin sect__title--big">maître & èlèves</span></>} backImg={{ backgroundImage: `url(${BackImgJap})` }} />
+            <InterSectionBox WhitThext={true} textTitle={<>Une transmission entre <br /><span className=" sect__title--thin sect__title--big">maitre & eleves</span></>} backImg={{ backgroundImage: `url(${BackImg3})` }} />
+            {/* <InterSectionBox WhitThext={true} textTitle={<>Une transmission entre <br /><br /><span className=" sect__title--thin sect__title--big">maître & èlèves</span></>} backImg={{ backgroundImage: `url(${BackImgJap})` }} /> */}
             {/* La presentation des artiste  */}
             <div className="sect--heigth100 sect--snapChild">
                 <SectHoriFull BigTitle1={texteTitleCol[0]} BigTitle2={texteTitleCol[1]} imgArtiste1={Horyoshi3} imgArtiste2={HoryoshiSan}
@@ -94,7 +96,8 @@ function JapanPage() {
                 </div>
 
             </section>
-            <InterSectionBox WhitThext={true} textTitle={"Les motifs amblématiques"} backImg={{ backgroundImage: `url(${backImgjap02})` }} />
+            <InterSectionBox WhitThext={true} textTitle={"Les motifs amblematiques"} backImg={{ backgroundImage: `url(${backImgjap02})` }} />
+            {/* <InterSectionBox WhitThext={true} textTitle={"Les motifs amblématiques"} backImg={{ backgroundImage: `url(${backImgjap02})` }} /> */}
             {/* <div className="sect__nameBigBox sect__nameBigBox--fondImgJap1 sect--snapChild" >
                 <h2 className="sect__title sect_title--2">
                     Les motifs amblématiques
@@ -102,8 +105,9 @@ function JapanPage() {
             </div> */}
 
             <div className="sect--heigth100 sect--snapChild">
-                <SectionMotifHori Img01={Ryu01} Img012={Ryu02} nameIllu={"Ryu / Dragon"} OneImg1={true} styleBoxIllu1={{margin : '0px'}}
-                    Img02={Koi01} Img021={Koi02} Img03={Jigoku1} Img032={Jigoku2} title01={texteTitleCol[7]} title02={texteTitleCol[8]} title03={texteTitleCol[9]} txt01={texteCol[7]} txt02={texteCol[8]} txt03={texteCol[9]} />
+                <SectionMotifHori Img01={Ryu01} Img012={Ryu02} title01={texteTitleCol[7]}  txt01={texteCol[7]} nameIllu={"Ryu / Dragon"} OneImg1={true} styleBoxIllu1={{margin : '0px'}}
+                    Img02={Koi01} Img021={Koi02} title02={texteTitleCol[8]}  txt02={texteCol[8]} nameIllu2={texteTitleCol[8]} 
+                     Img03={Jigoku1} Img032={Jigoku2}  title03={texteTitleCol[9]} txt03={texteCol[9]} nameIllu3={texteTitleCol[9]} />
 
             </div>
 
