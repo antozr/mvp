@@ -1,14 +1,19 @@
 .sect {
 
-    &--row{
+    &--row {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
-    &--heigth100{
+    &--rowReverse{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    &--heigth100 {
         height: 100vh;
         width: 100vw;
     }
-    &--japInter{
+
+    &--japInter {
         background-image: url('../assets/img/japan/japanPatern.svg');
         background-attachment: fixed;
         background-position: center;
@@ -19,25 +24,43 @@
         justify-content: center;
         height: 50vh;
     }
-    &__interColor{
+
+    
+    &__interColor {
         background-image: url('../assets/img/japan/japanPatern.svg');
         background-attachment: fixed;
         background-position: center;
         background-size: cover;
         background-repeat: repeat;
-        height: 50vh;
+        height: 20vh;
 
-        &--oldSchool{
+        &--oldSchool {
             background-image: url("../assets/img/svg/oldSchool/paternOldSchool.svg");
             background-size: contain;
-            
+
 
         }
     }
-    &--snap{
+
+    &--snap {
+       
+        height: 120vh;
+        width: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
         scroll-snap-type: y mandatory;
+        scroll-snap-stop : always;
+        scroll-behavior: smooth;
+        
+        //scroll-snap-type: y proximity;
     }
-    &__changePage{
+    &--snapChild{
+        scroll-snap-align: center;
+
+    }
+    
+
+    &__changePage {
         height: 20vh;
         background-color: #FFF5E2;
         width: 100%;
@@ -45,23 +68,27 @@
         top: 100%;
         left: 0;
         z-index: -20;
-        &--close{
-            animation:animeChangePage 4s both;
+
+        &--close {
+            animation: animeChangePage 4s both;
         }
-        &--closeNav{
-            animation: animeChangePagetoLink 3s  both;
+
+        &--closeNav {
+            animation: animeChangePagetoLink 3s both;
             top: 0;
             width: 20vw;
             height: 100vh;
         }
     }
-&--homeAD{
-   
-    padding: 5vh 0;
-}
+
+    &--homeAD {
+
+        padding: 5vh 0;
+    }
+
     &__boxImg {
         width: min(1200px, 100%);
-        height: calc(100vh - 70px);
+        height: calc(150vh - 70px);
         // border-top: 6px solid #1d1d1d;
         // border-right: 6px solid #1d1d1d;
         border-top-right-radius: 20px;
@@ -70,7 +97,8 @@
         overflow: hidden;
         position: relative;
         z-index: 2;
-        &--big{
+
+        &--big {
             width: 100vw;
             background-image: url('../assets/img/homeImg.jpg');
             background-position: center;
@@ -79,7 +107,7 @@
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
-            padding: 10vh 5vw;
+            padding: 40vh 5vw 10vh;
             color: #FFF5E2;
         }
 
@@ -87,13 +115,13 @@
 
     &__boxTxt {
         // max-width: 500px;
-       
+
         height: 100%;
         width: clamp(500px, 25vw, 100%);
-        margin: 3cqh 0 0 -5vw;
+        margin: 3cqh 0 0 0vw;
         position: relative;
         z-index: 4;
-        
+
     }
 
     &__img {
@@ -115,113 +143,151 @@
 
     &__boxTitle {
 
-        &--home{
+        &--home {
             width: 500px;
-        height: 140px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        position: absolute;
-        right: 3vw;
-        z-index: 0;
+            height: 140px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: absolute;
+            right: 3vw;
+            z-index: 0;
         }
-        width: 50vw;
+
+        width: 100%;
         height: 140px;
         display: flex;
         flex-direction: row;
         align-items: center;
-        
+
     }
-    &__titre{
+
+    &__titre {
         display: flex;
-        flex-direction: row;
+        flex-direction: column-reverse;
+        align-items: center;
         justify-content: space-between;
         overflow: hidden;
-        
+
     }
-    &__imgDecor{
-        width: 689px;
-        height: 857px;
-        &--marginLeftMin{
-            margin: 0 -120px 0 0 ;
+
+    &__imgDecor {
+        width: 103vw;
+        height: 45vh;
+        aspect-ratio: 1/2;
+
+        &--marginLeftMin {
+            margin: 0 -170px 0 0;
         }
-        &--min{
-            width: 488px;
-            height: 607px;
+
+        &--min {
+            width: 103vw;
+            height: 13vh;
+            aspect-ratio: 1/2;
         }
-        &--rotateY{
+
+        &--rotateY {
             transform: rotateY(180deg);
         }
-        &--spaceLeft{
-            margin: 26vh 8vw 0 0 ;
+
+        &--spaceLeft {
+            margin: 26vh 8vw 0 0;
         }
     }
-    &__boxIntro{
-        padding: 0 5vw 0 0;
+
+    &__boxIntro {
+        padding: 0 3vw 10vh 3vw;
         align-items: center;
+        overflow: hidden;
+        height: auto;
 
-        &--minHeigt{
-            margin: -250px 0 0 0 ;
+        &--minHeigt {
+            margin: -250px 0 0 0;
         }
     }
-    &__firstContenut{
-        padding: 0 5vw 0 0;
+
+    &__firstContenut {
+        padding: 4vh 3vw ;
         width: 100%;
-        height: 100vh;
-        
+        height: auto;
+
     }
 
-    &__colGauche{
-        width: 65%;
-        height:100vh;
+    &__colGauche {
+        width: 100%;
+        height: auto;
         //background-color: red;
-        padding: 5vh 2vw ;
-        
+        padding: 5vh 2vw;
+        overflow: hidden;
+
     }
-    &__colDroite{
-        width: 35%;
+
+    &__colDroite {
+        width: 100%;
         height: 100%;
     }
-    &__imgHirondelle{
+
+    &__imgHirondelle {
         width: 410px;
         fill: #FFF5E2;
         position: relative;
         z-index: 2;
-        &>g>path{
+
+        &>g>path {
             fill: #FFF5E2;
         }
-        &>g>g>path{
+
+        &>g>g>path {
             fill: #FFF5E2;
         }
 
     }
-    &__artiste{
-        width: 102vh;
+    &____historyLand{
+        width: 100vw;
+        height: 440vh;
+        background-color: red;
+        
+    }
+
+    &__artiste {
+        width: 100vw;
+        min-height: 110vh;
+        height: auto;
+        transform-origin: top left;
+        overflow-x: hidden;
+        margin: 0vw 0 0 0;
+        padding: 3vh 0 0 0;
+        // scroll-snap-align: start;
+        // scroll-snap-stop: normal;
+        // position: sticky;
+        //top: 0;
+
+        &--rotate{
+            width: 102vh;
+            min-height: 100vw;
+            height: 100vw;
+            transform: rotate(-90deg) translateX(-100vh);
+        }
+
+        // background-color: red;
+    }
+
+    &__motif {
+        width: 100vh;
         height: 100vw;
         transform: rotate(-90deg) translateX(-100vh);
         transform-origin: top left;
-        overflow-x: hidden;
-        margin: 0vw 0 0  0;
-        scroll-snap-align: start;
-  scroll-snap-stop: normal;
-        // background-color: red;
-    }
-    &__motif{
-        width: 100vh;
-        height: 100vw;
-        //transform: rotate(-90deg) translateX(-100vh);
-        transform-origin: top left;
         //overflow-x: hidden;
 
-        &--GsapScroll{
+        &--GsapScroll {
             width: 100vw;
             height: 100vh;
-            overflow: hidden;
+            //overflow: hidden;
             border: #F9B949 solid 6px;
         }
     }
 
-    &__attente{
+    &__attente {
         width: 100%;
         height: 90vh;
         display: flex;
@@ -229,7 +295,8 @@
         align-items: center;
         justify-content: center;
     }
-    &__nameBigBox{
+
+    &__nameBigBox {
         width: 100%;
         height: 100vh;
         background-color: #000;
@@ -238,15 +305,17 @@
         justify-content: center;
         color: #FFF5E2;
         font-size: 120px;
-        margin: -55vw 0 0 0;
-        &--fondImg{
+        //margin: -55vw 0 0 0;
+
+        &--fondImg {
             background-image: url('../assets/img/oldSchool/fondPeauNoir.jpg');
             background-position: center;
             background-size: cover;
             background-repeat: repeat;
             background-attachment: fixed;
         }
-        &--fondImgJap1{
+
+        &--fondImgJap1 {
             background-image: url('../assets/img/japan/irezumiBack2.jpg');
             background-position: center;
             background-size: cover;
@@ -255,7 +324,7 @@
         }
     }
 
-    &__illu{
+    &__illu {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -266,67 +335,141 @@
     }
 }
 
-.oldschool{
-    border: 6px solid red;
-}
 
-.map {
 
-    &__box {
-        width: 100%;
-        height: 100%;
-    }
 
-    &__map {}
 
-    &__state {
-        cursor: pointer;
-        transition: 0.3s;
 
-        &:hover {
-            transition: 0.6s;
-            fill: #1d1d1d;
+
+
+@media(min-width:600px) {
+    .sect {
+        &--row {
+
+            flex-direction: row;
         }
-    }
+        &--rowReverse{
+            display: flex;
+            flex-direction: row;
+        }
 
-    &__boxName {
-        width: 50vw;
-        height: 60px;
-        border-radius: 10px 10px 0 0;
-        background-color: #F9B949;
-        position: fixed;
-        z-index: 0;
-        bottom: 0;
-        left: 25%;
-        font-family: "JosefinVariable";
-        font-weight: 600;
-        line-height: 110%;
-        font-size: 28px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        pointer-events: none;
-       // box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.15);
+        &__boxImg {
+            width: min(1200px, 100%);
+            height: calc(100vh - 70px);
+
+            &--big {
+                width: 100vw;
+                padding: 10vh 5vw;
+            }
+
+        }
+
+        //
+        &__interColor {
+            height: 50vh;
+        }
+
+        //
+        &__boxTxt {
+            // max-width: 500px;
+            margin: 3cqh 0 0 -5vw;
+        }
+
+        &__titre {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__imgDecor {
+            width: 689px;
+            height: 857px;
+
+            &--marginLeftMin {
+                margin: 0 -120px 0 0;
+            }
+
+            &--min {
+                width: 488px;
+                height: 607px;
+            }
+
+            &--spaceLeft {
+                margin: 26vh 8vw 0 0;
+            }
+        }
+
+        &__boxTitle {
+
+            &--home {
+                width: 500px;
+                height: 140px;
+                flex-direction: row;
+                right: 3vw;
+            }
+
+            width: 50vw;
+            height: 140px;
+            flex-direction: row;
+            align-items: center;
+
+        }
+        &__boxIntro {
+            padding: 0 5vw 0 0;
+            align-items: center;
+    
+            &--minHeigt {
+                margin: -250px 0 0 0;
+            }
+        }
+        &__colGauche {
+            width: 65%;
+            height: 100vh;
+            padding: 5vh 2vw;
+            overflow: visible;
+    
+        }
+    
+        &__colDroite {
+            width: 35%;
+            height: 100%;
+        }
+        &__firstContenut {
+            padding: 0 5vw 5vh 0;
+            
+            min-height: 120vh;
+            //position: sticky;
+    
+        }
+        &__illuGrid {
+            display: grid;
+            grid-template-rows: 50vh 50vh;
+            grid-template-columns: 2fr 1fr;
+            grid-template-areas:
+            "i1 t1"
+            "i1 i2" ;
+            height: 100vh;
+            width: 100%;
+            margin: 4vh 0 0 0 ;
+            position: relative;
+
+            &:nth-child(1){
+                grid-area: i1;
+            }
+            &:nth-child(2){
+                grid-area: i2;
+            }
+            &:nth-child(3){
+                grid-area: t1;
+            }
+
+           
+        }
+
+        //
     }
 }
 
 
-@keyframes animeChangePage{
-    0%{
-        z-index: 20;
-    }
-    40%{
-        background-color: #F9B949;
-    }
-    60%{
-        height: 160vh;
-        background-color: #F9B949;
-    }
-    to{
-        height: 100%;
-        transform: translateY(-200%);
-        background-color: #FFF5E2;
-        z-index: 20;
-    }
-}
+// .i1{
+//     grid-area: i1;
+// }

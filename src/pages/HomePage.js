@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './HomePage.scss'
 /// les images
 import ImageHome from '../assets/img/homeImg3.jpg'
@@ -6,10 +6,27 @@ import ImageHome2 from '../assets/img/homeImg.jpg'
 import BoutonNormal from '../components/BoutonComp'
 import MapBox from '../components/MapBox'
 import { initStatDataView } from '../logic/_status-map.js';
+import ListMapMobile from '../components/ListMapMobile'
+import InterSectionBox from '../components/InterSectionBox'
 
 
 function HomePage() {
+
+  if(window.location.pathname !== '/japon'){
+    document.querySelector('body').classList.remove('App--hidden')
+  }
   initStatDataView();
+
+ const [sizeWindow, setSizeWindow] = useState(window.innerWidth)
+  React.useEffect(()=>{
+      function windowResize(){
+        console.log('resize to : '+ window.innerHeight +'X'+window.innerWidth);
+        console.log(window.innerWidth);
+        setSizeWindow(window.innerWidth); 
+      }
+      window.addEventListener('resize', windowResize);     
+  },[])
+
 
   return (
     <>
@@ -18,9 +35,6 @@ function HomePage() {
       
 
       <div className="homepage__sect1 homepage__sect1--bgImg sect">
-        {/* <div className="sect__boxImg sect__boxImg--big">
-          <img src={ImageHome2} alt="" className="sect__img" loading='lazy' />
-        </div> */}
         <div className="sect__boxImg--big sect__boxImg">
           <div className="sect__boxTxt ">
             <h2 className=" sect__title sect__title--2 sect__title--ecart">
@@ -37,11 +51,10 @@ function HomePage() {
           </div>
         </div>
       </div>
-      <div className="sect__interColor sect--heigth100">
+      <InterSectionBox />
+      
 
-      </div>
-
-      <MapBox />
+      {sizeWindow <= 900 ? <ListMapMobile />:<MapBox/>  }
 
     </div>
     </>

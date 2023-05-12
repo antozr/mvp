@@ -1,19 +1,20 @@
-
-
-@keyframes animeChangePagetoLink{
-    0%{
+@keyframes animeChangePagetoLink {
+    0% {
         z-index: 20;
-       
+
     }
-    40%{
+
+    40% {
         background-color: #F9B949;
         transform: translateX(-20%);
     }
-    60%{
-        width:160vw;
-        
+
+    60% {
+        width: 160vw;
+
     }
-    to{
+
+    to {
         width: 120vw;
         transform: translateX(200%);
         background-color: #FFF5E2;
@@ -22,8 +23,67 @@
 }
 
 
-@keyframes openBoxImageTop{
-    to{
+@keyframes openBoxImageTop {
+    to {
         transform: translateY(0vh);
     }
+}
+
+@keyframes openNavLink {
+    from {
+        bottom: -100vh;
+    }
+
+    to {
+        bottom: 0px;
+    }
+}
+
+@keyframes animeChangePage {
+    0% {
+        z-index: 20;
+    }
+
+    40% {
+        background-color: #F9B949;
+    }
+
+    60% {
+        height: 160vh;
+        background-color: #F9B949;
+    }
+
+    to {
+        height: 100%;
+        transform: translateY(-200%);
+        background-color: #FFF5E2;
+        z-index: 20;
+    }
+}
+
+
+@keyframes changeImgColG {
+    0% {
+        transform: translateY(0);
+
+    }
+
+    60% {
+        transform: translateY(100vh);
+    }
+
+    61% {
+        opacity: 0;
+        transform: translateY(-100vh);
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+
 }

@@ -1,49 +1,175 @@
-
-.nav{
+.nav {
     width: 100%;
-    padding: 14px 3vw ;
+    padding: 14px 3vw;
     height: 60px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     box-sizing: border-box;
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
     z-index: 10;
-    background-color: #cabca110;
 
-    &__box{
+    &--mobile {
+        //background-color: #e2cc9f;
+        background-image: url(../assets/img/oldSchool/fondPeauNoir.jpg);
+        background-position: center;
+        background-size: cover;
+        object-fit: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__box {
         width: 40%;
         height: 100%;
     }
-    &__list{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        column-gap: 38px;
-        font-family: "JosefinVariable";
-        font-size:21px;
-        
-        font-weight: 400;
+
+    &__list {
+
+        display: none;
+
+
+        &--close {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-image: url(../assets/img/oldSchool/fondPeauNoir.jpg);
+            background-position: center;
+            background-size: cover;
+            object-fit: cover;
+            background-repeat: no-repeat;
+       
+            width: 100vw;
+            height: 100dvh;
+            background-color: #e2cc9f;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 30vh 0;
+            font-size: 8vw;
+            font-family: "JosefinVariable";
+            font-weight: 400;
+            animation: openNavLink 3s both;
+            }//
 
     }
-    &__el{
-        color: #1d1d1d;
+
+    &__el {
+        color: #FDF2DE;
     }
-    &__a{
+
+    &__a {
         color: inherit;
         padding: 8px 14px;
-        &:hover{
-           color: #F9B949;
+
+        &:hover {
+            color: #F9B949;
 
             transition: 0.3s;
         }
     }
 
-    &__logo{
+    &__logo {
         font-size: 21px;
         font-family: "JosefinVariable";
-        color: #1d1d1d;
+        color: #FDF2DE;
+
+    }
+
+    &__btn {
+        width: 38px;
+        height: 23px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        background-color: transparent;
+        border: none;
+        transition: 0.8s;
+
+        &--close {
+            transition: 0.3s;
+            transform: translateX(35vw);
+        }
+
+    }
+
+    &__btnBarre {
+        width: 100%;
+        height: 20%;
+        background-color: #FDF2DE;
+        border-radius: 3px;
+        transform-origin: 50% 50%;
+        transition: 0.6s;
+
+        &:nth-child(2) {
+            width: 60%;
+
+            transition: 0.4s;
+        }
+
+        &--close {
+            transition: 0.6s;
+
+            &:nth-child(1) {
+                transform: translateY(10px) rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                transform: scale(0);
+            }
+
+            &:nth-child(3) {
+                width: 60%;
+                transform: translateY(-10px) rotate(-45deg);
+            }
+        }
+    }
+}
+
+
+@media (min-width:900px) {
+
+
+    .nav {
+
+        top: 0;
+        bottom: auto;
+        background-color: #cabca110;
+
+        &--mobile{
+            //background-color: #e2cc9f;
+            background-image: none;
+        }
+        &__list {
+            //visibility: visible;
+            //opacity: 1;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            column-gap: 38px;
+            font-family: "JosefinVariable";
+            font-size: 21px;
+
+            font-weight: 400;
+
+        }
+
+        &__el{
+            color: #1d1d1d;
+        }
+
+
+        &__btn {
+            display: none;
+        }
+
+        &__logo {
+            color: #1d1d1d;
+        }
     }
 }

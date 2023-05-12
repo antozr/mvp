@@ -16,8 +16,9 @@
     font-weight: 600;
     line-height: 110%;
     //font-size: 91px;
-    font-size: 5dvw;
+    font-size: 10dvw;
     &--2{
+      //font-size: 2.8dvw;
       font-size: 51px;
     }
 
@@ -64,10 +65,11 @@
   &__txt {
     font-family: 'JosefinVariable';
     font-weight: 400;
-    font-size: 21px;
+    font-size: 16px;
     line-height: 130%;
     //color: #000000;
     max-width: 68ch;
+    display: inline-block;
     &--italic{
       font-family: 'JosefinVariableItalic';
     }
@@ -77,6 +79,7 @@
     }
     &--ecart{
       margin: 28px 0 0 0 ;
+
     }
     &--big{
       font-size: 120px;
@@ -86,7 +89,7 @@
       color: #F9B949;
     }
     &--smallLength{
-      width: 40ch;
+      width: clamp(32ch, 37ch, 40ch);
     }
     &--ecartnv2{
       margin: 51px 0 0 0 ;
@@ -95,11 +98,39 @@
       margin: 0 0 0 5vw;
     }
     &--margeTop{
-      margin: 20vh 0 0 3vw;
+      margin: 4vh  0vw;
     }
    &--bold{
     font-weight: 700;
    }
     
+  }
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #1d1d1d;
+  background: #F9B949;
+}
+
+::selection {
+  color: #1d1d1d;
+  background: #F9B949;
+}
+
+@media(min-width:600px){
+
+  .sect{
+    &__title{
+      font-size: 3dvw;
+    }
+    &__txt{
+      font-size: 21px;
+      &--smallLength{
+        width: 40ch;
+      }
+      &--margeTop{
+        margin: 20vh 0 0 3vw;
+      }
+    }
   }
 }

@@ -2,6 +2,7 @@ import React, { useEffect, useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Timeline } from 'gsap/gsap-core';
+import Hirondelle from "../assets/img/svg/hirondelle.svg";
 
 
 gsap.registerPlugin(ScrollTrigger, Timeline);
@@ -9,73 +10,79 @@ gsap.registerPlugin(ScrollTrigger, Timeline);
 function AnimColGauche() {
     console.log(gsap.version);
     const boxRef = useRef();
-    const partNoir = useRef()
+    //const partNoir = useRef()
 
     useEffect(() => {
         console.log(boxRef);
-        let tl = gsap.timeline({
+        
+        if (window.innerWidth > 900){
+            // let tl = gsap.timeline({
 
-            scrollTrigger: {
-                trigger: ".sect__colGauche",
-                markers: false,
-                start: "top center",
-                end: "+=1000",
-                scrub: true,
-                toggleActions: 'play none reverse none',
-            }
-        });
-        tl.to("#Calque_2", {
-            duration:2,
-            x: 400,
-            y: 150
-
-        })
-            .to('.blackPart ', {
-                fill: '#000',
-
-            }, ">")
-            .to("#Calque_2", {
-                rotateY: 180,
-                
-            }, ">")
-            .to("#Calque_2", {
+            //     scrollTrigger: {
+            //         trigger: "#thirdCircle",
+            //         markers: true,
+            //         start: "top center",
+            //         end: "+=1000",
+            //         scrub: true,
+            //         toggleActions: 'play none reverse none',
+            //     }
+            // });
+            let tl = gsap.timeline({
+                repeat: -1
+            });
+            tl.to("#Calque_2", {
                 duration:2,
-                x: 200,
-                y: 350,
-                rotate:29
-                
-            }, ">")
-            .to("#ombreAile",{
-                fill:"#F5D850",
-                stroke: "none"
-            },"<")
-
-            .to(".borsAile", {
-                duration:1,
-                fill:"#EF8C22"
-                
-            }, ">")
-            .to(".plume", {
-                duration:0.5,
-                fill:"#F5D850"
-                
-            }, ">")
-            .to(".ventre", {
-                duration:0.5,
-                fill:"#E41D29",
-                
-            }, "<")
-            .to("#Calque_2", {
-                duration:2,
-                rotateY:0,
-                x: 450,
-                y: 650,
-                rotate:-29
-                
-            }, ">")
-            .to("#ombreAile",{
-                fill:"linear-gradient(218.7deg, rgba(0, 0, 0, 0.8) 14.94%, rgba(0, 0, 0, 0) 109.02%)"
-            },"<")
+                x: 400,
+                y: 150
+    
+            })
+                .to('.blackPart ', {
+                    fill: '#000',
+    
+                }, ">")
+                .to("#Calque_2", {
+                    rotateY: 180,
+                    
+                }, ">")
+                .to("#Calque_2", {
+                    duration:2,
+                    x: 200,
+                    y: 350,
+                    rotate:29
+                    
+                }, ">")
+                .to("#ombreAile",{
+                    fill:"#F5D850",
+                    stroke: "none"
+                },"<")
+    
+                .to(".borsAile", {
+                    duration:1,
+                    fill:"#EF8C22"
+                    
+                }, ">")
+                .to(".plume", {
+                    duration:0.5,
+                    fill:"#F5D850"
+                    
+                }, ">")
+                .to(".ventre", {
+                    duration:0.5,
+                    fill:"#E41D29",
+                    
+                }, "<")
+                .to("#Calque_2", {
+                    duration:2,
+                    rotateY:0,
+                    x: 450,
+                    y: 650,
+                    rotate:-29
+                    
+                }, ">")
+                .to("#ombreAile",{
+                    fill:"linear-gradient(218.7deg, rgba(0, 0, 0, 0.8) 14.94%, rgba(0, 0, 0, 0) 109.02%)"
+                },"<")
+        }
 
 
        
@@ -86,8 +93,7 @@ function AnimColGauche() {
     return (
         <div ref={boxRef} id="thirdCircle">
 
-
-            <svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.178 279.574" className="sect__imgHirondelle">
+            { window.innerWidth <= 900 ? <><img src={Hirondelle} alt="Une illustration d'hirondelle dans un style old-school." className="sect__imgDecor " /></> : <><svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.178 279.574" className="sect__imgHirondelle">
                 <g id="hirondelle">
                     <path id="becbas" className="blackPart" d="m234.288,245.628l24.096-.447c-4.512-4.383-10.395-7.719-14.553-8.745-4.021.766-11.848,6.547-9.543,9.191Z" stroke="#000" stroke-miterlimit="10" stroke-width="4" />
                     <path id="becHaut" className="blackPart" d="m236.403,253.805c5.314-.248,11.398-2.04,15.246-2.656-4.128-1.511-9.636-3.907-11.912-5.617l-5.449.096c-1.58,2.358-.497,6.536,2.115,8.177Z" stroke="#000" stroke-miterlimit="10" stroke-width="4" />
@@ -125,7 +131,7 @@ function AnimColGauche() {
                         <path id="ombreAile" data-name="ombreAile" d="m160.423,82.37c.005-.274.39-.325.471-.063,9.462,30.243,16.4,60.727,5.402,92.924-8.53,23.585,2.017,42.613,13.021,61.532l-7.915,10.213c-23.896-18.207-12.161-96.785-10.98-164.606Z" stroke="#000" stroke-miterlimit="10" />
                     </g>
                 </g>
-            </svg>
+            </svg></>}
         </div>
     )
 }

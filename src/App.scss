@@ -11,4 +11,14 @@
 
 body{
   background-color: #FFF5E2;
+  overflow-x: hidden;
+
+}
+
+.App{
+  min-height: 100dvh;
+  &--hidden{
+    height: 100vh;
+    overflow: hidden;
+  }
 }

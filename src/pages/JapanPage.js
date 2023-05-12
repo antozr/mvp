@@ -4,62 +4,107 @@ import HeartSVG from '../assets/img/svg/coeur001.svg';
 import RyuPatte from '../assets/img/japan/ryu01.svg';
 import KoiCarpeColor from '../assets/img/japan/carpeColor.svg'
 import SectHoriFull from '../components/SectHoriFull';
-
+import SectionMotifHori from '../components/SectionHoriMotif';
+import SectionIntroPage from '../components/SectionIntroPage';
+import InterSectionBox from '../components/InterSectionBox';
+import ContentBoxHori from '../components/ContentBoxHori';
 // les images 
 import Horyoshi3 from '../assets/img/japan/horiyoshi-III.jpg';
 import HoryoshiSan from '../assets/img/tebori.jpg';
-function JapanPage() {
+import RestartHorishi1 from '../assets/img/japan/tebori.jpeg';
+import Ainu1 from '../assets/img/japan/ainu1.jpg';
+import Meiji1 from '../assets/img/japan/meiji1.jpg';
+import Meiji2 from '../assets/img/japan/meiji2.jpg';
+import BackImgJap from '../assets/img/japan/irezumiBack2.jpg';
+import backImgjap02 from '../assets/img/japan/arrierePlanYakuza.jpg';
+import Ryu01 from "../assets/img/japan/dragon2.jpg";
+import Ryu02 from "../assets/img/japan/dragon02.jpg";
+import Koi01 from "../assets/img/japan/koi1.jpg";
+import Koi02 from "../assets/img/japan/koi2.jpg";
+import Jigoku1 from '../assets/img/japan/jigoku1.jpg'
+import Jigoku2 from '../assets/img/japan/jigoku2.jpg'
 
+function JapanPage() {
+    if (window.location.pathname === '/japon') {
+        document.querySelector('body').classList.add('App--hidden')
+    } else {
+        document.querySelector('body').classList.remove('App--hidden')
+    }
 
     /// le contenut texte 
-    let texteTitleCol = ["Un style qui", " se demarque", "Les artistes", "Les hirondelles", " Les Pin-up", "Les ancres & navires", "Horiyoshi ", " Horiyoshi III"];
-    let texteCol = [<>Le style se compose de contours noir épais avec des couleurs limitées avec les couleurs primaires  <span className="sect__txt--thin sect__txt--italic">( Jaune - Rouge - Bleu - Vert )</span> avec peux d’ombrage mais bien marqué. Avec une iconographie venue en partie de l’univers de la marine, on retrouve les motifs sous forme de FLASH. <br /> <br /></>,
-    <>On peut situer ces premières apparition en tant que point d’influence dés le début du 20e siècles & principalement aux US ,<span className="sect__txt--thin sect__txt--italic"> comme à Honolulu, San Francisco, New-York mais aussi à Bristol.</span> <br /> <br /></>,
-    <>On peut noter que certains artistes ont permis de faire naître cet effort ainsi que montrer cet art au grand public, pour se faire on retrouve <b>Sailor Jerry</b> qui vas faire évoluer le style en y intégrant des iconographies japonais en plus qu’un retravaille des anciennes iconographies. On lui doit aussi une amélioration des techniques de tatouages notamment avec l’intégration de celle-ci pour en améliorer. Avec son apprenti,<b> Don Ed Hardy</b>, qui va populariser le style au grand public dans les années 70-80, tout en y intégrant une plus grande iconographie japonaise. On peut retrouver certaines collaborations avec des marques de textiles & une marque de rhum pour Sailor Jerry.</>,
-    <>On retrouve comme artistes qui ont fait la renommée et ont propagé ce style, on retrouve donc Sailor Jerry, Don Ed Hardy,  et bien d'autres. On peut leur donner comme point d’orgue qu’ils ont su apporter une nouvelle vague de design dans un univers qui étaient déjà riche mais aussi leur ouverture à une autre caste de personnes en dehors des marins / motards et autre personnes, ils ont sut faire croître leur popularité jusqu'à maintenant en maintenant l'authenticité des motifs et de l’esprit de liberté que beaucoup font ressortir. </>,
-    <><br /><br /><span className="sect__txt--thin sect__txt--italic">Si aujourd’hui bien des styles existent, un bon nombre de personnes apprécient encore leur travail et se le font encrer.  </span> </>,
-    <><span className='sect__txt--thin sect__txt--italic sect__txt--smallLength'>"Les créatures que je dessine ne prennent vie que sur la peau de quelqu'un. C'est pourquoi je ne montre jamais mes créations comme de l'art. Je dessine simplement pour le plaisir et pour avoir des échantillons à montrer à mes clients afin qu'ils puissent choisir un nouveau design. Les créatures représentées coupent le souffle de la personne une fois qu'elles sont sur sa peau - puis les deux commencent à respirer ensemble, à l'unisson. L'histoire humaine modifie l'apparence des animaux et des plantes que je peins, et lorsque la personne qui les porte meurt, elle aussi."<br /><br /><b> Horiyoshi III, Words to Live By</b></span></>,
-    <>Une présence essentielle dans l’iconographie & tradition de la marine, on se la fait tatoué sur une au <span className='sect__txt--italic sect__txt--bold'> 5000 miles marins</span> et une seconde au <span className='sect__txt--italic sect__txt--bold'> 10.000miles marins</span>. Elle représente les voyages et les expériences de ces derniers dans leur aventures sur les mers. Partants sur de longue traversée mais revenant toujours à leur point de départ, ces oiseaux représentent le retour chez soi malgré les problèmes et la distance. </>,
-    <>On retrouve bon nombre de flash avec des femmes, sous formes de sirènes, pin-up, elles ont pris un fort élan depuis la seconde guerre mondiale où bon nombre de ces dernières étaient peintes sur la carlingue des appareils et certains blousons des membres d’équipages. Pour représenter le but de leur combat et de porte bonheur, elles sont devenues des emblèmes de ceux partis loin de chez eux et de leur amour.   </>,
-    <>Elle a une connotation forte à la marine, car étant une partie du bâtiment, elle sert à marquer son point d'ancrage quelque part, un point de stabilité et de repos. Servant à amarrer un navire dans les flot, elle montrera son attachement à une personne, à un lieu, jusqu’au prochain départ. Ainsi le Navire permet de donner une vision de la liberté, un gout de l’aventure.</>,
-
-
-    ]
+    let texteTitleCol = ["Les artistes", "Horiyoshi ", " Horiyoshi III", "La beauté des femmes", "La répression sous Meiji", "L’ouverture au monde, l’ère des Horishi", "La traditions dans un monde moderne", " Le dragon, Ryu", " Le Koi", <>Jigoku dayu, <br/>la courtisane de l'enfer. </>, "Les 108 héros"];
+    let texteCol = [<></>,
+    <>On peut retrouver des traces de tatouages allant vers la préhistoire jusqu’à l’ère Meiji dans certaines archipelles. Où les femmes se faisaient tatouer les mains, bras pour signifier des moments clé dans leur vie, et pour leur apporter une beauté toute autre, avec une célébration pour la personne, une fois que les motifs furent finis. Les motifs changent d’une région à une autre, comme avec les Aïnous, qui mettait leur lèvres en valeurs par un tatouage autour, le but était de se mettre en valeur, d’être plus belle même si cette coutume à commencer à ce dissiper dans pour être remplacer par d’autre critère de beauté comme avec des parfums et des vêtements. <br /><br /><br /> <span className="sect__txt--thin">Ainsi la beauté se perpétue par des rythmes différents, et des coutumes se font absoudre par des lois répressives. </span></>,
+    <>Avec l’ouverture sur le monde à partir de 1868, le gouvernement veut construire son pays comme les autres grandes nations industrielles. En recevant les voyageurs et émissaires du monde entier,elle fit interdire ces mœurs pour correspondre à une image d’un pays comme les autres. De ce fait l’irezumi fut interdit, comme le fait de devoir s’habiller pour sortir, mais le fait de devoir se couvrir va donner une nouvelle essor pour le tatouage en le rendant invisible au yeux de tous mais en perpétuant la tradition en la cachant sous un voile. Le fait d’avoir voulu faire disparaître cette coutume va dépeindre cet art de mystère, d’une beauté renouvelée mais aussi d'une spiritualité nouvelle, par la main de quelque maître artisan tatoueur <span className="sect__txt--boldsect__txt--italic">qu’on nomme Horishi</span>. </>,
+    <>L’ombre apportée sur cet art vas être mis en lumière par quelque que grand maître par le tatouage de certains grand monarque , comme le tsar Nicolas II lors de leur séjour aux pays du soleil levant. Cette activité se faisant dans les ports ou bien dans des demeures, caché au yeux de tous, pour ne pas subir la répression, de plus en plus de marins virent dans ces port pour avoir un souvenir dans leur peau. Mais les maîtres artisans devaient rester cachés, dès lors ils vécurent entre deux feux, exerçant un métier “normal” le jour & dans l’ombre entretenait les mythes & légendes de l’irezumi.
+        <br /><br /><span className="sect__txt--thin">Certains ont préféré quitter l'île pour rejoindre une autre patrie pour exercer son art aux yeux de tous, et le montrer à qui le veut. Mais les occidentaux avaient une relation différente sur les motifs, voulant de petit motif avec un exercice en une scéances et non un projet qui se ferait sur plusieurs mois. Dès lors, les étendues de leur talent restent cachées au fond de leur encres.</span><br /><span className="sect__txt--bold">Ainsi l’ouverture au monde à donner une reconnaissance de ces motifs tout autour de la planète et au grand de ce monde. </span></>,
+    <>La renaissance, après le feu et les radiations, lors de l'occupation par les américains, ils vont lever les interdictions sur les tatouages & donner une nouvelle vie aux artisans qui se feront une renommée dans les ports et autour des bases américaines. Où les motifs les plus fait seront de l’occidentale , tradi-américains mais aussi un peu de traditionnelles japonais. <br /><br /><span className="sect__txt--thin sect__txt--italic">On note aussi avec l’ouverture au monde dans les années 80-90, un mélange de savoir entre les maîtres japonais et américains comme entre Maître Horioshi & Sailor Jerry, mais aussi avec Filip Leu qui fut l’apprentie de ce dernier lors de sa jeunesse.
+        L’art de l’irezumi se répand encore de nos jours, sous sa forme première, en complétant les corps de ses processeurs en suivant les règles et en perpétuant la traditions & le folklore autour de cette art.
+    </span></>,
+    <><span className="sect__txt--thin sect__text--italic">“Les clefs pour un magnifique shishei : le dessin, sans bon dessin tu ne peux pas avoir de bon contour. Sans contour précis, tu ne peux pas avoir d’ombrage. Et seulement après ça tu peux avoir les couleurs. “ </span>
+    </>,
+    <><br/><br/> <span className="sect__txt--ecart">Son premier contact avec les tatouages furent dans les années 50-60 dans des onsens, où ils aperçus des Yakuzas ayant le corps couvert de motifs et c’est à l’âge de 21 ans qu’il décide de devenir tatoueur. Il rencontre maître Horiyoshi I, il est d'abord son client et à l’âge de 25 ans, il devient son apprenti, où il recevra le titre d’Hori ( maître ) à ses 33 ans. 
+    Il forme plusieurs apprentis à son tour comme l’allemand <b>Hori Kitsune</b> sur une période de +/- 15 ans, ainsi que son fils . 
+    Il tatoue de manière traditionnelle, au tebori, mais avec la rencontre et correspondance de son ami Don Ed Hardy, il utilisera les dermographes pour faire ces contoures.</span> </>,
+    <> Il est un symbole de protection, de sagesse, de sérénité ainsi qu’une représentation de l’empereur du Japon. On le retrouve dans différents pays d’Asie, mais selon la tradition plus le dragon s’éloigne plus de la Chine, plus il perd de doigts, c’est pour ça qu’il a 3 doigts au Japon.<br/><br/><span className="sect__txt--thin">Il est composé d’une tête de chameau, de bois de cerfs, des yeux de lièvre, oreilles de taureaux, crête de phénix, un corps de serpents couvert d’écailles de poisson avec des pattes de tigre aux griffes d’aigle. </span>  </>,
+    <>Il symbolise la détermination, des forces, des résistances face à l’adversité. Selon la tradition, ils nagent à contre courant de la rivière jaune, où seule les les plus fort pourront atteindre la porte du dragon. Et ils pourront se transformer en dragon avec la joie éternelle. <br/><br/><span className="sect__txt--thin">On retrouve différent type de Koi sur les motifs de leur écailles ainsi que sur sa position, la composition et sera souvent lié avec l’élément de l’eau.  </span></>,
+    <>C'est une professionnelle des divertissements pour adultes mais un jour elle va rencontrer un moine qui l'aidera à atteindre l'éveil spirituel. On la représente avec une robe dont le dos est recouvert d'une imagerie des enfers et sur le devant avec une imagerie signifiant la miséricorde avec les fleurs de cerisier( symbolisant l'éphémérité de la condition humaine et de la beauté).<br/><br/> <span className="sect__txt--thin">Elle symbolise la rédemption et le changement de cap dans la vie .</span>
+    </>    ,
+    <>Ce sont 108 brigands qui vont se retourner contre le pouvoir en place , qui est corrompu. Ils viennent du <b>Suikoden</b> illustré par <b>Utagawa Kuniyoshi </b> et qui servent depuis pour la réalisation des grosses pièces d'irezumi.<br/><br/> <span className="sect__txt--thin">Il représente le courage , la loyauté et d'autres valeurs en fonction des personnages. </span> </>,
+]
     //
     return (
-        <div className="japan pagze">
-            <section className="sect homepage__sect1--bgImg">
-                <div className="sect__titre">
-                    <BoxeTitreDecor decor={"&"} titleP1={"Le Japon 日本"} titleP2={"L'irezumi "} sizeDecor={{ fontSize: '200px' }} positionBox={{ margin: '360px 0 0 25vw' }} />
-                    <img src={RyuPatte} alt="Voici une représentation d'un sacré coeur dans le style tradi américain." className="sect__imgDecor sect__imgDecor--marginLeftMin" />
-                </div>
-                <div className="sect__boxIntro sect--row sect__boxIntro--minHeigt">
-                    <img src={KoiCarpeColor} alt="Voici une représentation d'un sacré coeur dans le style tradi américain." className="sect__imgDecor sect__imgDecor--min sect__imgDecor--rotateY sect__imgDecor--spaceLeft" />
-                    <h2 className="sect__title sect__title--thin  sect__title--2 sect__title--italic">
-                        Transmission<br />
-                        par le sumi
-                    </h2>
-                    <p className="sect__txt sect__txt--smallLength sect__txt--margeRight sect__txt--margeTop">
-                        Le tatouage traditionnel japonais ou plus communément appelé : Irezumi. L’art de pratiquer le tatouage en transmettant les rites et légendes de la culture nippone, en couvrant le corps de son porteur.
-                    </p>
-                </div>
-            </section>
-            <section className="sect sect--heigth100 sect--japInter">
+        <div className="japan page sect--snap">
+
+            <SectionIntroPage BTD1={"日本"} BTD2={"L'irezumi"} Img01={RyuPatte} Img02={KoiCarpeColor} title={<>Transmission<br />par le sumi</>} txt={<>Le tatouage traditionnel japonais ou plus communément appelé : <b>Irezumi</b>. L’art de pratiquer le tatouage en transmettant les rites et légendes de la culture nippone, en couvrant le corps de son porteur.</>} />
+
+            {/* <section className="sect sect__interColor  sect--japInter ">
                 <h2 className="sect__title sect_title--2 ">
                     Une transmission entre maître & èlèves
                 </h2>
 
-            </section>
+            </section> */}
+            <InterSectionBox WhitThext={true} textTitle={<>Une transmission entre <br /><br /><span className=" sect__title--thin sect__title--big">maître & èlèves</span></>} backImg={{ backgroundImage: `url(${BackImgJap})` }} />
             {/* La presentation des artiste  */}
-            <SectHoriFull BigTitle1={texteTitleCol[2]} BigTitle2={texteTitleCol[6]} imgArtiste1={Horyoshi3} imgArtiste2={HoryoshiSan}
-                textcol1={texteCol[3]} textcol2={texteCol[4]} textcol3={""} textcol4={texteCol[5]} textcol5={""} textcol6={""}
-                smallTitle1={texteTitleCol[7]} smallTitle2={""} smallTitle3={"Des conteurs "} smallTitle4={"d'histoires..."}
-            />
+            <div className="sect--heigth100 sect--snapChild">
+                <SectHoriFull BigTitle1={texteTitleCol[0]} BigTitle2={texteTitleCol[1]} imgArtiste1={Horyoshi3} imgArtiste2={HoryoshiSan}
+                    textcol1={texteCol[5]} textcol2={texteCol[6]} textcol3={""} textcol4={texteCol[5]} textcol5={""} textcol6={""}
+                    smallTitle1={texteTitleCol[2]} smallTitle2={""} smallTitle3={"Des conteurs "} smallTitle4={"d'histoires..."}
+                />
+            </div>
 
-            <div className="sect__nameBigBox sect__nameBigBox--fondImgJap1" >
+            <InterSectionBox WhitThext={true} textTitle={"L'histoire de l'Irezumi"} backImg={{ backgroundImage: `url(${BackImgJap})` }} />
+            {/* <div className="sect__nameBigBox  sect__nameBigBox--fondImgJap1  sect--snapChild" >
                 <h2 className="sect__title sect_title--2">
-                    Les motifs emblématiques
+                    L'histoire de l'irezumi
                 </h2>
+            </div> */}
+            <section className="sect____historyLand sect--snapChild">
+                <div className="hori__box hori__box--black" id='contentSailor'>
+                    <ContentBoxHori linkImg01={Ainu1} title01={texteTitleCol[3]} text01={texteCol[1]} colorTxt={{ color: '#FDF2DE' }} linkImg02={Meiji1} animImg={true} />
+                </div>
+                <div className="hori__box " id='contentSailor'>
+                    <ContentBoxHori linkImg01={Meiji1} title01={texteTitleCol[4]} text01={texteCol[2]} linkImg02={Meiji2} animImg={true} />
+                </div>
+                <div className="hori__box " id='contentSailor'>
+                    <ContentBoxHori linkImg01={RestartHorishi1} title01={texteTitleCol[5]} text01={texteCol[3]} linkImg02={RestartHorishi1} animImg={true} />
+                </div>
+                <div className="hori__box hori__box--black" id='contentSailor'>
+                    <ContentBoxHori linkImg01={Ainu1} title01={texteTitleCol[6]} text01={texteCol[4]} colorTxt={{ color: '#FDF2DE' }} animImg={true} />
+                </div>
+
+            </section>
+            <InterSectionBox WhitThext={true} textTitle={"Les motifs amblématiques"} backImg={{ backgroundImage: `url(${backImgjap02})` }} />
+            {/* <div className="sect__nameBigBox sect__nameBigBox--fondImgJap1 sect--snapChild" >
+                <h2 className="sect__title sect_title--2">
+                    Les motifs amblématiques
+                </h2>
+            </div> */}
+
+            <div className="sect--heigth100 sect--snapChild">
+                <SectionMotifHori Img01={Ryu01} Img012={Ryu02} nameIllu={"Ryu / Dragon"} OneImg1={true} styleBoxIllu1={{margin : '0px'}}
+                    Img02={Koi01} Img021={Koi02} Img03={Jigoku1} Img032={Jigoku2} title01={texteTitleCol[7]} title02={texteTitleCol[8]} title03={texteTitleCol[9]} txt01={texteCol[7]} txt02={texteCol[8]} txt03={texteCol[9]} />
+
             </div>
 
         </div>

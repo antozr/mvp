@@ -32,9 +32,10 @@ export function initStatDataView() {
 };
 
 export function ChangeStateDataVisited() {
-    let arrayListPathName = ["/oldschool", "/japan", "/nordic", "/russie", "/europe", "/pacifique"];
+    let arrayListPathName = ["/oldschool", "/japon", "/nordic", "/russie", "/europe", "/pacifique"];
     let pathNamePage = window.location.pathname;
     console.log(pathNamePage);
+    console.log(arrayListPathName[1]);
     localStorage.setItem('ViewCheckPageStart',false);
     let SecondVisiteSelect = false;
 

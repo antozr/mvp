@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Hirondelle from '../assets/img/svg/hirondelle.svg';
 import Ancre from '../assets/img/svg/oldSchool/ancre.svg';
@@ -66,94 +66,96 @@ function MapBox() {
     }
 
 
-    var ArrayLinkSvg = ["", Hirondelle, Ancre, RyuHand, KoiFish]
-    setTimeout(() => {
-        let carte = document.getElementById('mapWorld')
-        // console.log(carte.childNodes[116].id);
-        //us
-        let idUs = carte.childNodes[116];
-        let idNordic = carte.childNodes[93];
-        let idJapon = carte.childNodes[59];
-        let idMaori = carte.childNodes[121];
-        let idRussie = carte.childNodes[92];
-        let idEurope = carte.childNodes[109];
-        let titleState = document.querySelector('#titleState');
+    /// les elements de la carte 
+    let carte = useRef(document.getElementById('mapWorld'))
+    let titleState = useRef(document.querySelector('#titleState'))
+    useEffect(() => {
+        let idUs = carte.current.childNodes[116];
+        let idNordic = carte.current.childNodes[93];
+        let idJapon = carte.current.childNodes[59];
+        let idMaori = carte.current.childNodes[121];
+        let idRussie = carte.current.childNodes[92];
+        let idEurope = carte.current.childNodes[109];
 
-        function stateMove(mapName, nameStyle, NamePath, randomnb1, randomnb2) {
-            mapName.addEventListener('mouseover', (e) => {
-                //console.log('hover');
-                titleState.innerText = nameStyle;
-                // init number position svg
-                var xMousePos = 0;
-                var yMousePos = 0;
-                let nbIllu = 0;
-
-
-
-
-                // nombre aleatoire
-                var randomNumber = Math.floor(Math.random() * (randomnb1 - randomnb2)) + (randomnb2);
-                //console.log(randomNumber);
-                // captation position souris 
-                xMousePos = e.clientX - 200;
-                yMousePos = e.clientY - 10;
-
-                //
-
-                if (nbIllu === 0) {
-                    let imgPop = document.createElement("img")
-                    imgPop.src = ArrayLinkSvg[randomNumber];
-                    imgPop.style.position = "absolute";
-                    imgPop.style.top = yMousePos + "px";
-                    imgPop.style.left = xMousePos + "px";
-                    imgPop.style.width = "15vw";
-                    imgPop.style.aspectRatio = 2 / 1
-                    imgPop.style.pointerEvents = "none";
-                    imgPop.style.transition = 0.6
-                    imgPop.classList.add('svgToMap');
-
-                    imgPop.style.zIndex = 4
-                    document.querySelector('.sect__map').append(imgPop);
-                    nbIllu++
-                    console.log(nbIllu);
-                }
-
-            });
-
-            mapName.addEventListener('mouseout', () => {
-                titleState.innerText = "Choisis une région du monde ";
-                let svgToDel = document.querySelector('.svgToMap');
-                svgToDel.remove()
-
-            });
-            mapName.addEventListener('click', () => {
-                //routChange(NamePath);
-                // recuperation item changement page 
-                let blocChangePage = document.querySelector('.sect__changePage');
-                blocChangePage.classList.add('sect__changePage--close');
-                setTimeout(()=>{
-                    window.scrollTo(100, 0);
-                },100)
-                
-                setTimeout(()=>{
-                    routChange(NamePath);
-                    window.scrollTo(0, 0);
-                },1100);
-                blocChangePage.addEventListener('animationend', (e) => {
-                    e.target.classList.remove("sect__changePage--close")
-                 })
-               
-            });
-
-
-        }
         stateMove(idNordic, "Nordique tradi", '/nordic', 2, 1);
         stateMove(idUs, "Old-school Américain", '/oldschool', 3, 1);
         stateMove(idJapon, 'Irezumi, tradi japonais', '/japon', 5, 3);
-        stateMove(idMaori, 'Traditionel des iles pacifiques', '/pacifique', 2, 1);
+        stateMove(idMaori, 'Traditionnel des iles pacifiques', '/pacifique', 2, 1);
         stateMove(idRussie, 'Prison russe & URSS', '/russie', 2, 1);
-        stateMove(idEurope, 'Traditionel européen', '/europe', 2, 1);
-    }, 300);
+        stateMove(idEurope, 'Traditionnel européen', '/europe', 2, 1);
+    }, [])
+
+
+    var ArrayLinkSvg = ["", Hirondelle, Ancre, RyuHand, KoiFish]
+    function stateMove(mapName, nameStyle, NamePath, randomnb1, randomnb2) {
+        mapName.addEventListener('mouseover', (e) => {
+            //console.log('hover');
+            titleState.current.innerText = nameStyle;
+            // init number position svg
+            var xMousePos = 0;
+            var yMousePos = 0;
+            let nbIllu = 0;
+
+
+
+
+            // nombre aleatoire
+            var randomNumber = Math.floor(Math.random() * (randomnb1 - randomnb2)) + (randomnb2);
+            //console.log(randomNumber);
+            // captation position souris 
+            xMousePos = e.clientX - 200;
+            yMousePos = e.clientY - 10;
+
+            //
+
+            if (nbIllu === 0) {
+                let imgPop = document.createElement("img")
+                imgPop.src = ArrayLinkSvg[randomNumber];
+                imgPop.style.position = "absolute";
+                imgPop.style.top = yMousePos + "px";
+                imgPop.style.left = xMousePos + "px";
+                imgPop.style.width = "15vw";
+                imgPop.style.aspectRatio = 2 / 1
+                imgPop.style.pointerEvents = "none";
+                imgPop.style.transition = 0.6
+                imgPop.classList.add('svgToMap');
+
+                imgPop.style.zIndex = 4
+                document.querySelector('.sect__map').append(imgPop);
+                nbIllu++
+                console.log(nbIllu);
+            }
+
+        });
+
+        mapName.addEventListener('mouseout', () => {
+            titleState.current.innerText = "Choisis une région du monde ";
+            let svgToDel = document.querySelector('.svgToMap');
+            svgToDel.remove()
+
+        });
+        mapName.addEventListener('click', () => {
+            //routChange(NamePath);
+            // recuperation item changement page 
+            let blocChangePage = document.querySelector('.sect__changePage');
+            blocChangePage.classList.add('sect__changePage--close');
+            setTimeout(() => {
+                window.scrollTo(100, 0);
+            }, 100)
+
+            setTimeout(() => {
+                routChange(NamePath);
+                window.scrollTo(0, 0);
+            }, 1100);
+            blocChangePage.addEventListener('animationend', (e) => {
+                e.target.classList.remove("sect__changePage--close")
+            })
+
+        });
+
+
+    }
+   
     return (
         <section className="sect__map homepage__sect1--bgImg">
             <div className="sect__boxTitle sect__boxTitle--home">
@@ -170,7 +172,7 @@ function MapBox() {
 
             </div>
             <div className="map__box">
-                <svg id="mapWorld" className='map__map' data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6215 3486" >
+                <svg id="mapWorld" className='map__map' ref={carte} data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6215 3486" >
                     <path d="m1856.6,2171.6l-.6.6-1.9-.2-.4-.8-.1-.5,1.2-1.1,1.4.5.5.5.4.1v.4l-.1.3-.4.2Zm-.6-8.3l-.3.4-1.4-.7-.4-1.4v-.3l.2-.2.6.3.8.1.5.4v1.4h0Z" fill="#fff5e2" stroke="#000" stroke-miterlimit="10" stroke-width="4" />
                     <path d="m1834.4,2153.4l-2.8.8.1-.4,2.2-1.1.8.1-.3.6h0Z" fill="#fff5e2" stroke="#000" stroke-miterlimit="10" stroke-width="4" />
                     <path d="m6193.8,2635.9l-.7.1-.9-.7,1.7-.5.6-.3,2.1.1-1.2.2-1.6,1.1h0Z" fill="#fff5e2" stroke="#fff" stroke-width=".5" />
@@ -445,7 +447,7 @@ function MapBox() {
                 </svg>
             </div>
             <div className="map__boxName">
-                <p className="map__boxTitle" id="titleState">
+                <p className="map__boxTitle" id="titleState" ref={titleState}>
                     Choisis une région du monde
                 </p>
             </div>

@@ -8,7 +8,7 @@ function BoxImageAnim({positionTB, urlImg, className}) {
     return (
         <div className="sect__divImgAnim " style={positionTB}>
             <div className={className}>
-                <img src={urlImg} alt="Illustration d'un tatouage" className="imgBoxDiv__imgFond" />
+                <img src={urlImg} alt="Illustration d'un tatouage" className="imgBoxDiv imgBoxDiv__imgFond" />
             </div>
         </div>
     )
