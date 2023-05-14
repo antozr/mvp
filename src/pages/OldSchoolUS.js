@@ -19,7 +19,9 @@ import Navire from '../assets/img/oldSchool/marinBat.jpg';
 import AncreSvg from '../assets/img/svg/oldSchool/ancre.svg';
 import SectHoriFull from '../components/SectHoriFull';
 import SectionIntroPage from '../components/SectionIntroPage';
-
+import InterSectionBox from '../components/InterSectionBox';
+import DarkSkin from '../assets/img/oldSchool/fondPeauNoir.jpg';
+import PaternUS from '../assets/img/svg/oldSchool/paternOldSchool.svg';
 
 function OldSchoolUS() {
 
@@ -62,26 +64,8 @@ function OldSchoolUS() {
   return (
     <div className="oldschool page sect--snap">
       <SectionIntroPage BTD1={"L’old school"} BTD2={"Américain"} Img01={HeartSVG} Img02={AncreSvg} title={<>Vogue vers <br/>la découverte</>} txt={<>Une mode vieille comme le navire qui la porte. C’est un style qui est née avec les marins qui voguait d’un port à l’autre, en marquant leur amour du monde sur leur&nbsp;corps.</>} />
-      {/* <section className="sect homepage__sect1--bgImg sect--snapChild">
-        <div className="sect__titre">
-          <BoxeTitreDecor decor={"&"} titleP1={"L’old school"} titleP2={"Américain"} sizeDecor={sizeWindow <= 900 ? { fontSize: '160px' } : { fontSize: '200px' }} positionBox={sizeWindow <= 900 ? { margin: '-13px 0 44px 10vw' } : { margin: '360px 0 0 25vw' }} />
-          <img src={HeartSVG} alt="Voici une représentation d'un sacré coeur dans le style tradi américain." className="sect__imgDecor sect__imgDecor--marginLeftMin" />
-        </div>
-        <div className="sect__boxIntro sect--row sect__boxIntro--minHeigt">
-          <img src={AncreSvg} alt="Voici une représentation d'un sacré coeur dans le style tradi américain." className="sect__imgDecor sect__imgDecor--min  sect__imgDecor--spaceLeft" />
-          <h2 className="sect__title sect__title--thin  sect__title--2 sect__title--italic">
-            Vogue vers<br />
-            la decouverte
-          </h2>
-          <p className="sect__txt sect__txt--smallLength sect__txt--margeRight sect__txt--margeTop">
-            Une mode vieille comme le navire qui la porte. C’est un style qui est née avec les marins qui voguait d’un port à l’autre, en marquant leur amour du monde sur leur&nbsp;corps.
-          </p>
-        </div>
-      </section> */}
-      <div className="sect__interColor sect--heigth100 sect__interColor--oldSchool ">
 
-      </div>
-
+      <InterSectionBox WhitThext={false}  backImg={{ backgroundImage: `url(${PaternUS})` }} />
 
       <div className="sect sect__firstContenut sect--rowReverse sect--snapChild">
         <div className="sect__colGauche">
@@ -102,16 +86,11 @@ function OldSchoolUS() {
       </div>
 
 
-      <div className="sect__nameBigBox sect__nameBigBox--fondImg sect--snapChild">
-        <h2 className="sect__title sect_title--2">
-          Les motifs emblématiques
-        </h2>
-      </div>
-      {/* <PresentationMotif Img01={Hirondelle} title1={texteTitleCol[3]} txt1={texteCol[6]} style2={{width: '50%', objectFit : 'contain'}}/>
-      <PresentationMotif Img01={PinUp01} title1={texteTitleCol[4]} txt1={texteCol[7]} />
-      <PresentationMotif Img01={Navire} title1={texteTitleCol[5]} txt1={texteCol[7]} /> */}
+      
+      
+      <InterSectionBox WhitThext={true} textTitle={"Les motifs amblematiques"} backImg={{ backgroundImage: `url(${DarkSkin})` }} />
       <div className="sect--heigth100 sect--snapChild">
-        <SectionMotifHori Img01={Hirondelle} Img012={HirondelleSJ} nameIllu={"hirondelle"}
+        <SectionMotifHori Img01={Hirondelle} Img012={HirondelleSJ} nameIllu={"hirondelle"} OneImg1={true} styleBoxIllu1={{margin : '0px'}}
           Img02={PinUp01} Img021={Pinup2} Img03={Navire} Img032={AncreSvg} title01={texteTitleCol[3]} title02={texteTitleCol[4]} title03={texteTitleCol[5]} txt01={texteCol[6]} txt02={texteCol[7]} txt03={texteCol[8]} />
 
       </div>

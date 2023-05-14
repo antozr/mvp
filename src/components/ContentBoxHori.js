@@ -4,7 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Timeline } from 'gsap/gsap-core';
 
-import hirondelle from '../assets/img/svg/hirondelle_1.svg';
+// import hirondelle from '../assets/img/svg/hirondelle_1.svg';
 
 
 gsap.registerPlugin(ScrollTrigger, Timeline);

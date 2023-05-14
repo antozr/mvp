@@ -20,8 +20,8 @@ export function openImg(e){
 export function closeImgBox(e){
     let boxImgFull = document.querySelector('.sect__imgOpenBig');
     boxImgFull.classList.add("sect__imgOpenBig--anim")
-    setTimeout(()=>{
-        boxImgFull.classList.add("sect__imgOpenBig--close")
-        boxImgFull.classList.remove("sect__imgOpenBig--anim")
-    }, 1000)
+    // setTimeout(()=>{
+    //     boxImgFull.classList.add("sect__imgOpenBig--close")
+    //     boxImgFull.classList.remove("sect__imgOpenBig--anim")
+    // }, 1000)
 }

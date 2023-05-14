@@ -29,7 +29,7 @@ function App() {
 
       </Routes>
       <div className="sect__changePage"></div>
-      <ImgOpenbig />
+      {/* <ImgOpenbig /> */}
     </div>
   );
 }

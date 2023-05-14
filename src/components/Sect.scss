@@ -54,11 +54,13 @@
         scroll-snap-type: y mandatory;
         scroll-snap-stop : always;
         scroll-behavior: smooth;
+        scroll-padding-block: 4vh;
         
         //scroll-snap-type: y proximity;
     }
     &--snapChild{
-        scroll-snap-align:start end;
+        //scroll-padding-block: -10vh;
+        scroll-snap-align:start ;
 
     }
     
