@@ -4,17 +4,18 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Timeline } from 'gsap/gsap-core';
 
+import BackImgJap from '../assets/img/japan/fondBigImg.png'
 
 //img
-import SailorJerry01 from '../assets/img/oldSchool/sailorJerry.jpg';
-import SailorJerry02 from '../assets/img/oldSchool/sailor02.jpg';
-import DonEdHardy01 from '../assets/img/oldSchool/donEdHardy01.jpg';
+// import SailorJerry01 from '../assets/img/oldSchool/sailorJerry.jpg';
+// import SailorJerry02 from '../assets/img/oldSchool/sailor02.jpg';
+// import DonEdHardy01 from '../assets/img/oldSchool/donEdHardy01.jpg';
 
 
 
 gsap.registerPlugin(ScrollTrigger, Timeline);
 
-function SectHoriFull({ BigTitle1, BigTitle2, imgArtiste1, imgArtiste2, textcol1, textcol2, textcol3, textcol4, textcol5, textcol6, smallTitle1, smallTitle2, smallTitle3, smallTitle4 }) {
+function SectHoriFull({ BigTitle1, BigTitle12, BigTitle2, imgArtiste1, imgArtiste2, textcol1, textcol2, textcol3, textcol4, textcol5, textcol6, smallTitle1, smallTitle2, smallTitle3, smallTitle4 }) {
     // let texteTitleCol = ["Un style qui", " se demarque", "Sailor Jerry", "Les artistes"," Don Ed Hardy"];
     // let texteCol = [<>Le style se compose de contours noir épais avec des couleurs limitées avec les couleurs primaires  <span className="sect__txt--thin sect__txt--italic">( Jaune - Rouge - Bleu - Vert )</span> avec peux d’ombrage mais bien marqué. Avec une iconographie venue en partie de l’univers de la marine, on retrouve les motifs sous forme de FLASH. <br /> <br /></>,
     // <>On peut situer ces premières apparition en tant que point d’influence dés le début du 20e siècles & principalement aux US ,<span className="sect__txt--thin sect__txt--italic"> comme à Honolulu, San Francisco, New-York mais aussi à Bristol.</span> <br /> <br /></>,
@@ -31,42 +32,45 @@ function SectHoriFull({ BigTitle1, BigTitle2, imgArtiste1, imgArtiste2, textcol1
 
     const boxRef = useRef();
 
-    useEffect(() => {
-        if (window.innerWidth >= 900) {
-            let tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: boxRef.current,
-                    markers: false,
-                    start: "top center",
-                    end: "+=400",
-                    scrub: true,
-                    toggleActions: 'play none reverse none',
-                }
-            });
-            tl.fromTo("#contentSailor", {
-                x: '0vw',
+    // useEffect(() => {
+    //     if (window.innerWidth >= 900) {
+    //         let tl = gsap.timeline({
+    //             scrollTrigger: {
+    //                 trigger: boxRef.current,
+    //                 markers: false,
+    //                 start: "top center",
+    //                 end: "+=400",
+    //                 scrub: true,
+    //                 toggleActions: 'play none reverse none',
+    //             }
+    //         });
+    //         tl.fromTo("#contentSailor", {
+    //             x: '0vw',
 
-            }, {
-                delay: 4,
-                x: '-30vw',
-                duration: 6
-            })
-                .from("#nameSecond", {
-                    //delay:6,
-                    x: '-30vw'
-                })
-        };
-    }, []);
+    //         }, {
+    //             delay: 4,
+    //             x: '-30vw',
+    //             duration: 6
+    //         })
+    //             .from("#nameSecond", {
+    //                 //delay:6,
+    //                 x: '-30vw'
+    //             })
+    //     };
+    // }, []);
     return (
         <section className="sect sect__artiste sect__artiste--rotate hori">
             <div className="hori__rowContainer hori__rowContainer--artiste" ref={boxRef}>
-                <div className="hori__box ">
+                <div className="hori__box hori__box--smallW " style={{ backgroundImage: `url(${BackImgJap})`}}>
                     <h2 className='sect__title sect__title--big'>
                         {BigTitle1}
                     </h2>
+                    <p className="sect__txt sect__txt--japTxt sect__txt--margeTop sect__txt--jaune" style={{margin: "50vh 0 0 0"}}>
+                        {BigTitle12}
+                    </p>
 
                 </div>
-                <div className="hori__box hori__box--black" id='contentSailor'>
+                <div className="hori__box hori__box--bigW  hori__box--black" id='contentSailor'>
 
                     <ContentBoxHori linkImg01={imgArtiste1} title01={smallTitle1} title02={smallTitle2} text01={textcol1} text02={textcol2} text03={textcol3} colorTxt={{ color: '#FDF2DE' }} />
                 </div>

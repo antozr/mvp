@@ -2,6 +2,9 @@
 
 
 export function openImg(e){
+
+       
+
     console.log(e.target);
     let srcImg = e.target.src;
     console.log(srcImg);

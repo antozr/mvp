@@ -109,6 +109,13 @@
    &--bold{
     font-weight: 700;
    }
+   &--white{
+    color: #FDF2DE;
+    
+  }
+  &--japTxt{
+    font-size: 20vw;
+  }
     
   }
 }
@@ -143,6 +150,10 @@
       &--margeTop{
         margin: 20vh 0 0 3vw;
       }
+      &--japTxt{
+        font-size: 10vw;
+      }
+
      
     }
   }

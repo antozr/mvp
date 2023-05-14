@@ -8,6 +8,7 @@ import TonAventure from './pages/TonAventure';
 import JapanPage from './pages/JapanPage';
 import RussiePage from './pages/Russie';
 import ImgOpenbig from './components/ImgOpenbig';
+import Page404 from './pages/Page404';
 
 
 
@@ -24,6 +25,7 @@ function App() {
         <Route path='/europe' element={<NordicPage />} />
         <Route path='/pacifique' element={<NordicPage />} />
         <Route path='/ton-aventure' element={<TonAventure />} />
+        <Route path='/*' element={<Page404 />} />
 
       </Routes>
       <div className="sect__changePage"></div>

@@ -9,8 +9,11 @@
         flex-direction: column-reverse;
     }
     &--heigth100 {
+        //height: 100vh;
         height: 100vh;
         width: 100vw;
+  
+       
     }
 
     &--japInter {
@@ -55,7 +58,7 @@
         //scroll-snap-type: y proximity;
     }
     &--snapChild{
-        scroll-snap-align: center;
+        scroll-snap-align:start end;
 
     }
     
@@ -244,8 +247,10 @@
     }
     &____historyLand{
         width: 100vw;
-        height: 440vh;
-        background-color: red;
+        height: calc((180vh * 3) + 130vh);
+        //background-color: red;
+        display: flex;
+        flex-direction: column;
         
     }
 
@@ -289,11 +294,13 @@
 
     &__attente {
         width: 100%;
-        height: 90vh;
+        height: 80vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
+        background-image: url(../assets/img/fondPapierBig.jpg);
     }
 
     &__nameBigBox {
