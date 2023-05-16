@@ -67,7 +67,7 @@ function ContentBoxHori({ linkImg01, title01, title02, text01, text02, text03, c
                 </> : <>
                 <div className="hori__colGaucheImg">
                         {/* <img src={hirondelle} alt="" className="hori__hirondelle" id='imgBoxHori' /> */}
-                        {animImg === true ? <img src={linkImg01} alt="Sailor Jerry" className="hori__img" loading='lazy' onMouseOver={changeImg} onMouseOut={returnImgSrc} onAnimationEnd={changeImgRemove} /> : <img src={linkImg01} alt="Sailor Jerry" className="hori__img" loading='lazy' />}
+                        {animImg === true ? <img src={linkImg01} alt="Sailor Jerry" className="hori__img" loading='lazy' onMouseOver={changeImg}  /> : <img src={linkImg01} alt="Sailor Jerry" className="hori__img" loading='lazy' />}
                         {/* <img src={linkImg01} alt="Sailor Jerry" className="hori__img" loading='lazy'   onMouseOver={changeImg} onMouseOut={returnImgSrc} onAnimationEnd={changeImgRemove}/> */}
                     </div>
                     <div className="hori__colDroite " style={colorTxt} >

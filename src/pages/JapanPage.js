@@ -1,6 +1,4 @@
 import React from 'react'
-import BoxeTitreDecor from '../components/BoxeTitreDecor';
-import HeartSVG from '../assets/img/svg/coeur001.svg';
 import RyuPatte from '../assets/img/japan/ryu01.svg';
 import KoiCarpeColor from '../assets/img/japan/carpeColor.svg'
 import SectHoriFull from '../components/SectHoriFull';
@@ -13,6 +11,7 @@ import Horyoshi3 from '../assets/img/japan/horiyoshi-III.jpg';
 import HoryoshiSan from '../assets/img/tebori.jpg';
 import RestartHorishi1 from '../assets/img/japan/tebori.jpeg';
 import Ainu1 from '../assets/img/japan/ainu1.jpg';
+import Ainu2 from '../assets/img/japan/ainu2.jpg'
 import Meiji1 from '../assets/img/japan/meiji1.jpg';
 import Meiji2 from '../assets/img/japan/meiji2.jpg';
 import BackImgJap from '../assets/img/japan/irezumiBack2.jpg';
@@ -72,7 +71,7 @@ function JapanPage() {
 
             <section className="sect____historyLand sect--snapChild">
                 <div className=" hori__grid hori__box--black" id='contentSailor'>
-                    <ContentBoxHori linkImg01={Ainu1} title01={texteTitleCol[3]} text01={texteCol[1]} colorTxt={{ color: '#FDF2DE' }} linkImg02={Meiji1} animImg={true} historicBox={true}/>
+                    <ContentBoxHori linkImg01={Ainu1} title01={texteTitleCol[3]} text01={texteCol[1]} colorTxt={{ color: '#FDF2DE' }} linkImg02={Ainu2} animImg={true} historicBox={true}/>
                 </div>
                 <div className="hori__box hori__box--bigHeight " id='contentSailor'>
                     <ContentBoxHori linkImg01={Meiji1} title01={texteTitleCol[4]} text01={texteCol[2]} linkImg02={Meiji2} animImg={true} historicBox={false} />
@@ -81,7 +80,7 @@ function JapanPage() {
                     <ContentBoxHori linkImg01={RestartHorishi1} title01={texteTitleCol[5]} text01={texteCol[3]} linkImg02={RestartHorishi1} animImg={true} historicBox={true}/>
                 </div>
                 <div className=" hori__grid  hori__box--black" id='contentSailor'>
-                    <ContentBoxHori linkImg01={Ainu1} title01={texteTitleCol[6]} text01={texteCol[4]} colorTxt={{ color: '#FDF2DE' }} animImg={true} historicBox={true}/>
+                    <ContentBoxHori linkImg01={BackImg3} title01={texteTitleCol[6]} text01={texteCol[4]}  colorTxt={{ color: '#FDF2DE' }} animImg={true} historicBox={true}/>
                 </div>
 
             </section>

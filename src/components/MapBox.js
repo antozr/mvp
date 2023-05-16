@@ -4,6 +4,7 @@ import Hirondelle from '../assets/img/svg/hirondelle.svg';
 import Ancre from '../assets/img/svg/oldSchool/ancre.svg';
 import RyuHand from '../assets/img/japan/ryu01.svg';
 import KoiFish from '../assets/img/japan/carpeNB.svg';
+import EtoileRusse from '../assets/img/svg/russie/EtoileRusse.svg';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Timeline } from 'gsap/gsap-core';
@@ -16,7 +17,7 @@ function MapBox() {
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".sect__map",
-                markers: true,
+                markers: false,
                 start: "top center",
                 end: "+=200",
                 scrub: false,
@@ -41,7 +42,7 @@ function MapBox() {
             y: 0,
             alpha: 1,
             nested: true,
-            duration: 0.8,
+            duration: 0.3,
             ease: "ease-in",
 
 
@@ -49,7 +50,7 @@ function MapBox() {
         tl.to(".map__boxTitle", {
             alpha: 1,
             rotateX: 0,
-            duration: 2,
+            duration: 0.6,
             color: "#000"
         })
 
@@ -81,12 +82,12 @@ function MapBox() {
         stateMove(idUs, "Old-school Américain", '/oldschool', 3, 1);
         stateMove(idJapon, 'Irezumi, tradi japonais', '/japon', 5, 3);
         stateMove(idMaori, 'Traditionnel des iles pacifiques', '/pacifique', 2, 1);
-        stateMove(idRussie, 'Prison russe & URSS', '/russie', 2, 1);
+        stateMove(idRussie, 'Prison russe & URSS', '/russie', 5, 5);
         stateMove(idEurope, 'Traditionnel européen', '/europe', 2, 1);
     }, [])
 
 
-    var ArrayLinkSvg = ["", Hirondelle, Ancre, RyuHand, KoiFish]
+    var ArrayLinkSvg = ["", Hirondelle, Ancre, RyuHand, KoiFish, EtoileRusse]
     function stateMove(mapName, nameStyle, NamePath, randomnb1, randomnb2) {
         mapName.addEventListener('mouseover', (e) => {
             //console.log('hover');

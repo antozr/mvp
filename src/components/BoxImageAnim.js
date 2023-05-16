@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { createPortal } from "react-dom"
 import './BoxImageAnim.scss';
-import { AnimatePresence, motion } from "framer-motion";
+//import { AnimatePresence, motion } from "framer-motion";
 //import { openImg } from '../logic/_openImg';
 import ImgOpenbig from './ImgOpenbig';
 //import img
@@ -33,14 +33,6 @@ function BoxImageAnim({ positionTB, urlImg, className, nameImg }) {
             </div>
 
             {showImg && createPortal(
-                // <motion.div
-                //     initial={{ y: '100vh' }}
-                //     animate={{ y: '0' }}
-                //     exit={{ y: '100vh' }}
-                //     className="sect__imgOpenBig " onClick={closeImgBox}>
-                //     <button className="imgOpenBig__btn" onClick={ closeImgBox}><span className="imgOpenBig__barre"></span><span className="imgOpenBig__barre"></span></button>
-                //     <img src={urlImgBox} alt="Une illustration d'un motif de tatouage traditionelle. " className="imgOpenBig__img" />
-                // </motion.div>
                 <ImgOpenbig closeModal={closeImgBox} urlImgBig={urlImgBox} />
                 ,
                 document.body

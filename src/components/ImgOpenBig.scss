@@ -1,7 +1,5 @@
-
-
-.sect{
-    &__imgOpenBig{
+.sect {
+    &__imgOpenBig {
         width: 100vw;
         height: 100vh;
         position: fixed;
@@ -17,23 +15,24 @@
         transform: translateY(0vh);
         transition: 0.8s;
 
-        &--close{
+        &--close {
             transform: translateY(100vh);
-             transition: 1.2s;
+            transition: 1.2s;
             position: relative;
             top: 100vh;
             z-index: -10;
             //animation: closeBoxfULLiMG 1.2s both;
 
         }
-        &--anim{
+
+        &--anim {
             animation: closeBoxfULLiMG 1.2s both;
         }
     }
 }
 
-.imgOpenBig{
-    &__btn{
+.imgOpenBig {
+    &__btn {
         width: 45px;
         height: 45px;
         border: none;
@@ -47,27 +46,53 @@
         flex-direction: column;
         justify-content: center;
         z-index: 22;
-        &:hover{
+
+        &:hover {
             transform: rotate(360deg);
             transition: 0.8s;
         }
     }
-    &__barre{
+
+    &__barre {
         width: 40px;
         height: 5px;
         background-color: #000000;
         border-radius: 5%;
         transform-origin: 50% 50%;
-        &:nth-child(1){
+
+        &:nth-child(1) {
             transform: translateY(3px) rotate(45deg);
         }
-        &:nth-child(2){
+
+        &:nth-child(2) {
             transform: translateY(-3px) rotate(-45deg);
         }
     }
-    &__img{
+
+    &__img {
         width: 100%;
         height: 100%;
         object-fit: contain;
     }
+}
+
+
+@media(min-width:900px) {
+
+    .imgOpenBig {
+        &__btn {
+
+            &--music {
+                top: 0vh;
+                right: 0vw;
+
+                &:hover {
+                    transform: rotate(0deg);
+                    opacity: 0.8;
+                    transition: 0.8s;
+                }
+            }
+        }
+    }
+
 }

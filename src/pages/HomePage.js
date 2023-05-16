@@ -52,7 +52,7 @@ function HomePage() {
           </div>
         </div>
       </div>
-      <InterSectionBox />
+      <InterSectionBox  />
       
 
       {sizeWindow <= 900 ? <ListMapMobile />:<MapBox/>  }

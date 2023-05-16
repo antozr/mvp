@@ -62,7 +62,7 @@ function SectHoriFull({ BigTitle1, BigTitle12, BigTitle2, imgArtiste1, imgArtist
         <section className="sect sect__artiste sect__artiste--rotate hori">
             <div className="hori__rowContainer hori__rowContainer--artiste" ref={boxRef}>
                 <div className="hori__box hori__box--smallW " style={{ backgroundImage: `url(${BackImgJap})`}}>
-                    <h2 className='sect__title sect__title--big'>
+                    <h2 className='sect__title sect__title--big '>
                         {BigTitle1}
                     </h2>
                     <p className="sect__txt sect__txt--japTxt sect__txt--margeTop sect__txt--jaune" style={{margin: "50vh 0 0 0"}}>
@@ -75,7 +75,7 @@ function SectHoriFull({ BigTitle1, BigTitle12, BigTitle2, imgArtiste1, imgArtist
                     <ContentBoxHori linkImg01={imgArtiste1} title01={smallTitle1} title02={smallTitle2} text01={textcol1} text02={textcol2} text03={textcol3} colorTxt={{ color: '#FDF2DE' }} />
                 </div>
                 <div className="hori__box hori__box--black " id='nameSecond'>
-                    <h2 className='sect__title sect__title--big sect__title--italic sect__title--white'>
+                    <h2 className='sect__title sect__title--big  sect__title--bigSolo  sect__title--italic sect__title--white'>
                         {BigTitle2}
                     </h2>
 

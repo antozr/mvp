@@ -74,8 +74,8 @@
         max-width: 850px;
         height: 37vh;
         object-fit: cover;
-        border-radius: 20px 10px 20px 3px;
-
+        //border-radius: 20px 10px 20px 3px;
+        border-radius: 3px;
         &--change {
             animation: changeImgColG 2s;
             cursor: pointer;
@@ -138,6 +138,7 @@
 
             &--smallW {
                 width: 80vw;
+                
             }
 
             &--bigW {
@@ -145,6 +146,15 @@
             }
             &--bigHeight{
                 height: 130vh;
+            }
+            &--black {
+                background-color: #000;
+                z-index: 8;
+                padding:  0;
+    
+                &>h1,h2,p{
+                    color: #FDF2DE;
+                }
             }
 
 
@@ -180,6 +190,7 @@
             display: flex;
             flex-direction: row;
             padding: 0 5vw ;
+            position: relative;
 
             &>p{
                 padding: 10vh 0 0 5vw;
@@ -223,6 +234,8 @@
                 height: 40vh;
                 aspect-ratio: 1/4;
                 transform: translateY(-15vh);
+                position: sticky;
+                top: 18vh;
             }
 
 

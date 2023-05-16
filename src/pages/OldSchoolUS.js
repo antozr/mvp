@@ -79,7 +79,7 @@ function OldSchoolUS() {
       </div>
 
       <div className="sect--snapChild sect--heigth100">
-        <SectHoriFull BigTitle1={texteTitleCol[2]} BigTitle2={texteTitleCol[6]} imgArtiste1={SailorJerry02} imgArtiste2={DonEdHardy01}
+        <SectHoriFull BigTitle1={texteTitleCol[2]} BigTitle12={"artists"}  BigTitle2={texteTitleCol[6]} imgArtiste1={SailorJerry02} imgArtiste2={DonEdHardy01}
           textcol1={texteCol[3]} textcol2={texteCol[4]} textcol3={""} textcol4={texteCol[5]} textcol5={""} textcol6={""}
           smallTitle1={texteTitleCol[6]} smallTitle2={""} smallTitle3={"L\'apprenti "} smallTitle4={"du marin"}
         />

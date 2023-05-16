@@ -2,11 +2,13 @@
   font-family: "JosefinVariableItalic";
   src: url(../assets/fonts/JosefinSans-Italic-VariableFont_wght.ttf);
 }
+
 @font-face {
   font-family: "JosefinVariable";
   src: url(../assets/fonts/JosefinSans-VariableFont_wght.ttf);
 }
-@font-face{
+
+@font-face {
   font-family: "Druzokh";
   src: url(../assets/fonts/DRUZHOK.otf);
 }
@@ -19,52 +21,64 @@
     line-height: 110%;
     //font-size: 91px;
     font-size: 10dvw;
-    &--2{
+
+    &--2 {
       //font-size: 2.8dvw;
       font-size: 51px;
     }
 
-    &--ecart{
+    &--ecart {
       margin: 0 0 38px 0;
     }
-    &--italic{
+
+    &--italic {
       font-family: 'JosefinVariableItalic';
     }
-    &--medium{
+
+    &--medium {
       font-weight: 500;
     }
-    &--margeLeftMin{
+
+    &--margeLeftMin {
       margin: 0 0 0 -10px;
     }
-    &--lineHSmall{
+
+    &--lineHSmall {
       line-height: 90%;
     }
-    &--thin{
+
+    &--thin {
       font-weight: 300;
     }
-    &--margeColDr{
+
+    &--margeColDr {
       margin: 91px 0 51px;
     }
-    &--big{
+
+    &--big {
       font-size: 10vw;
     }
-    &--white{
+
+    &--white {
       color: #FDF2DE;
-      
+
     }
-    &--link{
+
+    &--link {
       transition: 0.3s;
-      &:hover{
+
+      &:hover {
         color: #F9B949;
         font-weight: 600;
         transition: 0.3s;
       }
     }
-    &--druzokh{
-      font-family:"Druzokh";
-     
+
+    &--druzokh {
+      font-family: "Druzokh";
+
     }
-    
+
 
   }
 
@@ -76,51 +90,64 @@
     //color: #000000;
     max-width: 68ch;
     display: inline-block;
-    &--italic{
+
+    &--italic {
       font-family: 'JosefinVariableItalic';
     }
-    &--thin{
+
+    &--thin {
       font-weight: 300;
       line-height: 150%;
     }
-    &--ecart{
-      margin: 28px 0 0 0 ;
+
+    &--ecart {
+      margin: 28px 0 0 0;
 
     }
-    &--big{
+
+    &--big {
       font-size: 120px;
 
     }
-    &--jaune{
+
+    &--jaune {
       color: #F9B949;
     }
-    &--smallLength{
+
+    &--smallLength {
       width: clamp(32ch, 37ch, 40ch);
     }
-    &--ecartnv2{
-      margin: 51px 0 0 0 ;
+
+    &--ecartnv2 {
+      margin: 51px 0 0 0;
     }
-    &--margeRight{
+
+    &--margeRight {
       margin: 0 0 0 5vw;
     }
-    &--margeTop{
-      margin: 4vh  0vw;
+
+    &--margeTop {
+      margin: 4vh 0vw;
     }
-   &--bold{
-    font-weight: 700;
-   }
-   &--white{
-    color: #FDF2DE;
-    
-  }
-  &--japTxt{
-    font-size: 20vw;
-  }
-    
+
+    &--bold {
+      font-weight: 700;
+    }
+
+    &--white {
+      color: #FDF2DE;
+
+    }
+
+    &--japTxt {
+      font-size: 20vw;
+    }
+
   }
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
+  /* Code for Firefox */
   color: #1d1d1d;
   background: #F9B949;
 }
@@ -130,31 +157,41 @@
   background: #F9B949;
 }
 
-@media(min-width:600px){
+@media(min-width:600px) {
 
-  .sect{
-    &__title{
+  .sect {
+    &__title {
       font-size: 3dvw;
-      &--druzokh{
-        font-family:"Druzokh";
+
+      &--druzokh {
+        font-family: "Druzokh";
         font-size: 10dvw;
         text-align: center;
-        opacity: 0.7;
+        opacity: 0.9;
+      }
+
+      &--bigSolo {
+        font-size: 8dvw;
+
       }
     }
-    &__txt{
+
+    &__txt {
       font-size: 21px;
-      &--smallLength{
+
+      &--smallLength {
         width: 40ch;
       }
-      &--margeTop{
+
+      &--margeTop {
         margin: 20vh 0 0 3vw;
       }
-      &--japTxt{
+
+      &--japTxt {
         font-size: 10vw;
       }
 
-     
+
     }
   }
 }
