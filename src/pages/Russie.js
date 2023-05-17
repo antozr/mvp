@@ -3,7 +3,7 @@ import SectionIntroPage from '../components/SectionIntroPage'
 import InterSectionBox from '../components/InterSectionBox'
 import ContentBoxHori from '../components/ContentBoxHori'
 import SectHoriFull from '../components/SectHoriFull'
-
+import SectionMotifHori from '../components/SectionHoriMotif'
 
 //images
 import Danzing1 from '../assets/img/russie/danzing.jpg';
@@ -17,11 +17,17 @@ import ArtistPrison from '../assets/img/russie/prisonnier2.jpg'
 import CoilPrison from '../assets/img/russie/coilPrison.jpg';
 import EndArea from "../assets/img/russie/endEre.jpg";
 import CastePrisonnier from "../assets/img/russie/Caste.jpg";
-import SectionMotifHori from '../components/SectionHoriMotif'
+import Vierge1 from "../assets/img/russie/vierge1.jpg";
+import Vierge2 from "../assets/img/russie/vierge2.jpg";
+import Etoile1 from "../assets/img/russie/etoile1.jpg";
+import Etoile2 from "../assets/img/russie/etoile2.jpg";
+import Epaullette1 from "../assets/img/russie/epaullette1.jpg";
+import Epaullette2 from "../assets/img/russie/epaullette2.jpg";
+
 
 function RussiePage() {
 
-  let titleArray = ["Le collecteur", "Коллектор", "вор в законе", <>Le signe de la&nbsp;répression</>, <>Leur&nbsp;iconographie</>, "L’hygiène, une autre histoire", "La fin d'une ère", "Les épaulettes", <>L'étoiles&nbsp;à8&nbsp;branches</>, <>La Vierge&nbsp;à l’enfant</>]
+  let titleArray = ["Le collecteur", "Коллектор", "вор в законе", <>Le signe de la&nbsp;répression</>, <>Leur&nbsp;iconographie</>, "L’hygiène, une autre histoire", "La fin d'une ère", "Les épaulettes", <>L'étoiles&nbsp;à 8&nbsp;branches</>, <>La Vierge&nbsp;à l’enfant</>]
   let textArray = [
     <>A la chute de l'URSS,  on a pu voir l'iconographie de ce côté-là du monde et surtout grâce à un gardien de prison, < b > Danzig Baldaev</b>  qui a recueilli les dessins sur les prisonniers ainsi que leur signification. Grâce à lui , on sait que le tatouage se faisait peu de temps après le crime et que plus la personne en avait,  plus elle avait fait de prison et plus elle était dangereuse.
     </>,
@@ -100,7 +106,11 @@ function RussiePage() {
       </section>
       <InterSectionBox WhitThext={true} textTitle={"Les motifs amblematiques"} />
       <div className="section sect--heigth100">
-        <SectionMotifHori />
+        <SectionMotifHori 
+        Img01={Epaullette1} Img012={Epaullette2} title01={titleArray[7]} txt01={textArray[7]} nameIllu1={"Les épaulettes"} OneImg1={true} styleBoxIllu1={{margin : '0px'}}
+        Img02={Etoile1} Img021={Etoile2} title02={titleArray[8]} txt02={textArray[8] } nameIllu2={"L'étoile à 8 branches"}
+        Img03={Vierge1} Img032={Vierge2}  title03={titleArray[9]} txt03={textArray[9]} nameIllu3={"La vierge à l'enfant"} 
+        />
       </div>
 
     </div>
