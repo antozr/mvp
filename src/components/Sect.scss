@@ -375,6 +375,9 @@
         }
 
         //
+        &__artiste{
+            padding: 0;
+        }
         &__interColor {
             height: 50vh;
         }
@@ -463,6 +466,7 @@
             display: grid;
             grid-template-rows: 50vh 50vh;
             grid-template-columns: 1.5fr 1fr;
+            column-gap: 2vw;
             grid-template-areas:
             "i1 t1"
             "i1 i2" ;

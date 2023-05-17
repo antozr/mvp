@@ -133,7 +133,7 @@
             //border: solid red 5px;
             &--motif {
                 width: 660vw;
-                padding: 2vh 3vw;
+                padding: 2vh 5vw 0 0;
             }
 
             &--smallW {
@@ -150,11 +150,14 @@
             &--black {
                 background-color: #000;
                 z-index: 8;
-                padding:  0;
+                //padding:  0;
     
                 &>h1,h2,p{
                     color: #FDF2DE;
                 }
+            }
+            &--changeMap{
+                width: 370vw;
             }
 
 
@@ -167,20 +170,26 @@
             display: grid;
             grid-template-columns: 2.8fr  1fr;
             row-gap: 2vh;
-            grid-template-rows: 85vh 15vh 80vh;
+            grid-template-rows: 85vh 15vh 100vh;
             grid-template-areas:
                 "i1    ."
                 "i1   h1"
                 "b1   b1";
             position: relative;
             width: 100%;
-            height: 180vh;
+            height: 200vh;
             //border: blue solid 2px;
 
             &--title{
                 transform: translateX(-10vw) translateY(20px);
                 padding: 42px 20px ;
                 background-color: #000;
+                position: relative;
+                z-index: 4;
+            }
+            &--big{
+                height: 210vh;
+                grid-template-rows: 85vh 15vh 120vh;
             }
         }
 
@@ -207,7 +216,7 @@
             height: 110vh;
 
             &--motif {
-                width: 400vw;
+                width: 500vw;
             }
 
         }
@@ -238,6 +247,12 @@
                 transform: translateY(-15vh);
                 position: sticky;
                 top: 18vh;
+                
+            }
+            &--full{
+                max-width: 100%;
+                height: 100%;
+
             }
 
 
@@ -250,11 +265,35 @@
             &--marginNone {
                 margin: 0 2vw 0 0;
             }
+            &--full{
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 0;
+                width: 100%;
+                height: 120%;
+                margin: 0;
+                padding: 0;
+            }
 
         }
 
         &__colDroite {
             width: 25%;
+
+            &--full{
+                width: 50%;
+                position: relative;
+                right: 0;
+                z-index: 1;
+                background-color: #FDF2DE;
+                height: calc(80% + 4vh);
+                margin: 0vh -20vw 0 50%;
+                padding: 4vh 10vw 4vh 2.5vw;
+                &>p{
+                    width: 100%;
+                }
+            }
         }
     }
 }

@@ -74,10 +74,10 @@ function JapanPage() {
                     <ContentBoxHori linkImg01={Ainu1} title01={texteTitleCol[3]} text01={texteCol[1]} colorTxt={{ color: '#FDF2DE' }} linkImg02={Ainu2} animImg={true} historicBox={true}/>
                 </div>
                 <div className="hori__box hori__box--bigHeight " id='contentSailor'>
-                    <ContentBoxHori linkImg01={Meiji1} title01={texteTitleCol[4]} text01={texteCol[2]} linkImg02={Meiji2} animImg={true} historicBox={false} />
+                    <ContentBoxHori linkImg01={Meiji1} title01={texteTitleCol[4]} text01={texteCol[2]} linkImg02={Meiji2} animImg={true} historicBox={false} fullImg={true}/>
                 </div>
-                <div className=" hori__grid hori__box--black " id='contentSailor'>
-                    <ContentBoxHori linkImg01={RestartHorishi1} title01={texteTitleCol[5]} text01={texteCol[3]} linkImg02={RestartHorishi1} animImg={true} historicBox={true}/>
+                <div className=" hori__grid hori__grid--big hori__box--black " id='contentSailor'>
+                    <ContentBoxHori linkImg01={RestartHorishi1} title01={texteTitleCol[5]} text01={texteCol[3]} linkImg02={RestartHorishi1} animImg={true} historicBox={true} />
                 </div>
                 <div className=" hori__grid  hori__box--black" id='contentSailor'>
                     <ContentBoxHori linkImg01={BackImg3} title01={texteTitleCol[6]} text01={texteCol[4]}  colorTxt={{ color: '#FDF2DE' }} animImg={true} historicBox={true}/>

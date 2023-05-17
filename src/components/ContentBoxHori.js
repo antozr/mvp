@@ -9,7 +9,7 @@ import { Timeline } from 'gsap/gsap-core';
 
 gsap.registerPlugin(ScrollTrigger, Timeline);
 
-function ContentBoxHori({ linkImg01, title01, title02, text01, text02, text03, colorTxt, linkImg02, animImg, historicBox }) {
+function ContentBoxHori({ linkImg01, title01, title02, text01, text02, text03, colorTxt, linkImg02, animImg, historicBox, fullImg }) {
 
     // useEffect(()=>{
     //     let tl = gsap.timeline({
@@ -51,7 +51,7 @@ function ContentBoxHori({ linkImg01, title01, title02, text01, text02, text03, c
         <>
             {historicBox === true ?
                 <>
-                    
+
 
                     <img src={linkImg01} alt="Sailor Jerry" className="hori__img hori__img--grid i1" loading='lazy' />
 
@@ -65,15 +65,28 @@ function ContentBoxHori({ linkImg01, title01, title02, text01, text02, text03, c
                         </p>
                     </div>
                 </> : <>
-                <div className="hori__colGaucheImg">
-                        {/* <img src={hirondelle} alt="" className="hori__hirondelle" id='imgBoxHori' /> */}
-                        {animImg === true ? <img src={linkImg01} alt="Sailor Jerry" className="hori__img" loading='lazy' onMouseOver={changeImg}  /> : <img src={linkImg01} alt="Sailor Jerry" className="hori__img" loading='lazy' />}
-                        {/* <img src={linkImg01} alt="Sailor Jerry" className="hori__img" loading='lazy'   onMouseOver={changeImg} onMouseOut={returnImgSrc} onAnimationEnd={changeImgRemove}/> */}
-                    </div>
-                    <div className="hori__colDroite " style={colorTxt} >
-                        <TextColDroite title1={title01} title2={title02} txt1={text01} txt2={text02} txt3={text03} />
+                    {fullImg === true ?
+                        <>
+                            <div className="hori__colGaucheImg hori__colGaucheImg--full">
+                                {/* <img src={hirondelle} alt="" className="hori__hirondelle" id='imgBoxHori' /> */}
+                                {animImg === true ? <img src={linkImg01} alt="Sailor Jerry" className="hori__img hori__img--full" loading='lazy' onMouseOver={changeImg} /> : <img src={linkImg01} alt="Sailor Jerry" className="hori__img" loading='lazy' />}
+                                {/* <img src={linkImg01} alt="Sailor Jerry" className="hori__img" loading='lazy'   onMouseOver={changeImg} onMouseOut={returnImgSrc} onAnimationEnd={changeImgRemove}/> */}
+                            </div>
+                            <div className="hori__colDroite hori__colDroite--full " style={colorTxt} >
+                                <TextColDroite title1={title01} title2={title02} txt1={text01} txt2={text02} txt3={text03} />
 
-                    </div>
+                            </div>
+
+                        </> : <>
+                            <div className="hori__colGaucheImg ">
+                                {animImg === true ? <img src={linkImg01} alt="Sailor Jerry" className="hori__img " loading='lazy' onMouseOver={changeImg} /> : <img src={linkImg01} alt="Sailor Jerry" className="hori__img" loading='lazy' />}
+                            </div>
+                            <div className="hori__colDroite  " style={colorTxt} >
+                                <TextColDroite title1={title01} title2={title02} txt1={text01} txt2={text02} txt3={text03} />
+
+                            </div>
+
+                        </>}
 
                 </>}
         </>

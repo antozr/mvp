@@ -28,14 +28,14 @@ function SectionMotifHori({ Img01, Img012, Img02, Img021, Img03, Img032, title01
 
                 </div>
                 <div className="hori__box hori__box--motif hori__box--black" id='Motif02'>
-                    <PresentationMotif Img01={Img02} Img02={Img021} title1={title02} txt1={txt02} style2={{color:"#FDF2DE"}} nameIllu={nameIllu2}  StyleIlluBox={styleBoxIllu2}/>
+                    <PresentationMotif Img01={Img02} Img02={Img021} title1={title02} txt1={txt02} style2={{color:"#FDF2DE", width:"60ch"}} nameIllu={nameIllu2}  StyleIlluBox={styleBoxIllu2}/>
 
                 </div>
                 <div className="hori__box hori__box--motif " id='Motif03'>
                     <PresentationMotif Img01={Img03} Img02={Img032} title1={title03} txt1={txt03} nameIllu={nameIllu3}  StyleIlluBox={styleBoxIllu3} />
 
                 </div>
-                <div className="hori__box hori__box--black sect__nameBigBox--fondImg " id='Motif04'>
+                <div className="hori__box hori__box--changeMap hori__box--black sect__nameBigBox--fondImg " id='Motif04'>
                     <Link to='/#mapWorld' onClick={ChangeStateDataVisited()}>
                         <h2 className='sect__title  sect__title--italic sect__title--white sect__title--link'>
                             Part voir d'autre motif.
