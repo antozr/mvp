@@ -47,14 +47,10 @@ function RussiePage() {
   return (
     <div className="sect page">
 
-      <SectionIntroPage BTD1={"CCCP"} BTD2={"Prison Russe"} title={<>Go to goulag! Kurwa!!</>} txt={<></>} />
-      <InterSectionBox WhitThext={false} />
-      <section className="sect__historyLand">
-        <div className="hori__box hori__box--black">
-          <ContentBoxHori linkImg01={""} linkImg02={""} title01={""} title02={""} text01={""} animImg={true} />
-        </div>
-      </section>
-      <InterSectionBox WhitThext={true} textTitle={"Insalubrité & Beauté"} />
+      <SectionIntroPage BTD1={"Russie"} BTD2={"ГУЛАГ"} title={<>Direction le Goulag. честь ,боль!</>} txt={<>On se trouve dans le bloc soviétique, en voyageant de goulag à camp de travail dans la Sibérie. On part à la découverte des illustrations faites par les prisonniers sur d'autres par amour, haut-fait ou patriotisme.</>} />
+      
+      
+      <InterSectionBox WhitThext={true} textTitle={"Insalubrite & Beaute"} />
       {/* {la technique } */}
       <div className="sect--height100">
         <SectHoriFull BigTitle1={titleArray[0]} BigTitle12={titleArray[1]} imgArtiste1={Danzing1} textcol1={textArray[0]} textcol2={textArray[1]} textcol3={""}

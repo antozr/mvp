@@ -12,9 +12,26 @@ function NavBar() {
 
   const [showMusic, setShowMusic] = useState(false);
 
+
   /// function pour la modla de musique 
 
   function openModal(e) {
+    let arrayLinkMusic = [
+      "https://open.spotify.com/playlist/5bdQoZomjCWxHB5wbNYM4w?si=231b47b0866a461e",
+      "https://open.spotify.com/playlist/1EWuk6pjCm1jmNku0iWVQr?si=0757ac238b01401f",
+      "https://open.spotify.com/playlist/0j9M4eMvMgdXFpslIoaVRL?si=f8d101a558bb41fa",
+    ]
+    let randomNumber = Math.floor(Math.random() * (arrayLinkMusic.length - 0)) ;
+    if(window.location.pathname  === "/"){
+      window.open(arrayLinkMusic[randomNumber], "_blank")
+    }else if(window.location.pathname  === "/japon"){
+      window.open(arrayLinkMusic[1], "_blank")
+    }else if(window.location.pathname === "/russie"){
+      window.open(arrayLinkMusic[2], "_blank")
+    }else{
+      window.open(arrayLinkMusic[randomNumber], "_blank")
+    }
+
     setShowMusic(false);
     window.open("https://open.spotify.com/playlist/1EWuk6pjCm1jmNku0iWVQr?si=bc7332b5e51f4151","_blank");
   }
