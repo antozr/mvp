@@ -88,7 +88,8 @@
     font-size: 16px;
     line-height: 130%;
     //color: #000000;
-    max-width: 68ch;
+    width: 100%;
+    max-width: 18ch;
     display: inline-block;
 
     &--italic {
@@ -178,6 +179,9 @@
 
     &__txt {
       font-size: 21px;
+      //width: 100%;
+      width: 90ch;
+      max-width: 80ch;
 
       &--smallLength {
         width: 40ch;
