@@ -69,7 +69,7 @@ function JapanPage() {
 
             <InterSectionBox WhitThext={true} textTitle={"L'histoire de l'Irezumi"} backImg={{ backgroundImage: `url(${BackImgJap})` }} />
 
-            <section className="sect____historyLand sect--snapChild">
+            <section className="sect__historyLand sect--snapChild">
                 <div className=" hori__grid hori__box--black" id='contentSailor'>
                     <ContentBoxHori linkImg01={Ainu1} title01={texteTitleCol[3]} text01={texteCol[1]} colorTxt={{ color: '#FDF2DE' }} linkImg02={Ainu2} animImg={true} historicBox={true}/>
                 </div>
