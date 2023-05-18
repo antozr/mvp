@@ -15,7 +15,7 @@ import BackImgJap from '../assets/img/japan/fondBigImg.png'
 
 gsap.registerPlugin(ScrollTrigger, Timeline);
 
-function SectHoriFull({ BigTitle1, BigTitle12, BigTitle2, imgArtiste1, imgArtiste2, textcol1, textcol2, textcol3, textcol4, textcol5, textcol6, smallTitle1, smallTitle2, smallTitle3, smallTitle4 }) {
+function SectHoriFull({ BigTitle1, BigTitle12, BigTitle2, imgArtiste1, imgArtiste2, textcol1, textcol2, textcol3, textcol4, textcol5, textcol6, smallTitle1, smallTitle2, smallTitle3, smallTitle4, fullImgs }) {
     // let texteTitleCol = ["Un style qui", " se demarque", "Sailor Jerry", "Les artistes"," Don Ed Hardy"];
     // let texteCol = [<>Le style se compose de contours noir épais avec des couleurs limitées avec les couleurs primaires  <span className="sect__txt--thin sect__txt--italic">( Jaune - Rouge - Bleu - Vert )</span> avec peux d’ombrage mais bien marqué. Avec une iconographie venue en partie de l’univers de la marine, on retrouve les motifs sous forme de FLASH. <br /> <br /></>,
     // <>On peut situer ces premières apparition en tant que point d’influence dés le début du 20e siècles & principalement aux US ,<span className="sect__txt--thin sect__txt--italic"> comme à Honolulu, San Francisco, New-York mais aussi à Bristol.</span> <br /> <br /></>,
@@ -81,7 +81,7 @@ function SectHoriFull({ BigTitle1, BigTitle12, BigTitle2, imgArtiste1, imgArtist
 
                 </div>
                 <div className="hori__box ">
-                    <ContentBoxHori linkImg01={imgArtiste2} title01={smallTitle3} title02={smallTitle4} text01={textcol4} text02={textcol5} text03={textcol6} colorTxt={{ color: '#000' }} />
+                    <ContentBoxHori linkImg01={imgArtiste2} title01={smallTitle3} title02={smallTitle4} text01={textcol4} text02={textcol5} text03={textcol6} colorTxt={{ color: '#000' }} fullImg={fullImgs}/>
 
                 </div>
             </div>

@@ -63,7 +63,7 @@ function JapanPage() {
             <div className="sect--heigth100 sect--snapChild">
                 <SectHoriFull BigTitle1={texteTitleCol[0]} BigTitle12={"芸術家"} BigTitle2={texteTitleCol[1]} imgArtiste1={Horyoshi3} imgArtiste2={HoryoshiSan}
                     textcol1={texteCol[5]} textcol2={texteCol[6]} textcol3={""} textcol4={texteCol[5]} textcol5={""} textcol6={""}
-                    smallTitle1={texteTitleCol[2]} smallTitle2={""} smallTitle3={"Des conteurs "} smallTitle4={"d'histoires..."}
+                    smallTitle1={texteTitleCol[2]} smallTitle2={""} smallTitle3={"Des conteurs "} smallTitle4={"d'histoires..."} fullImgs={true}
                 />
             </div>
 

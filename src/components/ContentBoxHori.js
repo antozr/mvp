@@ -3,6 +3,7 @@ import TextColDroite from './TextColDroite';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Timeline } from 'gsap/gsap-core';
+import { motion } from 'framer-motion'
 
 // import hirondelle from '../assets/img/svg/hirondelle_1.svg';
 
@@ -72,10 +73,18 @@ function ContentBoxHori({ linkImg01, title01, title02, text01, text02, text03, c
                                 {animImg === true ? <img src={linkImg01} alt="Sailor Jerry" className="hori__img hori__img--full" loading='lazy' onMouseOver={changeImg} /> : <img src={linkImg01} alt="Sailor Jerry" className="hori__img" loading='lazy' />}
                                 {/* <img src={linkImg01} alt="Sailor Jerry" className="hori__img" loading='lazy'   onMouseOver={changeImg} onMouseOut={returnImgSrc} onAnimationEnd={changeImgRemove}/> */}
                             </div>
-                            <div className="hori__colDroite hori__colDroite--full " style={colorTxt} >
+                            <motion.div className="hori__colDroite hori__colDroite--full " style={colorTxt} initial={{ opacity: 0, x: '50%' , color:"#FDF2DE"}}
+                                whileInView={{
+                                    transition: {
+                                        delayChildren: 1,
+                                        staggerChildren: 0.2,
+                                        delay: 0.6
+                                        
+                                    }, opacity: 1, x: 0, color: "#000"
+                                }}>
                                 <TextColDroite title1={title01} title2={title02} txt1={text01} txt2={text02} txt3={text03} />
 
-                            </div>
+                            </motion.div>
 
                         </> : <>
                             <div className="hori__colGaucheImg ">

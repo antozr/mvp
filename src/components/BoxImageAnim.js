@@ -4,6 +4,7 @@ import './BoxImageAnim.scss';
 //import { AnimatePresence, motion } from "framer-motion";
 //import { openImg } from '../logic/_openImg';
 import ImgOpenbig from './ImgOpenbig';
+import {motion} from 'framer-motion';
 //import img
 //import PinUpImg from '../assets/img/oldSchool/pinup1.jpg';
 
@@ -26,11 +27,11 @@ function BoxImageAnim({ positionTB, urlImg, className, nameImg }) {
     return (
         <>
 
-            <div className="sect__divImgAnim " style={positionTB}>
+            <motion.div className="sect__divImgAnim " style={positionTB} >
                 <div className={className}>
                     <img src={urlImg} alt="Illustration d'un tatouage" className="imgBoxDiv imgBoxDiv__imgFond" title={nameImg} onClick={openImgBox} />
                 </div>
-            </div>
+            </motion.div>
 
             {showImg && createPortal(
                 <ImgOpenbig closeModal={closeImgBox} urlImgBig={urlImgBox} />

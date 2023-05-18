@@ -2,6 +2,7 @@ import React from 'react'
 import TextColDroite from './TextColDroite'
 import BoxImageAnim from './BoxImageAnim'
 
+
 function PresentationMotif({ Img01, Img02, title1, txt1, style2, nameIllu, OneImg, StyleIlluBox }) {
     return (
         <>
