@@ -76,7 +76,7 @@ function RussiePage() {
     </>
   ]
   return (
-    <div className="sect page">
+    <div className="sect page pageChangeSet">
 
       <SectionIntroPage BTD1={"Russie"} BTD2={"ГУЛАГ"} title={<>Direction le Goulag.<br /> честь ,боль!</>} txt={<>On se trouve dans le bloc soviétique, en voyageant de goulag à camp de travail dans la Sibérie. On part à la découverte des illustrations faites par les prisonniers sur d'autres par amour, haut-fait ou patriotisme.</>} />
 

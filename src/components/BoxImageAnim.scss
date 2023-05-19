@@ -51,10 +51,12 @@
 
     &__smallImg{
         position: relative;
-        bottom: -10vh;
+        //bottom: 20vh;
+        bottom: -15vh;
         // bottom: 0px;
         //left: 35%;
-        width: 50vw;
+        // width: 50vw;
+        width: 80vw;
         height: 100vh;
         
     }
@@ -71,6 +73,10 @@
             // top: 3vh;
             //left: 0;
             
+        }
+        &__smallImg{
+            bottom: -10vh;
+            width: 50vw;
         }
     }
 }

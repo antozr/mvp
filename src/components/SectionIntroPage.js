@@ -7,7 +7,7 @@ function SectionIntroPage({Img01, Img02, BTD1, BTD2, title, txt}) {
     <section className="homepage__sect1--bgImg sect--snapChild ">
         <div className="sect__titre">
         
-          <BoxeTitreDecor decor={"&"} titleP1={BTD1} titleP2={BTD2} sizeDecor={window.innerWidth <= 900 ? { fontSize: '160px' } : { fontSize: '200px' }} positionBox={window.innerWidth <= 900 ? { margin: '-13px 0 44px 10vw' } : { margin: '360px 0 0 25vw' }} />
+          <BoxeTitreDecor decor={"&"} titleP1={BTD1} titleP2={BTD2} sizeDecor={window.innerWidth <= 900 ? { fontSize: '160px' , width: 'auto'} : { fontSize: '200px' }} positionBox={window.innerWidth <= 900 ? { margin: '-13px 0 44px -20vw' } : { margin: '360px 0 0 25vw' }} />
           <img src={Img01} alt="Voici une représentation d'un sacré coeur dans le style tradi américain." className="sect__imgDecor sect__imgDecor--marginLeftMin" />
         </div>
         <div className="sect__boxIntro sect--row sect__boxIntro--minHeigt">

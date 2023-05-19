@@ -117,7 +117,7 @@ export  function loadDataMapAdventure (){
     let tableVisitedand = []
     console.table(tableVisitedand)
     //// tableau avec les noms des lieux 
-    let tabLandName = ["Us old-school", "Japon", "Nordic & Celte", "Tradi européens", "Russie & prisons ", "Maori"];
+    let tabLandName = ["Old school", "Japon", "Nordic & Celte", "Tradi européens", "Russie & prisons ", "Maori"];
     let i = 0;
 
     arrayAllDataLoad.forEach((el)=>{

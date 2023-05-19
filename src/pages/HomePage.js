@@ -31,7 +31,7 @@ function HomePage() {
   return (
     <>
 
-      <div className='homepage'>
+      <div className='homepage pageChangeSet'>
 
 
         <div className="homepage__sect1 homepage__sect1--bgImg sect">
@@ -47,7 +47,7 @@ Bienvenus dans cet univers, qui est de plus en plus visible de nos jours mais qu
               <p className="sect__txt sect__txt--ecart sect__txt--italic sect__txt--thin">
                 Alors je vous invite à voyager dans ses différents univers pour en apprendre plus sur les codes et les bases de ces styles venant des 4 coins du monde.
               </p>
-              <BoutonNormal nameBtn={"Voir la carte"} linkBtn={'#mapWorld'} />
+              <BoutonNormal nameBtn={"Voir la carte"} linkBtn={'#mapWorld'} ClassColor={"sect__btn"} linkHref={true}/>
             </div>
           </div>
         </div>

@@ -20,5 +20,18 @@
             font-family: 'JosefinVariableItalic';
             font-weight: 400;
         }
+
+
+        &--yellow{
+            background-color: #1d1d1d;
+            color: #FFF5E2;
+
+            &:hover{
+                background-color: #F9B949;
+                color: #1d1d1d;
+            }
+        }
     }
+    
+    
 }

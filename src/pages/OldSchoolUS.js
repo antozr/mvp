@@ -62,7 +62,7 @@ function OldSchoolUS() {
 
 
   return (
-    <div className="oldschool page sect--snap">
+    <div className="oldschool page sect--snap pageChangeSet">
       <SectionIntroPage BTD1={"L’old school"} BTD2={"Américain"} Img01={HeartSVG} Img02={AncreSvg} title={<>Vogue vers <br/>la découverte</>} txt={<>Une mode vieille comme le navire qui la porte. C’est un style qui est née avec les marins qui voguait d’un port à l’autre, en marquant leur amour du monde sur leur&nbsp;corps.</>} />
 
       <InterSectionBox WhitThext={false}  backImg={{ backgroundImage: `url(${PaternUS})` }} />

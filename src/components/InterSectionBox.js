@@ -14,7 +14,7 @@ function InterSectionBox({ WhitThext, backImg, textTitle }) {
     function textBoxOn() {
         return (
             <div className="sect__nameBigBox sect__nameBigBox--fondImg sect--snapChild" style={backImg}>
-                <h2 className="sect__title sect_title--2 sect__title--druzokh">
+                <h2 className="sect__title sect_title--2 sect__title--big sect__title--druzokh">
                     {textTitle}
                 </h2>
             </div>

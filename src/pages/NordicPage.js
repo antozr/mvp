@@ -1,14 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import BoutonNormal from '../components/BoutonComp'
+import InterSectionBox from '../components/InterSectionBox'
+import backInterOld from '../assets/img/svg/oldSchool/paternOldSchool.svg';
 function NordicPage() {
     return (
-        <section className="sect sect__attente">
-            <h1 className="sect__title">
-                Le contenut arrive bientôt . </h1>
+        <>
+            <section className="sect sect__attente pageChangeSet">
+                <h1 className="sect__title">
+                    Le contenut arrive bientôt . </h1>
 
-                <Link to='/' className='sect__txt sect__txt--italic' >Retour à la carte </Link>
-        </section>
+                <BoutonNormal linkBtn={"/"} nameBtn={"Retour à la carte "} ClassColor={"sect__btn sect__btn--yellow"} />
+            </section>
+            <InterSectionBox backImg={{ backgroundImage: `url(${backInterOld})` }} />
+        </>
     )
 }
 

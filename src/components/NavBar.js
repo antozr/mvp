@@ -11,6 +11,7 @@ import spotifyLogo from "../assets/img/svg/spotify.svg";
 function NavBar() {
 
   const [showMusic, setShowMusic] = useState(false);
+  const [changePage, setChangePage] = useState(false);
 
 
   /// function pour la modla de musique 
@@ -33,7 +34,7 @@ function NavBar() {
     }
 
     setShowMusic(false);
-    window.open("https://open.spotify.com/playlist/1EWuk6pjCm1jmNku0iWVQr?si=bc7332b5e51f4151","_blank");
+    //window.open("https://open.spotify.com/playlist/1EWuk6pjCm1jmNku0iWVQr?si=bc7332b5e51f4151","_blank");
   }
   function closeModal(e) {
     setShowMusic(false)
@@ -47,18 +48,22 @@ function NavBar() {
   }
   //
   function animateChangePage(e) {
-    //this.target.preventDefault();
+    // e.target.preventDefault();
 
     let namePath = e.target.title;
     let blocChangePage = document.querySelector('.sect__changePage');
+    blocChangePage.classList.remove("sect__changePage--closeNav")
     blocChangePage.classList.add('sect__changePage--closeNav');
+    document.querySelector('.pageChangeSet').style.visibility = "hidden";
     setTimeout(() => {
       window.scrollTo(0, 0);
+
     }, 100);
 
     setTimeout(() => {
       routChange(namePath);
       window.scrollTo(0, 0);
+      document.querySelector('.pageChangeSet').style.visibility = "visible";
     }, 1100);
     blocChangePage.addEventListener('animationend', (e) => {
       e.target.classList.remove("sect__changePage--closeNav")
@@ -94,15 +99,15 @@ function NavBar() {
         <nav className="navBox  ">
           <ul className="nav__list " ref={listLien}>
             <li className="nav__el" >
-              <NavLink to="/" className={({ isActive, isPending }) => isPending ? "nav__a" : isActive ? "nav__a nav__a--active" : "nav__a"} > La découverte </NavLink>
+              <NavLink to="#" className={({ isActive, isPending }) => isPending ? "nav__a" : isActive ? "nav__a nav__a--active" : "nav__a"} title='/'  onClick={animateChangePage} > La découverte </NavLink>
               {/* <Link rel="stylesheet" to='#' className="nav__a" onClick={animateChangePage} title='/'> La découverte </Link> */}
             </li>
             <li className="nav__el">
-              <NavLink to="#" className={({ isActive, isPending }) => isPending ? "nav__a" : isActive ? "nav__a " : "nav__a"} > Les styles </NavLink>
+              <NavLink to="#" className={({ isActive, isPending }) => isPending ? "nav__a" : isActive ? "nav__a " : "nav__a"} title='les-styles' onClick={animateChangePage} > Les styles </NavLink>
               {/* <Link rel="stylesheet" href="#" className="nav__a" onClick={animateChangePage} title='#'> Les Styles </Link> */}
             </li>
             <li className="nav__el" onClick={loadDataMapAdventure}>
-              <NavLink to="/ton-aventure" className={({ isActive, isPending }) => isPending ? "nav__a" : isActive ? "nav__a nav__a--active" : "nav__a"} > Mon aventure  </NavLink>
+              <NavLink to="#" className={({ isActive, isPending }) => isPending ? "nav__a" : isActive ? "nav__a nav__a--active" : "nav__a"} title='/ton-aventure'  onClick={animateChangePage} > Mon aventure  </NavLink>
               {/* <Link rel="stylesheet" to="#" className="nav__a" onClick={animateChangePage} title='/ton-aventure'> Mon aventure </Link> */}
             </li>
           </ul>
@@ -125,6 +130,17 @@ function NavBar() {
           </p>
         </div>
       </div>
+
+      {changePage &&createPortal(
+        <>
+        <motion.div
+        initial={{x:'-100vw'}}
+        animate={{x:'100vw'}}
+        className="">
+        
+        </motion.div>
+        </>
+      )}
 
       {showMusic && createPortal(
         <>

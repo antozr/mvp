@@ -18,6 +18,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path='/' element={<HomePage />} />
+        <Route path='/les-styles' element={<NordicPage/>} />
         <Route path='/oldschool' element={<OldSchoolUS />} />
         <Route path='/japon' element={<JapanPage />} />
         <Route path='/nordic' element={<NordicPage />} />

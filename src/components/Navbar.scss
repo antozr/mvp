@@ -233,10 +233,16 @@
         top: 0;
         bottom: auto;
         background-color: #cabca110;
+        //height: 80px;
+
+        // &>nav{
+        //     height: 100%;
+
+        // }
 
         &--mobile{
             //background-color: #e2cc9f;
-            background-image: none;
+            background-image: url(../assets/img/fondPapierBig.jpg);
             align-items: flex-end;
         }
         &__list {

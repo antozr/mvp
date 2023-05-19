@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import InterSectionBox from '../components/InterSectionBox'
 import backInterOld from '../assets/img/svg/oldSchool/paternOldSchool.svg';
+import BoutonNormal from '../components/BoutonComp';
 
 
 function Page404() {
@@ -18,8 +19,7 @@ function Page404() {
                 <h2 className="sect__title sect__title--2">
                     Retourner en lieu sûr.
                 </h2>
-
-                <Link to='/' className='sect__txt sect__txt--italic' >Retour à la carte </Link>
+                <BoutonNormal linkBtn={"/"} nameBtn={"Retour à la carte "} ClassColor={"sect__btn sect__btn--yellow"}/>
             </section>
             <InterSectionBox  backImg={{ backgroundImage: `url(${backInterOld})` }}/>
         </>
