@@ -20,6 +20,8 @@ import Ryu02 from "../assets/img/japan/dragon02.jpg";
 import Koi02 from "../assets/img/japan/koi2.jpg";
 import Vierge2 from "../assets/img/russie/vierge2.jpg";
 import Epaullette2 from "../assets/img/russie/epaullette2.jpg";
+import Prisonnier2 from '../assets/img/russie/prisonnier3.jpg';
+import Etoile1 from "../assets/img/russie/etoile2.jpg";
 //
 import TextColDroite from '../components/TextColDroite.js';
 import BoutonComp from '../components/BoutonComp.js';
@@ -35,9 +37,9 @@ function TonAventure() {
   }
 
   const PosCardImg1 = useSpring({ x: 100, y: 0 });
-  const PosCardImg2 = useSpring({ x: 20, y: 60 });
-  const PosCardImg3 = useSpring({ x: 60, y: -30 });
-  const PosCardImg4 = useSpring({ x: -20, y: 20 });
+  const PosCardImg2 = useSpring({ x: -60, y: -40 });
+  const PosCardImg3 = useSpring({ x: -507, y: -280 });
+  const PosCardImg4 = useSpring({ x: -550, y: -220 });
 
   const bindCardImg1 = useDrag((params) => {
     PosCardImg1.x.set(params.offset[0])
@@ -59,11 +61,12 @@ function TonAventure() {
 
   const [linkActive, setlinkActive] = useState("");
   const [dataImgActive, setDataImgActive] = useState([]);
-  const [dataBoxInfo, setDataBoxInfo] = useState([])
+  const [dataBoxInfo, setDataBoxInfo] = useState([]);
+  const [mapLink, setMapLink] = useState([]);
   // console.log("je suis chevre");
   // console.log(ViewStateVisited);
   const arrayListImgLand = [
-    { "US": { "Img01": Hirondelle, "Img02": Pinup, "Img03":Pinup2, "Img04":Ancre1 } },
+    { "US": { "Img01": Hirondelle, "Img02": Pinup, "Img03": Pinup2, "Img04": Ancre1 } },
     { "Japon": { "Img01": Jigoku1, "Img02": Ryu02 } },
     { "Russie": { "Img01": Vierge2, "Img02": Epaullette2 } }
   ];
@@ -72,50 +75,117 @@ function TonAventure() {
   ViewStateVisited();
 
   const tabDataNameUse = loadDataMapAdventure();
+  console.table(tabDataNameUse)
 
   /// tri des données pour affichage 
   let arrayListMapLink = [CarteUS, CarteJapon, CarteNordic, CarteEu, CarteRussie, CarteNordic];
-  let imgBox = Hirondelle;
 
-  if (tabDataNameUse[0]) {
-    var linkMap = arrayListMapLink[0]
-    imgBox = arrayListImgLand[0].US.Img02
-  }
 
-  // const [dataNameCountry, setDataNameCountry] = useState([]);
 
-  function changeDataLink(e){
+
+  function changeDataLink(e) {
     setlinkActive(e.target.title);
-    console.log(linkActive);
-    changeDataInfoBox(e.target.title)
-    console.log(dataBoxInfo);
+   
+    setTimeout(()=>{
+      changeDataInfoBox(e.target.title)
+    }, 800)
+    
+    let allLink = document.querySelectorAll('.adventure__link');
+    allLink.forEach((el) => {
+      el.classList.remove("adventure__link--actif")
+    });
+    console.log(e.target);
+    e.target.classList.add("adventure__link--actif");
+
+    document.querySelector("#boxInfoGauche").classList.add("adventure__imgBox--animClose");
+    document.querySelector("#boxInfoGauche").addEventListener('animationend', (e) => {
+      e.target.classList.remove("adventure__imgBox--animClose");
+    })
   }
 
-  function changeDataInfoBox(linkActive){
-    if(linkActive === "Old school"){
+  function changeDataInfoBox(linkActive) {
+    if (linkActive === "Old school") {
       setDataBoxInfo(
-        [dataDiscover[0].name,dataDiscover[0].description,dataDiscover[0].land,dataDiscover[0].link]
+        [dataDiscover[0].name, dataDiscover[0].description, dataDiscover[0].land, dataDiscover[0].link]
       );
       setDataImgActive(
-        [ Hirondelle,  Pinup, Pinup2, Ancre1, "Hirondelle", "Pin-up","Pin-up", "Bateau & ancre"]
+        [Hirondelle, Pinup, Pinup2, Ancre1, "Hirondelle", "Pin-up", "Pin-up", "Bateau & ancre"]
+      )
+      setMapLink(
+        arrayListMapLink[0]
       )
 
-    }else if(linkActive === "Japon"){
+    } else if (linkActive === "Japon") {
       setDataBoxInfo(
-        [dataDiscover[1].name,dataDiscover[1].description,dataDiscover[1].land,dataDiscover[1].link]
+        [dataDiscover[1].name, dataDiscover[1].description, dataDiscover[1].land, dataDiscover[1].link]
       );
       setDataImgActive(
-        [Ryu02,Jigoku1, Koi02, Ryu01, "Dragon", "Jigoku", "Koi", "Ryu"]
+        [Ryu02, Jigoku1, Koi02, Ryu01, "Dragon", "Jigoku", "Koi", "Ryu"]
+      )
+      setMapLink(
+        arrayListMapLink[1]
       )
 
-    }else{
+    } else if (linkActive === "Russie & prisons ") {
+      setDataBoxInfo(
+        [dataDiscover[2].name, dataDiscover[2].description, dataDiscover[2].land, dataDiscover[2].link]
+      );
+      setDataImgActive(
+        [Vierge2, Epaullette2, Prisonnier2, Etoile1, "Vierge a l'enfant", "Epaulette", "Prisonnier", "Etoile 8 branches"]
+      )
+      setMapLink(
+        arrayListMapLink[4]
+      )
+    }
+    else {
       setDataBoxInfo(
         ["Contenu non trouvable"]
       )
     }
   }
 
-  useEffect(()=>{
+  useEffect(() => {
+
+    if (tabDataNameUse.length !== 0) {
+      if (tabDataNameUse[0] === "Old school") {
+        setDataBoxInfo(
+          [dataDiscover[0].name, dataDiscover[0].description, dataDiscover[0].land, dataDiscover[0].link]
+        );
+        setDataImgActive(
+          [Hirondelle, Pinup, Pinup2, Ancre1, "Hirondelle", "Pin-up", "Pin-up", "Bateau & ancre"]
+        )
+
+        setMapLink(
+          arrayListMapLink[0]
+        )
+
+      } else if (tabDataNameUse[0] === "Japon") {
+        setDataBoxInfo(
+          [dataDiscover[1].name, dataDiscover[1].description, dataDiscover[1].land, dataDiscover[1].link]
+        );
+        setDataImgActive(
+          [Ryu02, Jigoku1, Koi02, Ryu01, "Dragon", "Jigoku", "Koi", "Ryu"]
+        )
+        setMapLink(
+          arrayListMapLink[2]
+        )
+      } else if (tabDataNameUse[0] === "Russie & prisons ") {
+        setDataBoxInfo(
+          [dataDiscover[2].name, dataDiscover[2].description, dataDiscover[2].land, dataDiscover[2].link]
+        );
+        setDataImgActive(
+          [Vierge2, Epaullette2, Prisonnier2, Etoile1, "Vierge a l'enfant", "Epaulette", "Prisonnier", "Etoile 8 branches"]
+        )
+        setMapLink(
+          arrayListMapLink[4]
+        )
+      }
+      else {
+        setDataBoxInfo(
+          ["Contenu non trouvable"]
+        )
+      }
+    }
 
     console.log(dataBoxInfo);
     // if(linkActive === "Old school"){
@@ -128,7 +198,7 @@ function TonAventure() {
 
     // }
 
-  },[])
+  }, [])
 
 
 
@@ -165,10 +235,10 @@ function TonAventure() {
       {/* <div className="sect__interColor sect--heigth100">
 
       </div> */}
-      <InterSectionBox />
+      <InterSectionBox WhitThext={true} textTitle={"Souviens-toi du voyage"} />
       <section className="sect--heigth100 adventure--client " id='hollidays'>
 
-        <div className="adventure__imgBox adventure__imgBox--small">
+        <div className="adventure__imgBox adventure__imgBox--small" id='boxInfoGauche'>
 
           {tabDataNameUse.length === 0 ? <>
             <div className="adventure__colBox">
@@ -186,7 +256,7 @@ function TonAventure() {
               <p className="sect__txt">
                 Visite {dataBoxInfo[2]}
               </p>
-              <img src={linkMap} alt="Carte de pays ou d'une régions du monde. " className="adventure__img" />
+              <img src={mapLink} alt="Carte de pays ou d'une régions du monde. " className="adventure__img" />
             </Link>
           </>}
         </div>

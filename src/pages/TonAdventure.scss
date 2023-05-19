@@ -27,6 +27,10 @@
             padding: 2vh 2vw;
             border: 2px solid #1d1d1d;
         }
+
+        &--animClose{
+            animation:  animCloseBoxDroite 2s both;
+        }
        overflow: hidden;
 
     }
@@ -93,6 +97,7 @@
         color: #FFF5E2;
         padding: 6px 12px;
         transition: 0.3s;
+        cursor: pointer;
 
         &:hover {
             color: #F9B949;
@@ -113,7 +118,7 @@
         margin: 38px 0 0 0;
         overflow: hidden;
         position: relative;
-        border: 2PX solid RED;
+       
     }
     &__colBox{
         width: 100%;
@@ -252,6 +257,14 @@
         &>p{
             margin: 0;
         }
+    }
+    &__listLien {
+        height: 100px;
+    
+        position: sticky;
+        top: 6.5vh;
+        //border: 2px solid red;
+        padding: 10px 0 0 30vw;
     }
     }
 }
