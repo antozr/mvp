@@ -49,7 +49,7 @@ function HomePage() {
               </h2>
               <p className="sect__txt">
 
-Bienvenus dans cet univers, qui est de plus en plus visible de nos jours mais qui restes, pour certains assez flou sur le fond. Car l’histoire derrière certains courants, mouvement, style sont des histoires à part entières et celui qui connaît l’histoire verra ces œuvres d’un autre regard que l’Inculte.              </p>
+              Bienvenu dans cet univers, qui est de plus en plus visible de nos jours, mais qui reste, pour certain assez flou sur le fond. Car l’histoire derrière certains courants, mouvements, styles sont des histoires à part entière et celui qui connaît l’histoire verra ses œuvres d’un autre regard que l’Inculte.           </p>
               <p className="sect__txt sect__txt--ecart sect__txt--italic sect__txt--thin">
                 Alors je vous invite à voyager dans ses différents univers pour en apprendre plus sur les codes et les bases de ces styles venant des 4 coins du monde.
               </p>
