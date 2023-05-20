@@ -1,5 +1,5 @@
 import "./App.scss";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import NavBar from "./components/NavBar";
 import OldSchoolUS from "./pages/OldSchoolUS";
@@ -7,7 +7,7 @@ import NordicPage from "./pages/NordicPage";
 import TonAventure from "./pages/TonAventure";
 import JapanPage from "./pages/JapanPage";
 import RussiePage from "./pages/Russie";
-import ImgOpenbig from "./components/ImgOpenbig";
+//import ImgOpenbig from "./components/ImgOpenbig";
 import Page404 from "./pages/Page404";
 
 function App() {

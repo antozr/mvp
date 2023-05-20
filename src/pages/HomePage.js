@@ -16,7 +16,9 @@ function HomePage() {
   if (window.location.pathname !== '/japon') {
     document.querySelector('body').classList.remove('App--hidden')
   }
-  initStatDataView();
+  //initStatDataView();
+
+  
 
   const [sizeWindow, setSizeWindow] = useState(window.innerWidth)
   React.useEffect(() => {
