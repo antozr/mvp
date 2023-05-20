@@ -110,12 +110,30 @@
     }
 
     30%{
-        transform: translateX(-35vw);
+        transform: translateX(-100vw);
     }
     60%{
-        transform: translateX(-35vw);
+        transform: translateX(-100vw);
     }
     100%{
         transform: translateX(0vw);
+    }
+}
+
+@media(min-width:900px){
+    @keyframes animCloseBoxDroite{
+        0%{
+            transform: translateX(0);
+        }
+    
+        30%{
+            transform: translateX(-35vw);
+        }
+        60%{
+            transform: translateX(-35vw);
+        }
+        100%{
+            transform: translateX(0vw);
+        }
     }
 }

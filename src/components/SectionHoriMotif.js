@@ -112,7 +112,7 @@ function SectionMotifHori({ Img01, Img012, Img02, Img021, Img03, Img032, title01
 
                 </div>
                 <div className="hori__box hori__box--changeMap hori__box--black sect__nameBigBox--fondImg " id='Motif04'>
-                    <Link to='/#mapWorld' onClick={changeDataLand()} >
+                    <Link to='/#mapWorld' onClick={ChangeStateDataVisited} >
                         <h2 className='sect__title  sect__title--italic sect__title--white sect__title--link' onClick={animateChangePage}>
                             Part voir d'autre motif.
                         </h2>

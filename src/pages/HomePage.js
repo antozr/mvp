@@ -61,9 +61,9 @@ function HomePage() {
 
 
         {sizeWindow <= 900 ? <ListMapMobile /> : <MapBox />}
-
+        <Footer />
       </div>
-      <Footer />
+      
     </>
   )
 }
