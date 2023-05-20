@@ -10,7 +10,7 @@
     }
     &--heigth100 {
         //height: 100vh;
-        height: 100vh;
+        height: 450vh;
         width: 100vw;
 
        
@@ -269,12 +269,12 @@
         // position: sticky;
         //top: 0;
 
-        &--rotate{
-            width: 102vh;
-            min-height: 100vw;
-            height: 100vw;
-            transform: rotate(-90deg) translateX(-100vh);
-        }
+        // &--rotate{
+        //     width: 102vh;
+        //     min-height: 100vw;
+        //     height: 100vw;
+        //     transform: rotate(-90deg) translateX(-100vh);
+        // }
 
         // background-color: red;
     }
@@ -335,7 +335,7 @@
 
     &__illu {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: flex-start;
         //height: 70vh;
         height: 100%;
@@ -343,6 +343,7 @@
         margin: 10vh 0;
         position: relative;
     }
+    
     
 }
 
@@ -374,10 +375,23 @@
             }
 
         }
+        &--heigth100 {
+            //height: 100vh;
+            height: 100vh;
+           
+    
+           
+        }
 
         //
         &__artiste{
             padding: 0;
+            &--rotate{
+                width: 102vh;
+                min-height: 100vw;
+                height: 100vw;
+                transform: rotate(-90deg) translateX(-100vh);
+            }
         }
         &__interColor {
             height: 50vh;
@@ -460,7 +474,7 @@
     
         }
         &__illu {
-           
+           flex-direction: row;
             height: 100vh;
             margin: 4vh 0;
             align-items: flex-start;
@@ -490,6 +504,7 @@
 
            
         }
+        
 
         //
     }
