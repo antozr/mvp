@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Hirondelle from '../assets/img/svg/hirondelle.svg';
 import Ancre from '../assets/img/svg/oldSchool/ancre.svg';
 import RyuHand from '../assets/img/japan/ryu01.svg';
-import KoiFish from '../assets/img/japan/carpeNB.svg';
+import KoiFish from '../assets/img/japan/carpeColor.svg';
 import EtoileRusse from '../assets/img/svg/russie/EtoileRusse.svg';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';

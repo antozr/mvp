@@ -27,9 +27,7 @@ function PresentationMotif({ Img01, Img02, title1, txt1, style2, nameIllu, OneIm
 
             </>}
 
-            {/* <div className="illu__boxImg">
-                <img src={Img01} alt="Une illustration " className="illu__img " style={style2} id={nameIllu}/>
-            </div> */}
+   
 
 
 

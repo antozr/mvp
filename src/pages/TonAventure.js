@@ -22,6 +22,19 @@ import Vierge2 from "../assets/img/russie/vierge2.jpg";
 import Epaullette2 from "../assets/img/russie/epaullette2.jpg";
 import Prisonnier2 from '../assets/img/russie/prisonnier3.jpg';
 import Etoile1 from "../assets/img/russie/etoile2.jpg";
+/// motif @2x
+import Hirondelle2x from '../assets/img/oldSchool/hirondelletat@2x.jpg';
+import Pinup2x from '../assets/img/oldSchool/pinup1@2x.jpg';
+import Pinup22x from '../assets/img/oldSchool/pinup2@2x.jpg';
+import Ancre12x from '../assets/img/oldSchool/marinBat@2x.jpg';
+import Jigoku12x from '../assets/img/japan/jigoku1@2x.jpg';
+import Ryu012x from "../assets/img/japan/dragon2@2x.jpg";
+import Ryu022x from "../assets/img/japan/dragon02@2x.jpg";
+import Koi022x from "../assets/img/japan/koi2@2x.jpg";
+import Vierge22x from "../assets/img/russie/vierge2@2x.jpg";
+import Epaullette22x from "../assets/img/russie/epaullette2@2x.jpg";
+import Prisonnier22x from '../assets/img/russie/prisonnier3@2x.jpg';
+import Etoile12x from "../assets/img/russie/etoile2@2x.jpg";
 //
 import TextColDroite from '../components/TextColDroite.js';
 import BoutonComp from '../components/BoutonComp.js';
@@ -61,10 +74,10 @@ function TonAventure() {
 
   const [linkActive, setlinkActive] = useState("");
   const [dataImgActive, setDataImgActive] = useState([]);
+  const [dataImgActive2x, setDataImgActive2x] = useState([])
   const [dataBoxInfo, setDataBoxInfo] = useState([]);
   const [mapLink, setMapLink] = useState([]);
-  // console.log("je suis chevre");
-  // console.log(ViewStateVisited);
+  
   const arrayListImgLand = [
     { "US": { "Img01": Hirondelle, "Img02": Pinup, "Img03": Pinup2, "Img04": Ancre1 } },
     { "Japon": { "Img01": Jigoku1, "Img02": Ryu02 } },
@@ -111,6 +124,9 @@ function TonAventure() {
       setDataImgActive(
         [Hirondelle, Pinup, Pinup2, Ancre1, "Hirondelle", "Pin-up", "Pin-up", "Bateau & ancre"]
       )
+      setDataImgActive2x(
+        [Hirondelle2x,Pinup2x, Pinup22x, Ancre12x]
+      )
       setMapLink(
         arrayListMapLink[0]
       )
@@ -122,6 +138,9 @@ function TonAventure() {
       setDataImgActive(
         [Ryu02, Jigoku1, Koi02, Ryu01, "Dragon", "Jigoku", "Koi", "Ryu"]
       )
+      setDataImgActive2x(
+        [Ryu022x,Jigoku12x, Koi022x, Ryu012x]
+      )
       setMapLink(
         arrayListMapLink[1]
       )
@@ -132,6 +151,9 @@ function TonAventure() {
       );
       setDataImgActive(
         [Vierge2, Epaullette2, Prisonnier2, Etoile1, "Vierge a l'enfant", "Epaulette", "Prisonnier", "Etoile 8 branches"]
+      )
+      setDataImgActive2x(
+        [Vierge22x,Epaullette22x, Prisonnier22x, Etoile12x]
       )
       setMapLink(
         arrayListMapLink[4]
@@ -188,15 +210,7 @@ function TonAventure() {
     }
 
     console.log(dataBoxInfo);
-    // if(linkActive === "Old school"){
-    //   setDataBoxInfo(
-    //     dataBoxInfo.title = dataDiscover[0].name,
-    //     dataBoxInfo.textIntro = dataDiscover[0].description,
-    //     dataBoxInfo.nameLand = dataDiscover[0].land,
-    //     dataBoxInfo.dataLink = dataDiscover[0].link
-    //   )
 
-    // }
 
   }, [])
 
@@ -232,10 +246,8 @@ function TonAventure() {
         </div>
 
       </section>
-      {/* <div className="sect__interColor sect--heigth100">
 
-      </div> */}
-      <InterSectionBox WhitThext={true} textTitle={"Souviens-toi du voyage"} />
+      <InterSectionBox WhitThext={true} textTitle={<>Souviens-toi&nbsp; du&nbsp;voyage</>} />
       <section className="sect--heigth100 adventure--client " id='hollidays'>
 
         <div className="adventure__imgBox adventure__imgBox--small" id='boxInfoGauche'>
@@ -273,28 +285,28 @@ function TonAventure() {
                 <p className="sect__txt sect__title--druzokh sect__txt--big sect__txt--jaune" style={{ fontSize: "2vw" }}>
                   {dataImgActive[4]}
                 </p>
-                <img src={dataImgActive[0]} alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel." className="adventure__imgSlider" />
+                <img src={dataImgActive[0]}   alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel." className="adventure__imgSlider" />
 
               </animated.div>
               <animated.div {...bindCardImg2()} style={{ x: PosCardImg2.x, y: PosCardImg2.y }} className="adventure__boxImg">
                 <p className="sect__txt  sect__txt--big sect__txt--jaune" style={{ fontSize: "2vw" }}>
                   {dataImgActive[5]}
                 </p>
-                <img src={dataImgActive[1]} alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel." className="adventure__imgSlider" />
+                <img src={dataImgActive[1]}  alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel." className="adventure__imgSlider" />
 
               </animated.div>
               <animated.div {...bindCardImg3()} style={{ x: PosCardImg3.x, y: PosCardImg3.y }} className="adventure__boxImg">
                 <p className="sect__txt  sect__txt--big sect__txt--jaune" style={{ fontSize: "2vw" }}>
                   {dataImgActive[6]}
                 </p>
-                <img src={dataImgActive[2]} alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel." className="adventure__imgSlider" />
+                <img src={dataImgActive[2]}  alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel." className="adventure__imgSlider" />
 
               </animated.div>
               <animated.div {...bindCardImg4()} style={{ x: PosCardImg4.x, y: PosCardImg4.y }} className="adventure__boxImg">
                 <p className="sect__txt  sect__txt--big sect__txt--jaune" style={{ fontSize: "2vw" }}>
                   {dataImgActive[7]}
                 </p>
-                <img src={dataImgActive[3]} alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel." className="adventure__imgSlider" />
+                <img src={dataImgActive[3]}   alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel." className="adventure__imgSlider" />
 
               </animated.div>
             </>}

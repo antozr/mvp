@@ -2,13 +2,14 @@ import React from 'react'
 import './ListMapMobile.scss';
 
 import Hirondelle from '../assets/img/svg/hirondelle.svg';
-import Dragon from '../assets/img/japan/ryu01.svg';
+import Dragon from '../assets/img/japan/carpeColor.svg';
+import Etoile from "../assets/img/svg/russie/kremlin.svg";
 import { Link } from 'react-router-dom';
 function ListMapMobile() {
 
     let arrayAllName = ["Old-school Américain", "Japonais, irezumi", "Prison russe & URSS", "Nordique Tradi", 'Traditionnel européen', "Traditionnel des iles pacifiques"];
     let arrayLinkName = ["/oldschool", "/japon", "/russie", "nordic", "/europe", "pacifique"];
-    let arraySvgLand = [Hirondelle, Dragon, Hirondelle, Hirondelle, Hirondelle, Hirondelle];
+    let arraySvgLand = [Hirondelle, Dragon, Etoile, Hirondelle, Hirondelle, Hirondelle];
 
 
     return (
