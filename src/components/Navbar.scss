@@ -80,6 +80,9 @@
         font-size: 21px;
         font-family: "JosefinVariable";
         color: #FDF2DE;
+        &>span{
+            font-size: inherit;
+        }
 
     }
 

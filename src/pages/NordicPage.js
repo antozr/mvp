@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import BoutonNormal from '../components/BoutonComp'
 import InterSectionBox from '../components/InterSectionBox'
 import backInterOld from '../assets/img/svg/oldSchool/paternOldSchool.svg';
+import Footer from '../components/Footer';
 function NordicPage() {
     return (
         <>
@@ -12,7 +13,8 @@ function NordicPage() {
 
                 <BoutonNormal linkBtn={"/"} nameBtn={"Retour à la carte "} ClassColor={"sect__btn sect__btn--yellow"} />
             </section>
-            <InterSectionBox backImg={{ backgroundImage: `url(${backInterOld})` }} />
+            <InterSectionBox backImg={{ backgroundImage: `url(${backInterOld})`, height:"20vh" }} />
+            <Footer />
         </>
     )
 }

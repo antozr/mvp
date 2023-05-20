@@ -8,6 +8,7 @@ import MapBox from '../components/MapBox'
 import { initStatDataView } from '../logic/_status-map.js';
 import ListMapMobile from '../components/ListMapMobile'
 import InterSectionBox from '../components/InterSectionBox'
+import Footer from '../components/Footer'
 
 
 function HomePage() {
@@ -57,6 +58,7 @@ Bienvenus dans cet univers, qui est de plus en plus visible de nos jours mais qu
         {sizeWindow <= 900 ? <ListMapMobile /> : <MapBox />}
 
       </div>
+      <Footer />
     </>
   )
 }

@@ -22,19 +22,7 @@ import Vierge2 from "../assets/img/russie/vierge2.jpg";
 import Epaullette2 from "../assets/img/russie/epaullette2.jpg";
 import Prisonnier2 from '../assets/img/russie/prisonnier3.jpg';
 import Etoile1 from "../assets/img/russie/etoile2.jpg";
-/// motif @2x
-import Hirondelle2x from '../assets/img/oldSchool/hirondelletat@2x.jpg';
-import Pinup2x from '../assets/img/oldSchool/pinup1@2x.jpg';
-import Pinup22x from '../assets/img/oldSchool/pinup2@2x.jpg';
-import Ancre12x from '../assets/img/oldSchool/marinBat@2x.jpg';
-import Jigoku12x from '../assets/img/japan/jigoku1@2x.jpg';
-import Ryu012x from "../assets/img/japan/dragon2@2x.jpg";
-import Ryu022x from "../assets/img/japan/dragon02@2x.jpg";
-import Koi022x from "../assets/img/japan/koi2@2x.jpg";
-import Vierge22x from "../assets/img/russie/vierge2@2x.jpg";
-import Epaullette22x from "../assets/img/russie/epaullette2@2x.jpg";
-import Prisonnier22x from '../assets/img/russie/prisonnier3@2x.jpg';
-import Etoile12x from "../assets/img/russie/etoile2@2x.jpg";
+// 
 //
 import TextColDroite from '../components/TextColDroite.js';
 import BoutonComp from '../components/BoutonComp.js';
@@ -43,6 +31,7 @@ import InterSectionBox from '../components/InterSectionBox.js';
 import SerpentSvg from '../assets/img/svg/oldSchool/serpent.svg';
 import dataDiscover from "../assets/data/AdventureData.json";
 import BoutonNormal from '../components/BoutonComp.js';
+import Footer from '../components/Footer.js';
 
 function TonAventure() {
   if (window.location.pathname !== '/japon') {
@@ -74,7 +63,6 @@ function TonAventure() {
 
   const [linkActive, setlinkActive] = useState("");
   const [dataImgActive, setDataImgActive] = useState([]);
-  const [dataImgActive2x, setDataImgActive2x] = useState([])
   const [dataBoxInfo, setDataBoxInfo] = useState([]);
   const [mapLink, setMapLink] = useState([]);
   
@@ -124,9 +112,7 @@ function TonAventure() {
       setDataImgActive(
         [Hirondelle, Pinup, Pinup2, Ancre1, "Hirondelle", "Pin-up", "Pin-up", "Bateau & ancre"]
       )
-      setDataImgActive2x(
-        [Hirondelle2x,Pinup2x, Pinup22x, Ancre12x]
-      )
+
       setMapLink(
         arrayListMapLink[0]
       )
@@ -138,9 +124,7 @@ function TonAventure() {
       setDataImgActive(
         [Ryu02, Jigoku1, Koi02, Ryu01, "Dragon", "Jigoku", "Koi", "Ryu"]
       )
-      setDataImgActive2x(
-        [Ryu022x,Jigoku12x, Koi022x, Ryu012x]
-      )
+
       setMapLink(
         arrayListMapLink[1]
       )
@@ -152,9 +136,7 @@ function TonAventure() {
       setDataImgActive(
         [Vierge2, Epaullette2, Prisonnier2, Etoile1, "Vierge a l'enfant", "Epaulette", "Prisonnier", "Etoile 8 branches"]
       )
-      setDataImgActive2x(
-        [Vierge22x,Epaullette22x, Prisonnier22x, Etoile12x]
-      )
+
       setMapLink(
         arrayListMapLink[4]
       )
@@ -312,8 +294,9 @@ function TonAventure() {
             </>}
           </div>
         </div>
-
+        
       </section>
+      <Footer />
     </div>
   )
 }

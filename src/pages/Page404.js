@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import InterSectionBox from '../components/InterSectionBox'
 import backInterOld from '../assets/img/svg/oldSchool/paternOldSchool.svg';
 import BoutonNormal from '../components/BoutonComp';
+import Footer from '../components/Footer';
 
 
 function Page404() {
@@ -21,7 +22,8 @@ function Page404() {
                 </h2>
                 <BoutonNormal linkBtn={"/"} nameBtn={"Retour à la carte "} ClassColor={"sect__btn sect__btn--yellow"}/>
             </section>
-            <InterSectionBox  backImg={{ backgroundImage: `url(${backInterOld})` }}/>
+            <InterSectionBox  backImg={{ backgroundImage: `url(${backInterOld})`, height: "20vh" }}/>
+            <Footer />
         </>
     )
 }

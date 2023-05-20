@@ -126,12 +126,12 @@ function NavBar() {
         <button className="nav__btnMusic" onClick={openModal}>Ecoute de la musique<span className="modal__linkLogo"></span> </button>
         <div className="nav__boxLogo">
           <p className="nav__logo">
-            TattooExplore
+            <b>Tattoo</b>&nbsp;<span className="sect__title--druzokh">Explore</span>
           </p>
         </div>
       </div>
 
-      {changePage &&createPortal(
+      {/* {changePage &&createPortal(
         <>
         <motion.div
         initial={{x:'-100vw'}}
@@ -140,7 +140,7 @@ function NavBar() {
         
         </motion.div>
         </>
-      )}
+      )} */}
 
       {showMusic && createPortal(
         <>
