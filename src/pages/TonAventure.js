@@ -147,6 +147,30 @@ function TonAventure() {
       )
     }
   }
+  function animateChangePage(e) {
+    // e.target.preventDefault();
+
+    let namePath = e.target.title;
+    let blocChangePage = document.querySelector('.sect__changePage');
+    blocChangePage.classList.remove("sect__changePage--close")
+    blocChangePage.classList.remove("sect__changePage--closeNav")
+    blocChangePage.classList.add('sect__changePage--close');
+    document.querySelector('.pageChangeSet').style.visibility = "hidden";
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+
+    }, 100);
+
+    setTimeout(() => {
+      //routChange(namePath);
+      window.scrollTo(0, 0);
+      document.querySelector('.pageChangeSet').style.visibility = "visible";
+    }, 1100);
+    blocChangePage.addEventListener('animationend', (e) => {
+      e.target.classList.remove("sect__changePage--close")
+    });
+
+  }
 
   useEffect(() => {
 
@@ -238,14 +262,14 @@ function TonAventure() {
             <div className="adventure__colBox">
               <TextColDroite title1={<>Tu n'as encore rien&nbsp;visiter</>} txt1={"Choisis un pays sur la carte pour pouvoir commencer l'aventure et en apprendre plus sur un style de tatouage."} />
             </div>
-            <BoutonNormal linkBtn={"/"} nameBtn={"Vers la carte "} ClassColor={"sect__btn sect__btn--yellow"} />
+            <BoutonNormal linkBtn={"/"} nameBtn={"Vers la carte "} ClassColor={"sect__btn sect__btn--yellow"} onClick={animateChangePage}/>
 
             <img src={SerpentSvg} alt="Carte de pays ou d'une régions du monde. " className="adventure__img adventure__img--noData" />
           </> : <>
             <div className="adventure__colBox">
               <TextColDroite title1={dataBoxInfo[0]} txt1={dataBoxInfo[1]} />
             </div>
-            <Link to={dataBoxInfo[3]} className='adventure__linkBox'  >
+            <Link to={dataBoxInfo[3]} className='adventure__linkBox' onClick={animateChangePage}  >
 
               <p className="sect__txt">
                 Visite {dataBoxInfo[2]}

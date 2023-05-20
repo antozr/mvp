@@ -39,7 +39,10 @@ function HomePage() {
           <div className="sect__boxImg--big sect__boxImg">
             <div className="sect__boxTxt ">
               {/* Changer le titre  */}
-              <h2 className=" sect__title sect__title--2 sect__title--ecart">
+              <h1 className="sect__title sect__title--ecart">
+                TattooExplore
+              </h1>
+              <h2 className=" sect__title sect__title--2 sect__title--ecart" style={{fontSize: '28px'}}>
                 Découvre les<br />tatouages du<br /><i>monde</i>
               </h2>
               <p className="sect__txt">

@@ -61,7 +61,7 @@ function NavBar() {
     }, 100);
 
     setTimeout(() => {
-      routChange(namePath);
+      //routChange(namePath);
       window.scrollTo(0, 0);
       document.querySelector('.pageChangeSet').style.visibility = "visible";
     }, 1100);
@@ -99,15 +99,15 @@ function NavBar() {
         <nav className="navBox  ">
           <ul className="nav__list " ref={listLien}>
             <li className="nav__el" >
-              <NavLink to="#" className={({ isActive, isPending }) => isPending ? "nav__a" : isActive ? "nav__a nav__a--active" : "nav__a"} title='/'  onClick={animateChangePage} > La découverte </NavLink>
+              <NavLink to="/" className={({ isActive, isPending }) => isPending ? "nav__a" : isActive ? "nav__a nav__a--active" : "nav__a"} title='/'  onClick={animateChangePage} > La découverte </NavLink>
               {/* <Link rel="stylesheet" to='#' className="nav__a" onClick={animateChangePage} title='/'> La découverte </Link> */}
             </li>
             <li className="nav__el">
-              <NavLink to="#" className={({ isActive, isPending }) => isPending ? "nav__a" : isActive ? "nav__a " : "nav__a"} title='les-styles' onClick={animateChangePage} > Les styles </NavLink>
+              <NavLink to="/les-styles" className={({ isActive, isPending }) => isPending ? "nav__a" : isActive ? "nav__a " : "nav__a"} title='/les-styles' onClick={animateChangePage} > Les styles </NavLink>
               {/* <Link rel="stylesheet" href="#" className="nav__a" onClick={animateChangePage} title='#'> Les Styles </Link> */}
             </li>
             <li className="nav__el" onClick={loadDataMapAdventure}>
-              <NavLink to="#" className={({ isActive, isPending }) => isPending ? "nav__a" : isActive ? "nav__a nav__a--active" : "nav__a"} title='/ton-aventure'  onClick={animateChangePage} > Mon aventure  </NavLink>
+              <NavLink to="/ton-aventure" className={({ isActive, isPending }) => isPending ? "nav__a" : isActive ? "nav__a nav__a--active" : "nav__a"} title='/ton-aventure'  onClick={animateChangePage} > Mon aventure  </NavLink>
               {/* <Link rel="stylesheet" to="#" className="nav__a" onClick={animateChangePage} title='/ton-aventure'> Mon aventure </Link> */}
             </li>
           </ul>
