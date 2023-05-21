@@ -124,7 +124,7 @@ function NavBar() {
             </span>
           </button>
         </nav>
-        <button className="nav__btnMusic" onClick={openModal}>Ecoute de la musique<span className="modal__linkLogo"></span> </button>
+        <button className="nav__btnMusic" onClick={openModal}>{window.innerWidth >= 900 ? "Ecoute de la musique" : ""}<span className="modal__linkLogo"></span> </button>
         <div className="nav__boxLogo">
           <p className="nav__logo">
             <b>Tattoo</b>&nbsp;<span className="sect__title--druzokh">Explore</span>

@@ -29,8 +29,8 @@
       padding: 2vh 3vw;
     }
     &--smallW {
-       height: 90vh;
-      }
+      height: 90vh;
+    }
   }
 
   &__contenut {
@@ -40,12 +40,11 @@
   &__rowContainer {
     display: flex;
     //flex-direction: row;
-    //flex-direction: column;
     overflow-x: hidden;
     width: 100vw;
     height: 460vh;
     flex-direction: column;
-    // border: 3px solid red;
+    border: 3px solid red;
     overflow-y: hidden;
     //transform: rotate(90deg) translateY(-100vh);
     transform-origin: top left;
@@ -65,7 +64,6 @@
     }
 
     &--motif {
-      
     }
   }
 
@@ -119,17 +117,20 @@
 @media (min-width: 900px) {
   .hori {
     &__box {
-      width: 100vw;
-      height: 110vh;
-      flex-direction: row;
-      justify-content: center;
-      padding: 2vh 5vw;
+        width: 100vw;
+        height: 110vh;
+        flex-direction: row;
+        justify-content: center;
+        padding: 2vh 5vw;
 
-      //border: solid red 5px;
-      &--motif {
-        width: 660vw;
-        padding: 2vh 5vw 0 0;
-      }
+        //border: solid red 5px;
+        &--motif {
+            min-width:auto;
+            width: 660vw;
+            padding: 2vh 5vw 0 0;
+        }
+
+
 
       &--smallW {
         height: 110vh;
@@ -184,8 +185,8 @@
         grid-template-rows: 85vh 15vh 90vh;
       }
     }
-    &__colGaucheImg{
-        width: 60%;
+    &__colGaucheImg {
+      width: 60%;
     }
 
     &__colMedium {
@@ -214,7 +215,7 @@
       }
       &--artiste {
         transform: rotate(90deg) translateY(-100vh);
-        //flex-direction: row;
+        
       }
     }
 
