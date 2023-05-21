@@ -8,12 +8,12 @@ import Hirondelle from "../assets/img/svg/hirondelle.svg";
 gsap.registerPlugin(ScrollTrigger, Timeline);
 
 function AnimColGauche() {
-    console.log(gsap.version);
+   
     const boxRef = useRef();
     //const partNoir = useRef()
 
     useEffect(() => {
-        console.log(boxRef);
+        // console.log(boxRef);
         
         if (window.innerWidth > 900){
             // let tl = gsap.timeline({

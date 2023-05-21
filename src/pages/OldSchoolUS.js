@@ -50,8 +50,8 @@ function OldSchoolUS() {
 
 
     function windowResize() {
-      console.log('resize to : ' + window.innerHeight + 'X' + window.innerWidth);
-      console.log(window.innerWidth);
+      //console.log('resize to : ' + window.innerHeight + 'X' + window.innerWidth);
+      //console.log(window.innerWidth);
       setSizeWindow(window.innerWidth);
 
     }

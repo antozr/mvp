@@ -5,9 +5,9 @@ export function openImg(e){
 
        
 
-    console.log(e.target);
+   // console.log(e.target);
     let srcImg = e.target.src;
-    console.log(srcImg);
+    // console.log(srcImg);
 
     let boxImgFull = document.querySelector('.sect__imgOpenBig');
     //

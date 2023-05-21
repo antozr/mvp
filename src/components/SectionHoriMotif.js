@@ -53,8 +53,8 @@ function SectionMotifHori({ Img01, Img012, Img02, Img021, Img03, Img032, title01
             "/projets/tfe/suite/pacifique",
           ];
           let pathNamePage = window.location.pathname;
-          console.log(pathNamePage);
-          console.log(arrayListPathName[1]);
+          // console.log(pathNamePage);
+          // console.log(arrayListPathName[1]);
           localStorage.setItem("ViewCheckPageStart", false);
           let SecondVisiteSelect = false;
         
@@ -66,7 +66,7 @@ function SectionMotifHori({ Img01, Img012, Img02, Img021, Img03, Img032, title01
           //alert(pathNamePage)
         
           if (pathNamePage === arrayListPathName[0]) {
-            console.log("je suis bon");
+            
             localStorage.setItem("US", true);
             SecondVisiteSelect = true;
             localStorage.setItem("ViewCheckPageStart", true);

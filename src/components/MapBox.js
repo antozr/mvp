@@ -124,7 +124,7 @@ function MapBox() {
                 imgPop.style.zIndex = 4
                 document.querySelector('.sect__map').append(imgPop);
                 nbIllu++
-                console.log(nbIllu);
+                // console.log(nbIllu);
             }
 
         });

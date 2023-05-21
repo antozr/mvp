@@ -23,8 +23,8 @@ function HomePage() {
   const [sizeWindow, setSizeWindow] = useState(window.innerWidth)
   React.useEffect(() => {
     function windowResize() {
-      console.log('resize to : ' + window.innerHeight + 'X' + window.innerWidth);
-      console.log(window.innerWidth);
+      //console.log('resize to : ' + window.innerHeight + 'X' + window.innerWidth);
+      //console.log(window.innerWidth);
       setSizeWindow(window.innerWidth);
     }
     window.addEventListener('resize', windowResize);

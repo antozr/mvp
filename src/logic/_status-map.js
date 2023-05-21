@@ -1,4 +1,4 @@
-console.log("niveau des maps ");
+// console.log("niveau des maps ");
 
 let newArrayData = ["", "", "", "", "", ""];
 
@@ -12,7 +12,7 @@ export function ViewStateVisited() {
 
       nbLandVisited++;
       localStorage.setItem("numberStateVisited", nbLandVisited);
-      console.log("You have visited : " + nbLandVisited);
+      //console.log("You have visited : " + nbLandVisited);
     }
   });
 }
@@ -43,8 +43,8 @@ export function ChangeStateDataVisited() {
     "/projets/tfe/suite/pacifique",
   ];
   let pathNamePage = window.location.pathname;
-  console.log(pathNamePage);
-  console.log(arrayListPathName[1]);
+  //console.log(pathNamePage);
+  //console.log(arrayListPathName[1]);
   localStorage.setItem("ViewCheckPageStart", false);
   let SecondVisiteSelect = false;
 
@@ -89,11 +89,11 @@ export function GetItemStateTrue() {
   let EUdataLoad = localStorage.getItem("EU");
   let PussiadataLoad = localStorage.getItem("Russia");
   let MaoridataLoad = localStorage.getItem("Maori");
-  console.log(USdataLoad);
+  //console.log(USdataLoad);
 }
 
 export function loadDataMapAdventure() {
-  console.log("heu");
+  //console.log("heu");
   /// récupérer les données localStorage
   let USdataLoad = localStorage.getItem("US");
   let JapandataLoad = localStorage.getItem("Japan");
@@ -101,7 +101,7 @@ export function loadDataMapAdventure() {
   let EUdataLoad = localStorage.getItem("EU");
   let RussiadataLoad = localStorage.getItem("Russia");
   let MaoridataLoad = localStorage.getItem("Maori");
-  console.log(USdataLoad);
+  //console.log(USdataLoad);
   //// tableau donnee recuperee
   let arrayAllDataLoad = [
     USdataLoad,
@@ -111,10 +111,10 @@ export function loadDataMapAdventure() {
     RussiadataLoad,
     MaoridataLoad,
   ];
-  console.table(arrayAllDataLoad);
+  //console.table(arrayAllDataLoad);
   //// tableau contenant le retour pour les liens
   let tableVisitedand = [];
-  console.table(tableVisitedand);
+  //console.table(tableVisitedand);
   //// tableau avec les noms des lieux
   let tabLandName = [
     "Old school",
@@ -127,13 +127,13 @@ export function loadDataMapAdventure() {
   let i = 0;
 
   arrayAllDataLoad.forEach((el) => {
-    console.log(el);
+    //console.log(el);
     if (el === "true") {
       tableVisitedand.push(tabLandName[i]);
-      console.table(tableVisitedand);
+      //console.table(tableVisitedand);
     }
     i++;
   });
-  console.table(tableVisitedand);
+  //console.table(tableVisitedand);
   return tableVisitedand;
 }
