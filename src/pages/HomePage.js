@@ -9,6 +9,10 @@ import { initStatDataView } from '../logic/_status-map.js';
 import ListMapMobile from '../components/ListMapMobile'
 import InterSectionBox from '../components/InterSectionBox'
 import Footer from '../components/Footer'
+import TextColDroite from '../components/TextColDroite'
+import { Link } from 'react-router-dom'
+import AnimColGauche from '../components/AnimColGauche'
+import BoxImageAnim from '../components/BoxImageAnim'
 
 
 function HomePage() {
@@ -18,6 +22,13 @@ function HomePage() {
   }
   //initStatDataView();
 
+  let titleArray = [<>Comment&nbsp;visiter le monde&nbsp;? </>, <>Un&nbsp;plus musical</>];
+  let txtArray = [
+    <>Rends-toi sur la carte du monde pour choisir un pays que tu aimerais visiter, que tu connais l’histoire ou bien que tu veux en savoir un peu plus sur lui, je te propose de le visiter et d’en découvrir la culture du pays en lien avec le tatouage.  De la naissance, l’évolution ainsi que les répercussions sur la vision du tatouage. Viens découvrir cela en étayant ta curiosité, pour avoir une vision des motifs emblématiques. </>,
+    <><br/><br/><span className="sect__txt--thin sect__txt--italic">Tu pourras aussi suivre le suivi de tes explorations dans la page, “ <Link to='/ton-exploration' className='sect__txt' style={{cursor:'pointer', color: 'inherit'}}><b>Ton explorations</b></Link> “,  et venir découvrir si tu as découvert tous les motifs d’une région. </span> </>,
+    <>Agrémentez votre expérience par une touche musicale, en ayant des musiques qui sont en lien avec les styles de tatouage que vous pourrez rencontrer. Si vous le souhaitez, alors explorez ceci en musique.</>,
+    <></>
+  ]
   
 
   const [sizeWindow, setSizeWindow] = useState(window.innerWidth)
@@ -56,6 +67,11 @@ function HomePage() {
               <BoutonNormal nameBtn={"Voir la carte"} linkBtn={'#mapWorld'} ClassColor={"sect__btn"} linkHref={true}/>
             </div>
           </div>
+        </div>
+        <div className="homepage__boxContent">
+          <BoxImageAnim urlImg={ImageHome} nameImg={'Prensentation-carte'}  />
+
+          <TextColDroite title1={titleArray[0]}txt1={txtArray[0]} txt3={txtArray[1]} />
         </div>
         <InterSectionBox />
 
