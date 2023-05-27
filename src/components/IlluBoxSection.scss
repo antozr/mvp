@@ -1,0 +1,39 @@
+
+
+.illu{
+
+    &__boxImg{
+        width: 100%;
+        height: 100%;
+
+    }
+    &__droite{
+        width: 100%;
+        padding: 0 0 0 2vw;
+    }
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media(min-width:900px){
+    .illu{
+
+        &__boxImg{
+            width: 70%;
+            height: 100%;
+    
+        }
+        &__droite{
+            width: 30%;
+            padding: 0 0 0 2vw;
+        }
+        &__img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
