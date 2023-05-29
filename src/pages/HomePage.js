@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./HomePage.scss";
 import { motion } from "framer-motion";
 /// les images
-import ImageHome from "../assets/img/homeImg3.jpg";
+import MusicHome from "../assets/img/oldSchool/musicHome.jpg";
+import BateauHome from "../assets/img/oldSchool/bateauHome.jpg";
 import ImageHome2 from "../assets/img/homeImg.jpg";
 import BoutonNormal from "../components/BoutonComp";
 import MapBox from "../components/MapBox";
@@ -36,15 +37,15 @@ function HomePage() {
     <>
       <br />
       <br />
-      <span className="sect__txt--thin sect__txt--italic">
-        Tu pourras aussi suivre le suivi de tes explorations dans la page, “{" "}
-        <Link
+      <span className="sect__txt--thin sect__txt--italic" style={{display: 'inline-block'}}>
+        Tu pourras aussi suivre le suivi de tes explorations dans la page, “
+        <span><Link
           to="/ton-exploration"
-          className="sect__txt"
+          className=""
           style={{ cursor: "pointer", color: "inherit" }}
         >
           <b>Ton explorations</b>
-        </Link>{" "}
+        </Link></span>
         “, et venir découvrir si tu as découvert tous les motifs d’une région.{" "}
       </span>{" "}
     </>,
@@ -107,8 +108,8 @@ function HomePage() {
         </div>
         <div className="homepage__boxContent">
           <motion.img
-            src={ImageHome2}
-            initial={{ x: -100, opacity: 0.6 }}
+            src={BateauHome}
+            initial={{ x: -10, opacity: 0.4 }}
             whileInView={{ x: 0, opacity: 1 }}
             className="homepage__imgBox"
           ></motion.img>
@@ -122,18 +123,21 @@ function HomePage() {
         </div>
         <div className="homepage__boxContent homepage__boxContent--reverse">
           <motion.img
-            src={ImageHome2}
+            src={MusicHome}
             initial={{ y: -100, opacity: 0.6 }}
             whileInView={{ y: 0, opacity: 1 }}
             className="homepage__imgBox"
           ></motion.img>
           <div className="homepage__colTxt">
-            <TextColDroite
-              title1={titleArray[1]}
-              txt1={txtArray[2]}
-              
+            <TextColDroite title1={titleArray[1]} txt1={txtArray[2]} />
+            <BoutonNormal
+              linkHref={true}
+              nameBtn={"Tous en musique"}
+              linkBtn={
+                "https://open.spotify.com/playlist/5bdQoZomjCWxHB5wbNYM4w?si=dd8a791bcaaf43af"
+              }
+              ClassColor={"sect__btn sect__btn--yellow sect__btn--small"}
             />
-            <BoutonNormal linkHref={true} nameBtn={'Tous en musique'} linkBtn={'https://open.spotify.com/playlist/5bdQoZomjCWxHB5wbNYM4w?si=dd8a791bcaaf43af'} ClassColor={"sect__btn sect__btn--yellow sect__btn--small"}/>
           </div>
         </div>
         <InterSectionBox />
