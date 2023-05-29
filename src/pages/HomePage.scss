@@ -28,6 +28,33 @@
 
 
     }
+
+    &__boxContent{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100vw;
+        height: 70vh;
+        padding: 6vh 3vw;
+        column-gap: 3vw;
+        align-items: center;
+
+        &--reverse{
+            flex-direction: row-reverse;
+        }
+        
+    }&__imgBox{
+        width: 60%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+    &__colTxt{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
