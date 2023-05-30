@@ -37,15 +37,20 @@ function HomePage() {
     <>
       <br />
       <br />
-      <span className="sect__txt--thin sect__txt--italic" style={{display: 'inline-block'}}>
+      <span
+        className="sect__txt--thin sect__txt--italic"
+        style={{ display: "inline-block" }}
+      >
         Tu pourras aussi suivre le suivi de tes explorations dans la page, “
-        <span><Link
-          to="/ton-exploration"
-          className=""
-          style={{ cursor: "pointer", color: "inherit" }}
-        >
-          <b>Ton explorations</b>
-        </Link></span>
+        <span>
+          <Link
+            to="/ton-exploration"
+            className=""
+            style={{ cursor: "pointer", color: "inherit" }}
+          >
+            <b>Ton explorations</b>
+          </Link>
+        </span>
         “, et venir découvrir si tu as découvert tous les motifs d’une région.{" "}
       </span>{" "}
     </>,
@@ -106,30 +111,57 @@ function HomePage() {
             </div>
           </div>
         </div>
+        {/* info landing */}
         <div className="homepage__boxContent">
+          <div className="homepage__boxTxt">
+            <h2 className="sect__title sect__title--jaune sect__title--druzokh">
+              {titleArray[0]}
+            </h2>
+            <div className="homepage__colTxt">
+              <TextColDroite
+                // title1={titleArray[0]}
+                txt1={txtArray[0]}
+                txt3={txtArray[1]}
+              />
+            </div>
+          </div>
+          <div className="homepage__boxImgRow">
           <motion.img
             src={BateauHome}
-            initial={{ x: -10, opacity: 0.4 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            initial={{ x: 0, opacity: 0.8 }}
+            whileInView={{ x: 0, opacity: 1}}
+            transition={{type: "spring",delay:0.2}}
             className="homepage__imgBox"
           ></motion.img>
-          <div className="homepage__colTxt">
-            <TextColDroite
-              title1={titleArray[0]}
-              txt1={txtArray[0]}
-              txt3={txtArray[1]}
-            />
+          <motion.img
+            src={MusicHome}
+            initial={{ x: 300, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{type: "ease",delay:0.6}}
+            className="homepage__imgBox"
+          ></motion.img> 
           </div>
+          {/* <motion.img
+            src={BateauHome}
+            initial={{ y: -10, opacity: 0.6 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            className="homepage__imgBox"
+          ></motion.img> */}
         </div>
         <div className="homepage__boxContent homepage__boxContent--reverse">
-          <motion.img
+          {/* <motion.img
             src={MusicHome}
             initial={{ y: -100, opacity: 0.6 }}
             whileInView={{ y: 0, opacity: 1 }}
             className="homepage__imgBox"
-          ></motion.img>
+          ></motion.img> */}
+          <h2 className="sect__title sect__title--jaune sect__title--druzokh">
+            {titleArray[1]}
+          </h2>
           <div className="homepage__colTxt">
-            <TextColDroite title1={titleArray[1]} txt1={txtArray[2]} />
+            <TextColDroite 
+            // title1={titleArray[1]} 
+            txt1={txtArray[2]} />
             <BoutonNormal
               linkHref={true}
               nameBtn={"Tous en musique"}
