@@ -5,6 +5,7 @@
     &__box {
         width: 100%;
         height: 100%;
+        
     }
 
     &__map {}
@@ -24,9 +25,9 @@
         height: 60px;
         border-radius: 10px 10px 0 0;
         background-color: #F9B949;
-        position: fixed;
+        position: sticky;
         z-index: 0;
-        bottom: 0;
+        bottom: 0px;
         left: 25%;
         font-family: "JosefinVariable";
         font-weight: 600;
