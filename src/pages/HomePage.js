@@ -22,7 +22,7 @@ function HomePage() {
   //initStatDataView();
 
   let titleArray = [
-    <>Comment&nbsp;visiter le monde&nbsp;? </>,
+    <>Comment&nbsp;visiter le&nbsp;monde&nbsp;? </>,
     <>Un&nbsp;plus musical</>,
   ];
   let txtArray = [
@@ -44,7 +44,7 @@ function HomePage() {
         Tu pourras aussi suivre le suivi de tes explorations dans la page, “
         <span>
           <Link
-            to="/ton-exploration"
+            to="/ton-aventure"
             className=""
             style={{ cursor: "pointer", color: "inherit" }}
           >
@@ -133,13 +133,13 @@ function HomePage() {
             transition={{type: "spring",delay:0.2}}
             className="homepage__imgBox"
           ></motion.img>
-          <motion.img
+          {window.innerWidth >= 900 ? <motion.img
             src={MusicHome}
             initial={{ x: 300, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{type: "ease",delay:0.6}}
             className="homepage__imgBox"
-          ></motion.img> 
+          ></motion.img> : <></>}
           </div>
           {/* <motion.img
             src={BateauHome}

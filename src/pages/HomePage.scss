@@ -41,7 +41,7 @@
         align-items: center;
 
         &--reverse{
-            flex-direction: row-reverse;
+            flex-direction: column;
             padding: 17vh 3vw 2vh 10vw;
             // margin: 15vh 0 0 0;
             background-image: url(../assets/img/fondPapierBig.jpg);
@@ -53,7 +53,7 @@
         }
         
     }&__imgBox{
-        width: calc(100% + 6vw);
+        width: calc(100%);
         height: 70%;
         max-height: 500px;
         object-fit:cover;
@@ -71,7 +71,7 @@
     }
     &__boxTxt{
         width: 100%;
-        height: 84vh;
+        height: 65vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -80,7 +80,7 @@
         
     }
     &__colTxt{
-        width: 40%;
+        width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -103,6 +103,29 @@
 
 
 
+        }
+        &__boxContent{
+
+            &--reverse{
+                flex-direction: row-reverse;
+            }
+        }
+        &__imgBox{
+            width: calc(100% + 6vw);
+            
+    
+        }
+        &__colTxt{
+            width: 40%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: -16vh 0 0 0;
+        }
+        &__boxTxt{
+            height: 84vh;
+
+            
         }
     }
 }
