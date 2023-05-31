@@ -10,13 +10,17 @@ import ContentBoxHori from "../components/ContentBoxHori";
 import SectionMotifHori from "../components/SectionHoriMotif";
 
 
+//// les images
+import HomeNordiq from '../assets/img/nordic/vikingHome.jpg';
+import BackImgNordic from '../assets/img/nordic/interNordicnoir.jpg'
+
 function NordicPage() {
 
 
     let allTitle = [
         <>Voyage dans les plaines&nbsp;nordiques</>,
         <>Les origines</>,
-        <>L’explorateur et historien Ahmad ibn fadlan </>,
+        <>L’explorateur et historien Ahmad Ibn Fadlan </>,
         <>Les poèmes nordiques</>,
         <>La momie de sibérie</>,
         <>La toile de Wyrd </>,
@@ -50,6 +54,7 @@ function NordicPage() {
         <InterSectionBox
           WhitThext={true}
           textTitle={<>Dans&nbsp;le froid&nbsp;nordique</>}
+          backImg={{ backgroundImage: `url(${BackImgNordic})` }}
         />
 
         <div className="sect__historyland">

@@ -10,6 +10,7 @@ import RussiePage from "./pages/Russie";
 //import ImgOpenbig from "./components/ImgOpenbig";
 import Page404 from "./pages/Page404";
 import Standby from "./pages/Standby";
+import LesStyles from "./pages/lesStyles";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
       <div className="pageChangeSet">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/les-styles" element={<Standby />} />
+          <Route path="/les-styles" element={<LesStyles />} />
           <Route path="/oldschool" element={<OldSchoolUS />} />
           <Route path="/japon" element={<JapanPage />} />
           <Route path="/nordic" element={<NordicPage />} />
