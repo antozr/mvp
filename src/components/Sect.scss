@@ -116,6 +116,8 @@
             color: #FFF5E2;
         }
 
+
+
     }
 
     &__boxTxt {
@@ -126,7 +128,14 @@
         margin: 3cqh 0 0 0vw;
         position: relative;
         z-index: 4;
-
+        
+        &--bgNoir{
+            background-color: #00000060;
+            transform: translateX(5vw);
+            padding: 6vh 3vw;
+            height: 100vh;
+            width: clamp(800px, 25vw, 100%);
+        }
     }
 
     &__img {

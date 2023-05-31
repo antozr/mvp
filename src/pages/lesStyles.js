@@ -1,40 +1,34 @@
-import React from 'react'
+import React from "react";
 import BoutonNormal from "../components/BoutonComp";
 
+import HomeNordic from '../assets/img/russie/prisonnier4.jpg'
 
 function LesStyles() {
   return (
     <>
-    <div className="page">
-    <div className="homepage__sect1 homepage__sect1--bgImg sect">
-          <div className="sect__boxImg--big sect__boxImg">
-            <div className="sect__boxTxt ">
+      <div className="page">
+        <div className="homepage__sect1 homepage__sect1--bgImg sect">
+          <div className="sect__boxImg--big sect__boxImg" style={{backgroundImage:  `url(${HomeNordic})`}}>
+            <div className="sect__boxTxt sect__boxTxt--bgNoir ">
               {/* Changer le titre  */}
-              <h1 className="sect__title sect__title--ecart">TattooExplore</h1>
+              <h1 className="sect__title sect__title--ecart">Explore les styles</h1>
               <h2
                 className=" sect__title sect__title--2 sect__title--ecart"
                 style={{ fontSize: "28px" }}
               >
-                Découvre les
-                <br />
-                tatouages du
-                <br />
-                <i>monde</i>
+                Pret pour <br/> une exploration <br/> approfondie ? 
               </h2>
               <p className="sect__txt">
-                Bienvenu dans cet univers, qui est de plus en plus visible de
-                nos jours, mais qui reste, pour certain assez flou sur le fond.
-                Car l’histoire derrière certains courants, mouvements, styles
-                sont des histoires à part entière et celui qui connaît
-                l’histoire verra ses œuvres d’un autre regard que l’Inculte.{" "}
+                Si tu cherches à en savoir plus, que tu souhaites avoir un
+                complément d’informations ou tout simplement assouvir ta
+                curiosité. <b>Alors tu es au bon endroit !</b>
               </p>
               <p className="sect__txt sect__txt--ecart sect__txt--italic sect__txt--thin">
-                Alors je vous invite à voyager dans ses différents univers pour
-                en apprendre plus sur les codes et les bases de ces styles
-                venant des 4 coins du monde.
+                Tu vas pouvoir choisir un style ou tous les prendre, et explorer
+                l’univers qui est présent autour de ces styles.
               </p>
               <BoutonNormal
-                nameBtn={"Voir la carte"}
+                nameBtn={"Voir les infos"}
                 linkBtn={"#mapWorld"}
                 ClassColor={"sect__btn"}
                 linkHref={true}
@@ -42,9 +36,9 @@ function LesStyles() {
             </div>
           </div>
         </div>
-    </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default LesStyles
+export default LesStyles;

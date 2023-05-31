@@ -34,13 +34,21 @@ export function initStatDataView() {
 }
 
 export function ChangeStateDataVisited() {
+  // let arrayListPathName = [
+  //   "/projets/tfe/suite/oldschool",
+  //   "/projets/tfe/suite/japon",
+  //   "/projets/tfe/suite/nordic",
+  //   "/projets/tfe/suite/russie",
+  //   "/projets/tfe/suite/europe",
+  //   "/projets/tfe/suite/pacifique",
+  // ];
   let arrayListPathName = [
-    "/projets/tfe/suite/oldschool",
-    "/projets/tfe/suite/japon",
-    "/projets/tfe/suite/nordic",
-    "/projets/tfe/suite/russie",
-    "/projets/tfe/suite/europe",
-    "/projets/tfe/suite/pacifique",
+    "/oldschool",
+    "/japon",
+    "/nordic",
+    "/russie",
+    "/europe",
+    "/pacifique",
   ];
   let pathNamePage = window.location.pathname;
   //console.log(pathNamePage);
