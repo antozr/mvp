@@ -13,6 +13,11 @@ import SectionMotifHori from "../components/SectionHoriMotif";
 //// les images
 import HomeNordiq from '../assets/img/nordic/vikingHome.jpg';
 import BackImgNordic from '../assets/img/nordic/interNordicnoir.jpg'
+import vegvisir1 from '../assets/img/nordic/vegvisir.jpg'
+import vegvisir2 from '../assets/img/nordic/vegvisir2.jpg'
+import wirm1 from  '../assets/img/nordic/wyrd.jpg';
+import ygdrasil1 from '../assets/img/nordic/ygdrazil1.jpg';
+import ygdrasil2 from '../assets/img/nordic/ygdrazil2.jpg';
 
 function NordicPage() {
 
@@ -82,12 +87,13 @@ function NordicPage() {
         <InterSectionBox
           WhitThext={true}
           textTitle={<>De&nbsp;la pierre a&nbsp;l'homme</>}
+          backImg={{ backgroundImage: `url(${HomeNordiq})` }}
         />
         <div className="sect--heigth100">
           <SectionMotifHori 
-          title01={allTitle[5]} txt01={allTxt[8]}
-          title02={allTitle[6]} txt02={allTxt[9]}
-          title03={allTitle[7]} txt03={allTxt[10]}
+          title01={allTitle[5]} txt01={allTxt[8]} Img01={wirm1} Img012={wirm1} nameIllu1={allTitle[5]}  styleBoxIllu1={{margin : '0px'}}  OneImg1={true}
+          title02={allTitle[6]} txt02={allTxt[9]} Img02={ygdrasil1} Img021={ygdrasil2} nameIllu2={allTitle[6]}
+          title03={allTitle[7]} txt03={allTxt[10]} Img03={vegvisir1} Img032={vegvisir2} nameIllu3={allTitle[7]}
           />
         </div>
       </div>
