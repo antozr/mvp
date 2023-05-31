@@ -77,6 +77,9 @@
         justify-content: space-between;
         align-items: center;
         //border: 3px solid blue;
+        &>h2{
+            margin: 91px 0 0 0 ;
+        }
         
     }
     &__colTxt{
@@ -123,7 +126,11 @@
             margin: -16vh 0 0 0;
         }
         &__boxTxt{
-            height: 84vh;
+            height: 94vh;
+
+            &>h2{
+                margin: 91px 0 0 0 ;
+            }
 
             
         }
