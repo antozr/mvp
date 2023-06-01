@@ -2,6 +2,7 @@ import React from "react";
 import BoutonNormal from "../components/BoutonComp";
 
 import HomeNordic from '../assets/img/russie/prisonnier4.jpg'
+import InterSectionBox from "../components/InterSectionBox";
 
 function LesStyles() {
 
@@ -29,7 +30,7 @@ function LesStyles() {
           <div className="sect__boxImg--big sect__boxImg" style={{backgroundImage:  `url(${HomeNordic})`}}>
             <div className="sect__boxTxt sect__boxTxt--bgNoir ">
               {/* Changer le titre  */}
-              <h1 className="sect__title sect__title--ecart">Explore les styles</h1>
+              <h1 className="sect__title sect__title--ecart"><span className="sect__title--fontDruzokh ">Explore</span> les styles</h1>
               <h2
                 className=" sect__title sect__title--2 sect__title--ecart"
                 style={{ fontSize: "28px" }}
@@ -55,7 +56,8 @@ function LesStyles() {
           </div>
         </div>
         {/*  */}
-        <section className="sect__contenu">
+        <InterSectionBox />
+        <section className="sect__contenu" >
           <linkSelection/>
         </section>
       </div>
