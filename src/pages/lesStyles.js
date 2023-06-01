@@ -3,7 +3,8 @@ import BoutonNormal from "../components/BoutonComp";
 
 import HomeNordic from '../assets/img/russie/prisonnier4.jpg'
 import InterSectionBox from "../components/InterSectionBox";
-
+// img
+import backImg from '../assets/img/oldSchool/fondPeauNoir.jpg'
 function LesStyles() {
 
 
@@ -56,7 +57,7 @@ function LesStyles() {
           </div>
         </div>
         {/*  */}
-        <InterSectionBox />
+        <InterSectionBox backImg={{ backgroundImage: `url(${backImg})`}} />
         <section className="sect__contenu" >
           <linkSelection/>
         </section>

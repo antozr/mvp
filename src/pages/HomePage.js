@@ -79,7 +79,7 @@ function HomePage() {
           <div className="sect__boxImg--big sect__boxImg">
             <div className="sect__boxTxt ">
               {/* Changer le titre  */}
-              <h1 className="sect__title sect__title--ecart">TattooExplore</h1>
+              <h1 className="sect__title sect__title--ecart">Tattoo<span className="sect__title--fontDruzokh ">Explore</span></h1>
               <h2
                 className=" sect__title sect__title--2 sect__title--ecart"
                 style={{ fontSize: "28px" }}

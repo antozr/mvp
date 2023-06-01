@@ -14,7 +14,6 @@
 }
 
 .sect {
-
   &__title {
     font-family: "JosefinVariable";
     font-weight: 600;
@@ -33,7 +32,7 @@
     }
 
     &--italic {
-      font-family: 'JosefinVariableItalic';
+      font-family: "JosefinVariableItalic";
     }
 
     &--medium {
@@ -62,15 +61,14 @@
     }
 
     &--white {
-      color: #FDF2DE;
-
+      color: #fdf2de;
     }
 
     &--link {
       transition: 0.3s;
 
       &:hover {
-        color: #F9B949;
+        color: #f9b949;
         font-weight: 600;
         transition: 0.3s;
       }
@@ -78,14 +76,11 @@
 
     &--druzokh {
       font-family: "Druzokh";
-
     }
-
-
   }
 
   &__txt {
-    font-family: 'JosefinVariable';
+    font-family: "JosefinVariable";
     font-weight: 400;
     font-size: 16px;
     line-height: 160%;
@@ -95,7 +90,7 @@
     display: inline-block;
 
     &--italic {
-      font-family: 'JosefinVariableItalic';
+      font-family: "JosefinVariableItalic";
     }
 
     &--thin {
@@ -105,16 +100,14 @@
 
     &--ecart {
       margin: 28px 0 0 0;
-
     }
 
     &--big {
       font-size: 120px;
-
     }
 
     &--jaune {
-      color: #F9B949;
+      color: #f9b949;
     }
 
     &--smallLength {
@@ -138,53 +131,52 @@
     }
 
     &--white {
-      color: #FDF2DE;
-
+      color: #fdf2de;
     }
 
     &--japTxt {
       font-size: 20vw;
     }
 
-    &--link{
+    &--link {
       text-align: center;
-      padding: 12px 28px ;
+      padding: 12px 28px;
       font-size: 21px;
       font-weight: 800;
       transition: 0.6s;
       cursor: pointer;
 
-      &:hover{
+      &:hover {
         transition: 0.3s;
-        background-color: #F9B949;
-
+        background-color: #f9b949;
       }
     }
-
   }
 }
 
 ::-moz-selection {
   /* Code for Firefox */
   color: #1d1d1d;
-  background: #F9B949;
+  background: #f9b949;
 }
 
 ::selection {
   color: #1d1d1d;
-  background: #F9B949;
+  background: #f9b949;
 }
 
-@media(min-width:600px) {
-
+@media (min-width: 600px) {
   .sect {
     &__title {
       font-size: 3dvw;
 
-      &--2{
+      &--2 {
         font-size: 51px;
       }
 
+      &--fontDruzokh {
+        font-family: "Druzokh";
+      }
       &--druzokh {
         font-family: "Druzokh";
         font-size: 10dvw;
@@ -194,17 +186,15 @@
 
       &--bigSolo {
         font-size: 8dvw;
-
       }
-      
     }
 
     &__txt {
       font-size: 18px;
-      
+
       line-height: 160%;
-       width: 100%;
-       //max-width: 80ch;
+      width: 100%;
+      //max-width: 80ch;
 
       &--smallLength {
         width: 40ch;
@@ -217,8 +207,6 @@
       &--japTxt {
         font-size: 10vw;
       }
-
-
     }
   }
 }

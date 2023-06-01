@@ -343,13 +343,13 @@ function TonAventure() {
                 <TextColDroite
                   title1={<>Tu n'as encore rien&nbsp;visiter</>}
                   txt1={
-                    "Choisis un pays sur la carte pour pouvoir commencer l'aventure et en apprendre plus sur un style de tatouage."
+                    "Choisis un pays sur la carte pour pouvoir commencer l'aventure et en apprendre plus sur son style de tatouage."
                   }
                 />
               </div>
               <BoutonNormal
                 linkBtn={"/"}
-                nameBtn={"Vers la carte "}
+                nameBtn={"Recherche un style "}
                 ClassColor={"sect__btn sect__btn--yellow"}
                 onClick={animateChangePage}
               />

@@ -8,7 +8,7 @@ function Standby() {
   return (
     <>
       <section className="sect sect__attente pageChangeSet">
-        <h1 className="sect__title">Le contenut arrive bientôt . </h1>
+        <h1 className="sect__title">Le contenu arrive bientôt. </h1>
 
         <BoutonNormal
           linkBtn={"/"}
