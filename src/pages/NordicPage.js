@@ -26,6 +26,8 @@ import amad2 from '../assets/img/nordic/amad2.jpg';
 import drakar from  '../assets/img/nordic/drakar.jpg';
 import history1 from  '../assets/img/nordic/histpry1.jpg';
 import history2 from  '../assets/img/nordic/history2.jpg';
+import horyMotif from '../assets/img/nordic/motifHori.jpg';
+import motifImgHory from '../assets/img/nordic/motifBighory.jpg'
 
 function NordicPage() {
 
@@ -38,7 +40,11 @@ function NordicPage() {
         <>La momie de sibérie</>,
         <>La toile de Wyrd </>,
         <>Yggdrasil</>,
-        <>Vegvisir</>
+        <>Vegvisir</>,
+        <>La&nbsp;technique</>,
+        <>teknikken</>,
+        <>Des motifs</>,
+        <> </>,
     ];
     let allTxt = [
         <>On retrouve des traces éparses d’hommes couvertes de peinture avec une peau pigmentée bleue pour les peuplades celtes et des hypothèses pour les vikings sur leurs pratiques. Mais ces styles ont su renaître par des artisans représentant les forces de la nature et des dieux sur nous, pauvres mortels. </>,
@@ -49,9 +55,13 @@ function NordicPage() {
         <><br/><br/> <span className="sect__txt--thin sect__txt--italic">Comme avec des descriptions de leur façon de s’habiller, leurs coiffures, couleurs de cheveux … Cela ne veut pas dire que ces tatouages n’existaient pas, mais leurs origines restent inconnues.</span></>,
         <>On a retrouvé une momie dans les glaces de Sibérie recouverte de tatouages, mais quel est le lien ? Ce peuple faisant du commerce avec les pays du nord, on peut supposer que ces derniers aiment aussi partager leurs traditions pour le tatouage. Comme on retrouve des traces chez les peuples celtes, saxe, germain. </>,
         <> <br/><br/> <span className="sect__txt--thin">Des peuples que les nordiques ont rencontrés pour diverses raisons, et donc ces derniers importaient et s'approprient des éléments d’autres cultures, on peut se dire que certains membres des tribues nordiques étaient tatoués.        </span></>,
-        <>est une composition de 9 lignes, qui regrouperait toutes les runes . Signifiant le tout les possibilités du passé, du futur et du présent, montrant l'interconnexion entre nos actions passées répercutant notre présent et qui modifiera notre futur.        </>,
+        <> Il est une composition de 9 lignes, qui regrouperait toutes les runes . Signifiant le tout les possibilités du passé, du futur et du présent, montrant l'interconnexion entre nos actions passées répercutant notre présent et qui modifiera notre futur.        </>,
         <>Plus connu sous ‘ l’arbre de la vie’, il représente l’arbre qui porte l’univers dans ses branches, en connectant notre monde à tous les autres mondes. Il permet de donner un point de vue plus spirituel sur notre vision de l’univers et de l’au-delà.</>,
-        <>le compas runique, il sert à montrer d'où l’on vient et où on va, pouvant aussi servir d'amulette de protection, afin de retrouver son chemin.</>,
+        <>Le compas runique, il sert à montrer d'où l’on vient et où on va, pouvant aussi servir d'amulette de protection, afin de retrouver son chemin.</>,//
+        <>On peut supposer que la technique utilisée est un style de handpoke ( du point à la main), où l’artiste prenait un manche ( en bois) avec une aiguille et venait encrer le motif sur la peau avec une encre noire à base de charbon.</>,
+        <><br/><br/><span className="sect__txt--thin sect__txt--italic">De nos jours, les artistes qui exercent ce style,  on explore les récits, les techniques, pour se rapprocher de comment c'était fait avant. Pour ce faire, comme leurs prédécesseurs, ils utilisent du handpoke & de l’encre noire pour réaliser les motifs inspirés de l’art nordique.</span> </>,
+        <>On retrouve les motifs qui tiennent une part importante dans la mythologie et leurs arts, représentés sur les armes, maisons, manuscrits, sculptures… Ces peuples avaient un ‘amour’ pour leur représentation.</>,
+        <><br/><br/> <span className="sect__txt--thin">Le style se veut plus agressif et montre une symbolique guerrière de son porteur qu’un côté doux / calme. On retrouve des entrelacs, des boucles, nœuds, … qui sert à représenter une armure pour protéger son hôte.</span> </>,
    
     ];
 
@@ -90,7 +100,11 @@ function NordicPage() {
           textTitle={<>De&nbsp;l'ancien, maintenant</>}
         />
         <div className="sect--heigth100">
-          <SectHoriFull />
+          <SectHoriFull BigTitle1={allTitle[8]} BigTitle12={allTitle[9]} 
+          textcol1={allTxt[11]} textcol2={allTxt[12]} imgArtiste1={horyMotif} smallTitle1={"Du point fait main"}
+          BigTitle2={allTitle[10]}
+          textcol4={allTxt[13]} textcol5={allTxt[14]} imgArtiste2={motifImgHory} fullImgs={true} smallTitle3={"Des motifs "} smallTitle4={"riche de mythologie"}
+           />
         </div>
         <InterSectionBox
           WhitThext={true}
