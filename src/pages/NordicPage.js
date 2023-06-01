@@ -19,6 +19,14 @@ import wirm1 from  '../assets/img/nordic/wyrd.jpg';
 import ygdrasil1 from '../assets/img/nordic/ygdrazil1.jpg';
 import ygdrasil2 from '../assets/img/nordic/ygdrazil2.jpg';
 
+import momie1 from '../assets/img/nordic/momie1.jpg'
+import momie2 from '../assets/img/nordic/momie2.jpg'
+import amad1 from '../assets/img/nordic/amad1.jpg';
+import amad2 from '../assets/img/nordic/amad2.jpg';
+import drakar from  '../assets/img/nordic/drakar.jpg';
+import history1 from  '../assets/img/nordic/histpry1.jpg';
+import history2 from  '../assets/img/nordic/history2.jpg';
+
 function NordicPage() {
 
 
@@ -64,16 +72,16 @@ function NordicPage() {
 
         <div className="sect__historyland">
           <div className="hori__grid hori__box--black">
-            <ContentBoxHori title01={allTitle[1]} text01={allTxt[1]} animImg={true} historicBox={true} colorTxt={{ color: '#FDF2DE' }}/>
+            <ContentBoxHori title01={allTitle[1]} text01={allTxt[1]} animImg={true} historicBox={true} linkImg01={HomeNordiq} linkImg02={drakar} colorTxt={{ color: '#FDF2DE' }}/>
           </div>
           <div className="hori__grid hori__box--black">
-            <ContentBoxHori title01={allTitle[2]} text01={allTxt[2]} text02={allTxt[3]} animImg={true} historicBox={true} colorTxt={{ color: '#FDF2DE' }}/>
+            <ContentBoxHori title01={allTitle[2]} text01={allTxt[2]} text02={allTxt[3]} animImg={true} historicBox={true} linkImg01={amad1} linkImg02={amad2} colorTxt={{ color: '#FDF2DE' }}/>
           </div>
           <div className="hori__grid hori__box--black">
-            <ContentBoxHori title01={allTitle[3]} text01={allTxt[4]} text02={allTxt[5]} animImg={true} historicBox={true} colorTxt={{ color: '#FDF2DE' }}/>
+            <ContentBoxHori title01={allTitle[3]} text01={allTxt[4]} text02={allTxt[5]} animImg={true} historicBox={true} linkImg01={history2} linkImg02={history1} colorTxt={{ color: '#FDF2DE' }}/>
           </div>
           <div className="hori__grid hori__box--black">
-            <ContentBoxHori title01={allTitle[4]} text01={allTxt[6]} text02={allTxt[7]}  animImg={true} historicBox={true} colorTxt={{ color: '#FDF2DE' }}/>
+            <ContentBoxHori title01={allTitle[4]} text01={allTxt[6]} text02={allTxt[7]}  animImg={true} historicBox={true} linkImg01={momie1} linkImg02={momie2} colorTxt={{ color: '#FDF2DE' }}/>
           </div>
         </div>
 
@@ -92,8 +100,8 @@ function NordicPage() {
         <div className="sect--heigth100">
           <SectionMotifHori 
           title01={allTitle[5]} txt01={allTxt[8]} Img01={wirm1} Img012={wirm1} nameIllu1={allTitle[5]}  styleBoxIllu1={{margin : '0px'}}  OneImg1={true}
-          title02={allTitle[6]} txt02={allTxt[9]} Img02={ygdrasil1} Img021={ygdrasil2} nameIllu2={allTitle[6]}
-          title03={allTitle[7]} txt03={allTxt[10]} Img03={vegvisir1} Img032={vegvisir2} nameIllu3={allTitle[7]}
+          title02={allTitle[7]} txt02={allTxt[10]} Img02={vegvisir1} Img021={vegvisir2} nameIllu2={allTitle[7]}
+          title03={allTitle[6]} txt03={allTxt[9]} Img03={ygdrasil1} Img032={ygdrasil2} nameIllu3={allTitle[6]}
           />
         </div>
       </div>

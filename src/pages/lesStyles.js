@@ -4,6 +4,24 @@ import BoutonNormal from "../components/BoutonComp";
 import HomeNordic from '../assets/img/russie/prisonnier4.jpg'
 
 function LesStyles() {
+
+
+  let allLink = ["Tous", "Japon", "old-school", "Nordique", "Prison Russe", "Celtique"];
+
+
+
+  function linkSelection(){
+
+    return(
+      <li className="style__elLink">
+        <p className="style__link">
+          123
+        </p>
+      </li>
+    )
+  }
+
+
   return (
     <>
       <div className="page">
@@ -36,6 +54,10 @@ function LesStyles() {
             </div>
           </div>
         </div>
+        {/*  */}
+        <section className="sect__contenu">
+          <linkSelection/>
+        </section>
       </div>
     </>
   );

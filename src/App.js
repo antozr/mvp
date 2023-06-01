@@ -23,6 +23,7 @@ function App() {
           <Route path="/oldschool" element={<OldSchoolUS />} />
           <Route path="/japon" element={<JapanPage />} />
           <Route path="/nordic" element={<NordicPage />} />
+          <Route path='/celtic' element={<Standby />} />
           <Route path="/russie" element={<RussiePage />} />
           <Route path="/europe" element={<Standby />} />
           <Route path="/pacifique" element={<Standby />} />
