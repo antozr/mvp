@@ -1,28 +1,56 @@
-import React from "react";
-import './StylesPages.scss'
+import React, { useEffect, useState } from "react";
+import "./StylesPages.scss";
 import BoutonNormal from "../components/BoutonComp";
-
+import dataStyle from "../assets/data/StylesData.json";
 import HomeNordic from "../assets/img/russie/prisonnier4.jpg";
 import InterSectionBox from "../components/InterSectionBox";
 // img
 import backImg from "../assets/img/oldSchool/fondPeauNoir.jpg";
+import CardInfoStyle from "../components/CardInfoStyle";
+
 function LesStyles() {
+  const [navSecondActif, setNavSecondActif] = useState("Tous");
+
   let allLink = [
     "Tous",
     "Japon",
-    "old-school",
+    "Old-school",
     "Nordique",
     "Prison Russe",
     "Celtique",
   ];
 
   const linkLandEl = allLink.map((el) => (
-    <li className="stylePage__el">
+    <li className="stylePage__el" onClick={changestatNavSecond}>
       <p className="stylePage__link sect__txt sect__txt--bold" title={el}>
         {el}
       </p>
     </li>
   ));
+
+  useEffect(() => {
+    if (navSecondActif === "Tous") {
+      let firstLink = document.querySelectorAll(".stylePage__link");
+      firstLink[0].classList.add("stylePage__link--actif");
+    }
+
+
+  });
+
+  function changestatNavSecond(e){
+
+    setNavSecondActif(e.target.title)
+    
+    let allLink = document.querySelectorAll('.stylePage__link');
+    allLink.forEach((el)=>{
+      el.classList.remove("stylePage__link--actif")
+    })
+    e.target.classList.add("stylePage__link--actif")
+  }
+
+  console.log(dataStyle[0].book[0].urlImg);
+
+
 
   return (
     <>
@@ -72,6 +100,16 @@ function LesStyles() {
             <div className="stylePage__boxLink">
               <ul className="boxLink__ul">{linkLandEl}</ul>
             </div>
+          </div>
+          <div className="stylePage__sect">
+            <h2 className="sect__title sect__title--2">Des ouvrages :</h2>
+            <ul className="stylePage__listBox">
+                {dataStyle.map((el, key)=>(
+                 el.book.map((ell) =>(
+                  <CardInfoStyle urlImg={ell.urlImg} author={ell.author} nameBook={ell.nameBook}/>
+                 ))
+                ))}
+            </ul>
           </div>
         </section>
       </div>

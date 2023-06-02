@@ -4,6 +4,7 @@
     height: 60px;
     margin: 10vh 3vw;
     
+    
     & > ul {
       display: flex;
       flex-direction: row;
@@ -11,6 +12,9 @@
       column-gap: 1.2vw;
       height: 100%;
       width: 100%;
+      position: sticky;
+      top: 160px;
+      //border: 2px solid red;
     }
   }
   &__elLink{
@@ -25,6 +29,8 @@
 
     &:hover{
         background-color: #f9b949;
+        color: #000;
+
         padding: 6px 21px;
         transition: 0.3s;
     }
@@ -33,5 +39,53 @@
         transition: 0.3s;
         color: #f9b949;
     }
+  }
+
+  &__sect{
+    width: 100%;
+    padding: 0 3vw;
+  }
+
+  &__listBox{
+    width: 100%;
+    height: auto;
+    padding: 6vh 0vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 8vh;
+    column-gap: 3vw;
+  }
+
+  &__elBox{
+    width: 300px;
+    width: calc((100% / 5) - 3vw);
+    min-width: 250px;
+    max-width: 400px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.2vh;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.3s;
+    &:hover{
+      color: #f9b949;
+      
+      &>img{
+        transition: 0.3s;
+        opacity: 0.8;
+      }
+    }
+    
+  }
+
+  &__imgBox{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    padding: 0 0 18px ;
+
   }
 }
