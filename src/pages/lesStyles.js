@@ -9,13 +9,21 @@ import backImg from "../assets/img/oldSchool/fondPeauNoir.jpg";
 import CardInfoStyle from "../components/CardInfoStyle";
 import horisumi from "../assets/img/artistes/horisumi.jpg";
 import asakusa from "../assets/img/artistes/asakusa.jpeg";
+import edo from "../assets/img/artistes/edo.jpg";
 import annaOld from "../assets/img/artistes/anna.jpg";
+import alexplunk from "../assets/img/artistes/alexplunk.jpeg";
+import ludo from "../assets/img/artistes/ludo.jpg";
+import matt from "../assets/img/artistes/matt.jpg";
 
 function LesStyles() {
   const [navSecondActif, setNavSecondActif] = useState("Tous");
   const [dataCard, setDataCard] = useState(dataStyle);
 
-  let allLinkImgArtsit = [[horisumi, asakusa,], [annaOld]];
+  const allLinkImgArtsit = [
+    [horisumi, asakusa, edo],
+    [annaOld, alexplunk, matt, ludo],
+  ];
+  const [dataImgArtist, setDataImgArtist] = useState(allLinkImgArtsit);
 
   let allLink = [
     "Tous",
@@ -44,18 +52,26 @@ function LesStyles() {
   function changestatNavSecond(e) {
     setNavSecondActif(e.target.title.toLowerCase());
 
+    let nameLink = e.target.title.toLowerCase();
+
     if (e.target.title === "Tous") {
       setDataCard(dataStyle);
+      setDataImgArtist(allLinkImgArtsit);
     } else if (e.target.title === "Celtique") {
       setDataCard(
         dataStyle.filter((card) => card.name.toLowerCase() === "nordique")
       );
+      setDataImgArtist("");
     } else {
       setDataCard(
         dataStyle.filter(
           (card) => card.name.toLowerCase() === e.target.title.toLowerCase()
         )
       );
+
+      if (nameLink === "japon") {
+        setDataImgArtist(allLinkImgArtsit[0]);
+      }
     }
 
     // console.table(navSecondActif)
@@ -77,26 +93,33 @@ function LesStyles() {
       />
     ))
   );
- 
+
   let i = 0;
-  function setTableDataImg(key){
-    
-    let dataS1 = dataStyle[0].artiste.length
-    console.log('Longeur tab artistes : '+dataS1);
-    console.log('key: '+key);
-    if(key <= dataS1 -1 && i <= dataS1 -1){
-      console.log(allLinkImgArtsit[i])
-      i++
-      console.log(i);
-      return allLinkImgArtsit[0][key]
-    }else if (i > dataS1 -1){
-      return allLinkImgArtsit[1][key]
+
+  //// faire varier la liste en fonction choix nav secondaire
+
+  function setTableDataImg(key) {
+    if (navSecondActif === "Tous") {
+      let dataS1 = dataStyle[0].artiste.length;
+      console.log("Longeur tab artistes : " + dataS1);
+      console.log("key: " + key);
+
+      if (key <= dataS1 - 1 && i <= dataS1 - 1) {
+        console.log(allLinkImgArtsit[i]);
+        i++;
+        console.log(i);
+        return allLinkImgArtsit[0][key];
+      } else if (i > dataS1 - 1) {
+        i++;
+        return allLinkImgArtsit[1][key];
+      }
     }
   }
+
   const cardArtiste = dataCard.map((el) =>
     el.artiste.map((ell, key) => (
       <CardInfoStyle
-        urlImg={setTableDataImg(key)}
+        urlImg={ell.urlImg}
         author={ell.style}
         nameBook={ell.name}
       />

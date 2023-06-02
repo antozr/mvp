@@ -61,6 +61,11 @@
             "style":"Irezumi",
             "urlImg":"",
             "linkInsta":"https://www.instagram.com/asakusahorikazu/"
+        },
+        {
+            "name":"Horihiro edo",
+            "style":"Irezumi",
+            "linkInsta":"https://www.instagram.com/horihiro_tebori/"
         }
     ]
 },
@@ -104,6 +109,22 @@
          "style":"Old-school",
          "urlImg":"",
          "linkInsta": "https://www.instagram.com/annappley/"
+         },
+         {
+            "name":"Alex Plunkett",
+            "style":"Old-school",
+            "linkInsta":"https://www.instagram.com/mr.duckplunkett/",
+            "urlImg":"http://antoni-dumont.be/projets/tfe/imgArtist/alexplunk.jpeg"
+         },
+         {
+            "name":"Matt Howse",
+            "style":"Old-school",
+            "linkInsta":"https://www.instagram.com/matthowse/"
+         },
+         {
+            "name":"Ludo la main bleue",
+            "style":"Old-school",
+            "linkInsta":"https://www.instagram.com/ludolamainbleue/"
          }
      ]
 },
