@@ -49,6 +49,19 @@
             "urlImg":"",
             "linkVideo":""
         }
+    ],
+    "artiste":[
+       { "name":"HORISUMI",
+        "style":"Irezumi",
+        "urlImg":"",
+        "linkInsta": "https://www.instagram.com/horisumi/"
+        },
+        {
+            "name":"Asakusa Horikazu ",
+            "style":"Irezumi",
+            "urlImg":"",
+            "linkInsta":"https://www.instagram.com/asakusahorikazu/"
+        }
     ]
 },
 {
@@ -85,7 +98,14 @@
             "urlImg":"https://m.media-amazon.com/images/I/61KN6WTsi1L._SX373_BO1,204,203,200_.jpg",
             "linkProduit":"https://www.tattoolifestore.com/paul-dobleman-my-traditional-vision.html"
         }
-    ]
+    ],
+    "artiste":[
+        { "name":"Anna Wall",
+         "style":"Old-school",
+         "urlImg":"",
+         "linkInsta": "https://www.instagram.com/annappley/"
+         }
+     ]
 },
 {
     "name":"Prison Russe",
@@ -108,7 +128,14 @@
             "urlImg":"https://fuel-design.com/media/_/russian-criminal-tattoo-police-files/RCT%20Police%20Files%20Vol%20I%20cover_A1YbPkP.jpg.400x500_q90.jpg",
             "linkProduit":"https://fuel-design.com/publishing/russian-criminal-tattoo-police-files/"
         }
-    ]
+    ],
+    "artiste":[
+        { "name":"HORISUMI",
+         "style":"Irezumi",
+         "urlImg":"https://instagram.fcrl2-1.fna.fbcdn.net/v/t51.2885…omSByuD_GUqjDwDRfod2VQ&oe=647EEE31&_nc_sid=a1ad6c",
+         "linkInsta": "https://www.instagram.com/horisumi/"
+         }
+     ]
 },
 {
     "name":"Nordique",
@@ -125,7 +152,14 @@
             "urlImg":"https://m.media-amazon.com/images/I/41VwOSS18HL._SX384_BO1,204,203,200_.jpg",
             "linkProduit":"https://www.amazon.fr/Viking-Tattoos-Nordic-Symbols-Spirituality/dp/B0BFV21K4J/ref=d_pd_sbs_sccl_1_1/261-1158017-3219331?content-id=amzn1.sym.ee0ff4a0-226e-4e64-9b67-7a9488963b8a&pd_rd_i=B0BFV21K4J&psc=1"
         }
-    ]
+    ],
+    "artiste":[
+        { "name":"HORISUMI",
+         "style":"Irezumi",
+         "urlImg":"https://instagram.fcrl2-1.fna.fbcdn.net/v/t51.2885…omSByuD_GUqjDwDRfod2VQ&oe=647EEE31&_nc_sid=a1ad6c",
+         "linkInsta": "https://www.instagram.com/horisumi/"
+         }
+     ]
 }
 
 ]

@@ -7,11 +7,16 @@ import InterSectionBox from "../components/InterSectionBox";
 // img
 import backImg from "../assets/img/oldSchool/fondPeauNoir.jpg";
 import CardInfoStyle from "../components/CardInfoStyle";
+import horisumi from "../assets/img/artistes/horisumi.jpg";
+import asakusa from "../assets/img/artistes/asakusa.jpeg";
+import annaOld from "../assets/img/artistes/anna.jpg";
 
 function LesStyles() {
   const [navSecondActif, setNavSecondActif] = useState("Tous");
-  const [dataCard, setDataCard] = useState(dataStyle)
-console.log(dataCard);
+  const [dataCard, setDataCard] = useState(dataStyle);
+
+  let allLinkImgArtsit = [[horisumi, asakusa,], [annaOld]];
+
   let allLink = [
     "Tous",
     "Japon",
@@ -34,56 +39,70 @@ console.log(dataCard);
       let firstLink = document.querySelectorAll(".stylePage__link");
       firstLink[0].classList.add("stylePage__link--actif");
     }
-
-
   });
 
-  function trisData(){
-
-    if(navSecondActif === 'Japon'){
-      setDataCard(dataStyle[0])
-    }else if (navSecondActif === 'Old-school'){
-      setDataCard(dataStyle[1])
-    }else if (navSecondActif === 'Prison Russe'){
-      setDataCard(dataStyle[2])
-    }else if(navSecondActif === 'Nordique'){
-      setDataCard(dataStyle[3])
-    }else {
-      setDataCard(dataStyle)
-    }
-  }
-
-  function changestatNavSecond(e){
-
+  function changestatNavSecond(e) {
     setNavSecondActif(e.target.title.toLowerCase());
 
-    if(e.target.title === 'Tous'){
-      setDataCard(dataStyle)
-    }else if (e.target.title === 'Celtique'){
-      setDataCard(dataStyle.filter(card => card.name.toLowerCase() === "nordique"))
-    }else{
-      setDataCard(dataStyle.filter(card => card.name.toLowerCase() === e.target.title.toLowerCase()))
+    if (e.target.title === "Tous") {
+      setDataCard(dataStyle);
+    } else if (e.target.title === "Celtique") {
+      setDataCard(
+        dataStyle.filter((card) => card.name.toLowerCase() === "nordique")
+      );
+    } else {
+      setDataCard(
+        dataStyle.filter(
+          (card) => card.name.toLowerCase() === e.target.title.toLowerCase()
+        )
+      );
     }
-   
+
     // console.table(navSecondActif)
     // console.table(dataCard)
-    
-    let allLink = document.querySelectorAll('.stylePage__link');
-    allLink.forEach((el)=>{
-      el.classList.remove("stylePage__link--actif")
-    })
-    e.target.classList.add("stylePage__link--actif")
+
+    let allLink = document.querySelectorAll(".stylePage__link");
+    allLink.forEach((el) => {
+      el.classList.remove("stylePage__link--actif");
+    });
+    e.target.classList.add("stylePage__link--actif");
   }
 
-
-  const cardList = dataCard.map((el)=>(
-    el.book.map((ell) =>(
-     <CardInfoStyle urlImg={ell.urlImg} author={ell.author} nameBook={ell.nameBook}/>
+  const cardList = dataCard.map((el) =>
+    el.book.map((ell) => (
+      <CardInfoStyle
+        urlImg={ell.urlImg}
+        author={ell.author}
+        nameBook={ell.nameBook}
+      />
     ))
-   ))
-//console.log(dataStyle[2]);
-
-
+  );
+ 
+  let i = 0;
+  function setTableDataImg(key){
+    
+    let dataS1 = dataStyle[0].artiste.length
+    console.log('Longeur tab artistes : '+dataS1);
+    console.log('key: '+key);
+    if(key <= dataS1 -1 && i <= dataS1 -1){
+      console.log(allLinkImgArtsit[i])
+      i++
+      console.log(i);
+      return allLinkImgArtsit[0][key]
+    }else if (i > dataS1 -1){
+      return allLinkImgArtsit[1][key]
+    }
+  }
+  const cardArtiste = dataCard.map((el) =>
+    el.artiste.map((ell, key) => (
+      <CardInfoStyle
+        urlImg={setTableDataImg(key)}
+        author={ell.style}
+        nameBook={ell.name}
+      />
+    ))
+  );
+  //console.log(dataStyle[2]);
 
   return (
     <>
@@ -136,9 +155,17 @@ console.log(dataCard);
           </div>
           <div className="stylePage__sect">
             <h2 className="sect__title sect__title--2">Des ouvrages :</h2>
-            <ul className="stylePage__listBox">
-                {cardList}
-            </ul>
+            <ul className="stylePage__listBox">{cardList}</ul>
+          </div>
+          {/*  */}
+          <div className="stylePage__sect stylePage__sect--ecart">
+            <h2 className="sect__title sect__title--2">Des documentaires :</h2>
+            <ul className="stylePage__listBox">{cardList}</ul>
+          </div>
+          {/*  */}
+          <div className="stylePage__sect stylePage__sect--ecart">
+            <h2 className="sect__title sect__title--2">Des artistes :</h2>
+            <ul className="stylePage__listBox">{cardArtiste}</ul>
           </div>
         </section>
       </div>
