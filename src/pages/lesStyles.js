@@ -10,7 +10,8 @@ import CardInfoStyle from "../components/CardInfoStyle";
 
 function LesStyles() {
   const [navSecondActif, setNavSecondActif] = useState("Tous");
-
+  const [dataCard, setDataCard] = useState(dataStyle)
+console.log(dataCard);
   let allLink = [
     "Tous",
     "Japon",
@@ -37,9 +38,35 @@ function LesStyles() {
 
   });
 
+  function trisData(){
+
+    if(navSecondActif === 'Japon'){
+      setDataCard(dataStyle[0])
+    }else if (navSecondActif === 'Old-school'){
+      setDataCard(dataStyle[1])
+    }else if (navSecondActif === 'Prison Russe'){
+      setDataCard(dataStyle[2])
+    }else if(navSecondActif === 'Nordique'){
+      setDataCard(dataStyle[3])
+    }else {
+      setDataCard(dataStyle)
+    }
+  }
+
   function changestatNavSecond(e){
 
-    setNavSecondActif(e.target.title)
+    setNavSecondActif(e.target.title.toLowerCase());
+
+    if(e.target.title === 'Tous'){
+      setDataCard(dataStyle)
+    }else if (e.target.title === 'Celtique'){
+      setDataCard(dataStyle.filter(card => card.name.toLowerCase() === "nordique"))
+    }else{
+      setDataCard(dataStyle.filter(card => card.name.toLowerCase() === e.target.title.toLowerCase()))
+    }
+   
+    // console.table(navSecondActif)
+    // console.table(dataCard)
     
     let allLink = document.querySelectorAll('.stylePage__link');
     allLink.forEach((el)=>{
@@ -48,7 +75,13 @@ function LesStyles() {
     e.target.classList.add("stylePage__link--actif")
   }
 
-  console.log(dataStyle[0].book[0].urlImg);
+
+  const cardList = dataCard.map((el)=>(
+    el.book.map((ell) =>(
+     <CardInfoStyle urlImg={ell.urlImg} author={ell.author} nameBook={ell.nameBook}/>
+    ))
+   ))
+//console.log(dataStyle[2]);
 
 
 
@@ -104,11 +137,7 @@ function LesStyles() {
           <div className="stylePage__sect">
             <h2 className="sect__title sect__title--2">Des ouvrages :</h2>
             <ul className="stylePage__listBox">
-                {dataStyle.map((el, key)=>(
-                 el.book.map((ell) =>(
-                  <CardInfoStyle urlImg={ell.urlImg} author={ell.author} nameBook={ell.nameBook}/>
-                 ))
-                ))}
+                {cardList}
             </ul>
           </div>
         </section>
