@@ -53,19 +53,20 @@
     "artiste":[
        { "name":"HORISUMI",
         "style":"Irezumi",
-        "urlImg":"",
+        "urlImg":"http://antoni-dumont.be/projets/tfe/imgArtist/horisumi.jpg",
         "linkInsta": "https://www.instagram.com/horisumi/"
         },
         {
             "name":"Asakusa Horikazu ",
             "style":"Irezumi",
-            "urlImg":"",
+            "urlImg":"http://antoni-dumont.be/projets/tfe/imgArtist/asakusa.jpeg",
             "linkInsta":"https://www.instagram.com/asakusahorikazu/"
         },
         {
             "name":"Horihiro edo",
             "style":"Irezumi",
-            "linkInsta":"https://www.instagram.com/horihiro_tebori/"
+            "linkInsta":"https://www.instagram.com/horihiro_tebori/",
+            "urlImg":"http://antoni-dumont.be/projets/tfe/imgArtist/edo.jpg"
         }
     ]
 },
@@ -107,7 +108,7 @@
     "artiste":[
         { "name":"Anna Wall",
          "style":"Old-school",
-         "urlImg":"",
+         "urlImg":"http://antoni-dumont.be/projets/tfe/imgArtist/anna.jpg",
          "linkInsta": "https://www.instagram.com/annappley/"
          },
          {
@@ -119,12 +120,14 @@
          {
             "name":"Matt Howse",
             "style":"Old-school",
-            "linkInsta":"https://www.instagram.com/matthowse/"
+            "linkInsta":"https://www.instagram.com/matthowse/",
+            "urlImg":"http://antoni-dumont.be/projets/tfe/imgArtist/matt.jpg"
          },
          {
             "name":"Ludo la main bleue",
             "style":"Old-school",
-            "linkInsta":"https://www.instagram.com/ludolamainbleue/"
+            "linkInsta":"https://www.instagram.com/ludolamainbleue/",
+            "urlImg":"http://antoni-dumont.be/projets/tfe/imgArtist/ludo.jpg"
          }
      ]
 },
@@ -153,7 +156,7 @@
     "artiste":[
         { "name":"HORISUMI",
          "style":"Irezumi",
-         "urlImg":"https://instagram.fcrl2-1.fna.fbcdn.net/v/t51.2885…omSByuD_GUqjDwDRfod2VQ&oe=647EEE31&_nc_sid=a1ad6c",
+         "urlImg":"http://antoni-dumont.be/projets/tfe/imgArtist/horisumi.jpg",
          "linkInsta": "https://www.instagram.com/horisumi/"
          }
      ]

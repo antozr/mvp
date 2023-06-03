@@ -14,6 +14,7 @@ import annaOld from "../assets/img/artistes/anna.jpg";
 import alexplunk from "../assets/img/artistes/alexplunk.jpeg";
 import ludo from "../assets/img/artistes/ludo.jpg";
 import matt from "../assets/img/artistes/matt.jpg";
+import Footer from "../components/Footer";
 
 function LesStyles() {
   const [navSecondActif, setNavSecondActif] = useState("Tous");
@@ -127,6 +128,22 @@ function LesStyles() {
   );
   //console.log(dataStyle[2]);
 
+  /// close part of info
+
+  function closePartInfoList(e) {
+    console.log(e.target.parentElement.parentElement);
+    e.target.parentElement.parentElement.classList.toggle(
+      "stylePage__sect--small"
+    );
+    e.target.children[0].classList.toggle("stylePage__svgArrow--click");
+
+    if (e.target.children[1].innerText === "Réduire") {
+      e.target.children[1].innerText = "Étendre";
+    } else {
+      e.target.children[1].innerText = "Réduire";
+    }
+  }
+
   return (
     <>
       <div className="page">
@@ -145,7 +162,7 @@ function LesStyles() {
                 className=" sect__title sect__title--2 sect__title--ecart"
                 style={{ fontSize: "28px" }}
               >
-                Pret pour <br /> une exploration <br /> approfondie ?
+                Prêt pour <br /> une exploration <br /> approfondie ?
               </h2>
               <p className="sect__txt">
                 Si tu cherches à en savoir plus, que tu souhaites avoir un
@@ -177,21 +194,80 @@ function LesStyles() {
             </div>
           </div>
           <div className="stylePage__sect">
-            <h2 className="sect__title sect__title--2">Des ouvrages :</h2>
+            <div className="stylePage__boxTitle">
+              <h2 className="sect__title sect__title--2">Des ouvrages :</h2>
+              <p
+                className="sect__txt stylePage__btnToggle"
+                onClick={closePartInfoList}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="stylePage__svgArrow"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="#010101"
+                >
+                  <path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z" />
+                </svg>{" "}
+                <span>Réduire</span>{" "}
+              </p>
+            </div>
             <ul className="stylePage__listBox">{cardList}</ul>
           </div>
           {/*  */}
           <div className="stylePage__sect stylePage__sect--ecart">
-            <h2 className="sect__title sect__title--2">Des documentaires :</h2>
+            <div className="stylePage__boxTitle">
+              <h2 className="sect__title sect__title--2">
+                Des documentaires :
+              </h2>
+              <p
+                className="sect__txt stylePage__btnToggle"
+                onClick={closePartInfoList}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="stylePage__svgArrow"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="#010101"
+                >
+                  <path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z" />
+                </svg>{" "}
+                <span>Réduire</span>{" "}
+              </p>
+            </div>
+
             <ul className="stylePage__listBox">{cardList}</ul>
           </div>
           {/*  */}
           <div className="stylePage__sect stylePage__sect--ecart">
-            <h2 className="sect__title sect__title--2">Des artistes :</h2>
+            <div className="stylePage__boxTitle">
+              <h2 className="sect__title sect__title--2">Des artistes :</h2>
+              <p
+                className="sect__txt stylePage__btnToggle"
+                onClick={closePartInfoList}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="stylePage__svgArrow"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="#010101"
+                >
+                  <path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z" />
+                </svg>{" "}
+                <span>Réduire</span>{" "}
+              </p>
+            </div>
             <ul className="stylePage__listBox">{cardArtiste}</ul>
           </div>
         </section>
+        <Footer />
       </div>
+      
     </>
   );
 }
