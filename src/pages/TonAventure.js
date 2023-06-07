@@ -38,6 +38,7 @@ import dataDiscover from "../assets/data/AdventureData.json";
 import BoutonNormal from "../components/BoutonComp.js";
 import Footer from "../components/Footer.js";
 import ImgOpenbig from "../components/ImgOpenbig.js";
+import BateauHome from "../assets/img/boatAdventure.jpg";
 
 function TonAventure() {
   if (window.location.pathname !== "/japon") {
@@ -78,7 +79,7 @@ function TonAventure() {
     { Japon: { Img01: Jigoku1, Img02: Ryu02 } },
     { Russie: { Img01: Vierge2, Img02: Epaullette2 } },
   ];
- // console.log(arrayListImgLand);
+  // console.log(arrayListImgLand);
   //console.log(arrayListImgLand[0].US.Img01);
   ViewStateVisited();
 
@@ -291,43 +292,40 @@ function TonAventure() {
 
   return (
     <div className="yourAdventure pageChangeSet">
-      <section className="sect--homeAD sect--heigth100 sect--row  homepage__sect1--bgImg adventure--overflow">
-        <div className="adventure__imgBox">
-          <img
-            src={CarteNordic}
-            alt="Carte de pays ou d'une régions du monde. "
-            className="adventure__img"
-          />
-        </div>
-
-        <div className="adventure__boxDroite">
-          <div className="adventure__boxTitle">
-            <h2 className="sect__title ">
+     
+      <div className="homepage__sect1 homepage__sect1--bgImg sect">
+        <div
+          className="sect__boxImg--big sect__boxImg"
+          style={{ backgroundImage: `url(${BateauHome})` }}
+        >
+          <div className="sect__boxTxt sect__boxTxt--bgNoir ">
+            {/* Changer le titre  */}
+            <h1 className="sect__title sect__title--ecart">
               Ton aventure <br />
               <span className="sect__title--italic sect__title--thin">
                 Tes explorations
               </span>
-            </h2>
-            <p className="sect__title sect__title--big sect__txt--jaune adventure__decorTitle">
-              &
+            </h1>
+
+            <p className="sect__txt">
+              Tu retrouvera ici le suivis de ton aventure, entre les différents
+              pays que tu auras visité. Viens y jeter un coup d’œil pour avoir
+              un avis sur ce que tu as déjà vus, tu verras quelque exemples de
+              motifs présents dans leur univers.
             </p>
-          </div>
-          <p className="sect__txt sect__txt--ecartnv2 sect__txt--smallLength">
-            Tu retrouvera ici le suivis de ton aventure, entre les différents
-            pays que tu auras visité. Viens y jeter un coup d’œil pour avoir un
-            avis sur ce que tu as déjà vus, tu verras quelque exemples de motifs
-            présents dans leur univers.
-            <br />
-            <br />
             <span className="sect__txt sect__txt--italic sect__txt--bold sect__txt--ecart">
               Bonne aventure !{" "}
             </span>
-          </p>
 
-          {/* <BoutonComp  nameBtn={"Regarde ton voyage "} linkBtn={"#hollidays"} linkHref={true} ClassColor={"sect__btn sect__btn--yellow"}/> */}
+            <BoutonNormal
+              nameBtn={"Voir les infos"}
+              linkBtn={"#infoContent"}
+              ClassColor={"sect__btn"}
+              linkHref={true}
+            />
+          </div>
         </div>
-      </section>
-
+      </div>
       <InterSectionBox
         WhitThext={true}
         textTitle={<>Souviens-toi&nbsp; du&nbsp;voyage</>}
@@ -400,7 +398,7 @@ function TonAventure() {
                     src={dataImgActive[0]}
                     alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel."
                     className="adventure__imgSlider"
-                    onClick={openImgBox} 
+                    onClick={openImgBox}
                   />
                 </animated.div>
                 <animated.div
@@ -415,7 +413,7 @@ function TonAventure() {
                     src={dataImgActive[1]}
                     alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel."
                     className="adventure__imgSlider"
-                    onClick={openImgBox} 
+                    onClick={openImgBox}
                   />
                 </animated.div>
                 <animated.div
@@ -430,7 +428,7 @@ function TonAventure() {
                     src={dataImgActive[2]}
                     alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel."
                     className="adventure__imgSlider"
-                    onClick={openImgBox} 
+                    onClick={openImgBox}
                   />
                 </animated.div>
                 <animated.div
@@ -445,7 +443,7 @@ function TonAventure() {
                     src={dataImgActive[3]}
                     alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel."
                     className="adventure__imgSlider"
-                    onClick={openImgBox} 
+                    onClick={openImgBox}
                   />
                 </animated.div>
               </>
