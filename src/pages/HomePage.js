@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./HomePage.scss";
 import { motion } from "framer-motion";
 /// les images
-import MusicHome from "../assets/img/oldSchool/musicHome.jpg";
-import BateauHome from "../assets/img/oldSchool/bateauHome.jpg";
+import MusicHome from "../assets/img/oldSchool/musicHome.webp";
+import BateauHome from "../assets/img/oldSchool/bateauHome.webp";
 //import ImageHome2 from "../assets/img/homeImg.jpg";
 import BoutonNormal from "../components/BoutonComp";
 import MapBox from "../components/MapBox";
