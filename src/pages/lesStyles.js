@@ -91,6 +91,7 @@ function LesStyles() {
         urlImg={ell.urlImg}
         author={ell.author}
         nameBook={ell.nameBook}
+        urlTarget={ell.linkProduit}
       />
     ))
   );
@@ -123,10 +124,23 @@ function LesStyles() {
         urlImg={ell.urlImg}
         author={ell.style}
         nameBook={ell.name}
+        urlTarget={ell.linkInsta}
       />
     ))
   );
   //console.log(dataStyle[2]);
+
+  //// les video 
+
+  const cardFilm = dataCard.map((el)=>
+  el.film.map((ell, key)=>(
+    <CardInfoStyle
+    urlImg={ell.urlImg}
+    author={ell.author}
+    nameBook={ell.nameFilm}
+    urlTarget={ell.linkVideo}
+    video={true}/>
+  )))
 
   /// close part of info
 
@@ -184,16 +198,17 @@ function LesStyles() {
         </div>
         {/*  */}
         <InterSectionBox backImg={{ backgroundImage: `url(${backImg})` }} />
-        <section className="sect__contenu" id="infoContent">
-          <div className="homepage__boxContent">
+        <section className="sect__contenu " id="infoContent">
+          <div className="homepage__boxContent ">
             <h2 className="sect__title sect__title--druzokh">
               Choisis un style pour + d'infos
             </h2>
-            <div className="stylePage__boxLink">
+            
+          </div>
+          <div className="stylePage__boxLink">
               <ul className="boxLink__ul">{linkLandEl}</ul>
             </div>
-          </div>
-          <div className="stylePage__sect">
+          <div className="stylePage__sect ">
             <div className="stylePage__boxTitle">
               <h2 className="sect__title sect__title--2">Des ouvrages :</h2>
               <p
@@ -216,7 +231,7 @@ function LesStyles() {
             <ul className="stylePage__listBox">{cardList}</ul>
           </div>
           {/*  */}
-          <div className="stylePage__sect stylePage__sect--ecart">
+          <div className="stylePage__sect stylePage__sect--ecart  ">
             <div className="stylePage__boxTitle">
               <h2 className="sect__title sect__title--2">
                 Des documentaires :
@@ -239,11 +254,11 @@ function LesStyles() {
               </p>
             </div>
 
-            <ul className="stylePage__listBox">{cardList}</ul>
+            <ul className="stylePage__listBox">{cardFilm}</ul>
           </div>
           {/*  */}
-          <div className="stylePage__sect stylePage__sect--ecart">
-            <div className="stylePage__boxTitle">
+          <div className="stylePage__sect " style={{backgroundImage :`url(${backImg})` }}>
+            <div className="stylePage__boxTitle stylePage__listBox--black">
               <h2 className="sect__title sect__title--2">Des artistes :</h2>
               <p
                 className="sect__txt stylePage__btnToggle"
@@ -251,7 +266,7 @@ function LesStyles() {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="stylePage__svgArrow"
+                  className="stylePage__svgArrowstylePage__svgArrow--black"
                   width="18"
                   height="18"
                   viewBox="0 0 24 24"
@@ -262,10 +277,11 @@ function LesStyles() {
                 <span>Réduire</span>{" "}
               </p>
             </div>
-            <ul className="stylePage__listBox">{cardArtiste}</ul>
+            <ul className="stylePage__listBox stylePage__listBox--black">{cardArtiste}</ul>
           </div>
+          <Footer />
         </section>
-        <Footer />
+       
       </div>
       
     </>

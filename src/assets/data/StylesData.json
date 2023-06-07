@@ -38,10 +38,10 @@
     ],
     "film":[
         {
-            "nameFilm":"",
-            "author":"",
-            "urlImg":"",
-            "linkVideo":""
+            "nameFilm":"IREZUMI LE TATOUAGE JAPONAIS & LA FRANCE 1850 - 1980",
+            "author":"MIKAEL DE POISSY",
+            "urlImg":"http://antoni-dumont.be/projets/tfe/imgVideo/irezumi1.webp",
+            "linkVideo":"https://youtu.be/EcMoyT1XnzU"
         },
         {
             "nameFilm":"",
@@ -72,6 +72,20 @@
 },
 {
     "name":"Old-school",
+    "film":[
+        {
+            "nameFilm":"IREZUMI LE TATOUAGE JAPONAIS & LA FRANCE 1850 - 1980",
+            "author":"MIKAEL DE POISSY",
+            "urlImg":"",
+            "linkVideo":"https://youtu.be/EcMoyT1XnzU"
+        },
+        {
+            "nameFilm":"",
+            "author":"",
+            "urlImg":"",
+            "linkVideo":""
+        }
+    ],
     "book":[
         {
             "nameBook": "\"LEW THE JEW\" ALBERTS",
@@ -133,6 +147,20 @@
 },
 {
     "name":"Prison Russe",
+    "film":[
+        {
+            "nameFilm":"IREZUMI LE TATOUAGE JAPONAIS & LA FRANCE 1850 - 1980",
+            "author":"MIKAEL DE POISSY",
+            "urlImg":"",
+            "linkVideo":"https://youtu.be/EcMoyT1XnzU"
+        },
+        {
+            "nameFilm":"",
+            "author":"",
+            "urlImg":"",
+            "linkVideo":""
+        }
+    ],
     "book":[
         {
             "nameBook":"Russian Criminal Tattoo Encyclopaedia Volume III",
@@ -154,15 +182,29 @@
         }
     ],
     "artiste":[
-        { "name":"HORISUMI",
-         "style":"Irezumi",
-         "urlImg":"http://antoni-dumont.be/projets/tfe/imgArtist/horisumi.jpg",
-         "linkInsta": "https://www.instagram.com/horisumi/"
+        { "name":"russiantattoohistory",
+         "style":"Prison Russe",
+         "urlImg":"http://antoni-dumont.be/projets/tfe/imgArtist/russie1.jpg",
+         "linkInsta": "https://www.instagram.com/russiantattoohistory/"
          }
      ]
 },
 {
     "name":"Nordique",
+    "film":[
+        {
+            "nameFilm":"IREZUMI LE TATOUAGE JAPONAIS & LA FRANCE 1850 - 1980",
+            "author":"MIKAEL DE POISSY",
+            "urlImg":"",
+            "linkVideo":"https://youtu.be/EcMoyT1XnzU"
+        },
+        {
+            "nameFilm":"",
+            "author":"",
+            "urlImg":"",
+            "linkVideo":""
+        }
+    ],
     "book":[
         {
             "nameBook":"Nordic Tattoo",
