@@ -7,22 +7,22 @@ import SectionIntroPage from '../components/SectionIntroPage';
 import InterSectionBox from '../components/InterSectionBox';
 import ContentBoxHori from '../components/ContentBoxHori';
 // les images 
-import Horyoshi3 from '../assets/img/japan/horiyoshi-III.jpg';
+import Horyoshi3 from '../assets/img/japan/horiyoshi-III-min.webp';
 import HoryoshiSan from '../assets/img/tebori.jpg';
 import RestartHorishi1 from '../assets/img/japan/tebori.jpeg';
 import Ainu1 from '../assets/img/japan/ainu1.jpg';
 import Ainu2 from '../assets/img/japan/ainu2.jpg'
-import Meiji1 from '../assets/img/japan/meiji1.jpg';
-import Meiji2 from '../assets/img/japan/meiji2.jpg';
-import BackImgJap from '../assets/img/japan/irezumiBack2.jpg';
+import Meiji1 from '../assets/img/japan/meiji1-min.webp';
+import Meiji2 from '../assets/img/japan/meiji2-min.webp';
+import BackImgJap from '../assets/img/japan/irezumiBack2-min.webp';
 import backImgjap02 from '../assets/img/japan/arrierePlanYakuza.jpg';
-import BackImg3 from '../assets/img/japan/horishiFullWork.jpg';
-import Ryu01 from "../assets/img/japan/dragon2.jpg";
-import Ryu02 from "../assets/img/japan/dragon02.jpg";
-import Koi01 from "../assets/img/japan/koi1.jpg";
-import Koi02 from "../assets/img/japan/koi2.jpg";
-import Jigoku1 from '../assets/img/japan/jigoku1.jpg'
-import Jigoku2 from '../assets/img/japan/jigoku2.jpg'
+import BackImg3 from '../assets/img/japan/horishiFullWork-min.webp';
+import Ryu01 from "../assets/img/japan/dragon2-min.webp";
+import Ryu02 from "../assets/img/japan/dragon02-min.webp";
+import Koi01 from "../assets/img/japan/koi1-min.webp";
+import Koi02 from "../assets/img/japan/koi2-min.webp";
+import Jigoku1 from '../assets/img/japan/jigoku1-min.webp'
+import Jigoku2 from '../assets/img/japan/jigoku2-min.webp'
 
 function JapanPage() {
     if (window.location.pathname === '/japon') {

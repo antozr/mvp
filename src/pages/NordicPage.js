@@ -11,23 +11,23 @@ import SectionMotifHori from "../components/SectionHoriMotif";
 
 
 //// les images
-import HomeNordiq from '../assets/img/nordic/vikingHome.jpg';
-import BackImgNordic from '../assets/img/nordic/interNordicnoir.jpg'
-import vegvisir1 from '../assets/img/nordic/vegvisir.jpg'
-import vegvisir2 from '../assets/img/nordic/vegvisir2.jpg'
-import wirm1 from  '../assets/img/nordic/wyrd.jpg';
-import ygdrasil1 from '../assets/img/nordic/ygdrazil1.jpg';
-import ygdrasil2 from '../assets/img/nordic/ygdrazil2.jpg';
+import HomeNordiq from '../assets/img/nordic/compressed/vikingHome.webp';
+import BackImgNordic from '../assets/img/nordic/compressed/interNordicnoir.webp'
+import vegvisir1 from '../assets/img/nordic/compressed/vegvisir.webp'
+import vegvisir2 from '../assets/img/nordic/compressed/vegvisir2.webp'
+import wirm1 from  '../assets/img/nordic/compressed/wyrd.webp';
+import ygdrasil1 from '../assets/img/nordic/compressed/ygdrazil1.webp';
+import ygdrasil2 from '../assets/img/nordic/compressed/ygdrazil2.webp';
 
-import momie1 from '../assets/img/nordic/momie1.jpg'
-import momie2 from '../assets/img/nordic/momie2.jpg'
-import amad1 from '../assets/img/nordic/amad1.jpg';
-import amad2 from '../assets/img/nordic/amad2.jpg';
-import drakar from  '../assets/img/nordic/drakar.jpg';
-import history1 from  '../assets/img/nordic/histpry1.jpg';
-import history2 from  '../assets/img/nordic/history2.jpg';
-import horyMotif from '../assets/img/nordic/motifHori.jpg';
-import motifImgHory from '../assets/img/nordic/motifBighory.jpg'
+import momie1 from '../assets/img/nordic/compressed/momie1.webp'
+import momie2 from '../assets/img/nordic/compressed/momie2.webp'
+import amad1 from '../assets/img/nordic/compressed/amad1.webp';
+import amad2 from '../assets/img/nordic/compressed/amad2.webp';
+import drakar from  '../assets/img/nordic/compressed/drakar.webp';
+import history1 from  '../assets/img/nordic/compressed/histpry1.webp';
+import history2 from  '../assets/img/nordic/compressed/history2.webp';
+import horyMotif from '../assets/img/nordic/compressed/motifHori.webp';
+import motifImgHory from '../assets/img/nordic/compressed/motifBighory.webp'
 
 function NordicPage() {
 

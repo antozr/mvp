@@ -387,6 +387,8 @@ function TonAventure() {
               <></>
             ) : (
               <>
+                {window.innerWidth > 900 ? 
+                <>
                 <animated.div
                   {...bindCardImg1()}
                   style={{ x: PosCardImg1.x, y: PosCardImg1.y }}
@@ -448,6 +450,47 @@ function TonAventure() {
                     onClick={openImgBox}
                   />
                 </animated.div>
+              </>: 
+              <>
+                <ul className="adventure__mobileCarow">
+                  <li className="adventure__mobileEl">
+                    <p className="sect__txt sect__txt--jaune">
+                    {dataImgActive[4]}
+                    </p>
+                    <img src={dataImgActive[0]}
+                    alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel."
+                    className="adventure__imgSlider"
+                    onClick={openImgBox} />
+                  </li>
+                  <li className="adventure__mobileEl">
+                    <p className="sect__txt  sect__txt--jaune">
+                    {dataImgActive[5]}
+                    </p>
+                    <img src={dataImgActive[1]}
+                    alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel."
+                    className="adventure__imgSlider"
+                    onClick={openImgBox} />
+                  </li>
+                  <li className="adventure__mobileEl">
+                    <p className="sect__txt  sect__txt--jaune">
+                    {dataImgActive[6]}
+                    </p>
+                    <img src={dataImgActive[2]}
+                    alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel."
+                    className="adventure__imgSlider"
+                    onClick={openImgBox} />
+                  </li>
+                  <li className="adventure__mobileEl">
+                    <p className="sect__txt  sect__txt--jaune">
+                    {dataImgActive[7]}
+                    </p>
+                    <img src={dataImgActive[3]}
+                    alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel."
+                    className="adventure__imgSlider"
+                    onClick={openImgBox} />
+                  </li>
+                </ul>
+              </>}              
               </>
             )}
           </div>
