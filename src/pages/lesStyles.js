@@ -130,11 +130,7 @@ function LesStyles() {
     );
     e.target.children[0].classList.toggle("stylePage__svgArrow--click");
 
-    if (e.target.children[1].innerText === "Réduire") {
-      e.target.children[1].innerText = "Étendre";
-    } else {
-      e.target.children[1].innerText = "Réduire";
-    }
+    
   }
 
   return (
