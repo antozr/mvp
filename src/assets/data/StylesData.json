@@ -44,10 +44,10 @@
             "linkVideo":"https://youtu.be/EcMoyT1XnzU"
         },
         {
-            "nameFilm":"",
-            "author":"",
-            "urlImg":"",
-            "linkVideo":""
+            "nameFilm":"The Japanese Tattoo Duo: Taki & Horitomo",
+            "author":"Vice Tv",
+            "urlImg":"http://antoni-dumont.be/projets/tfe/imgVideo/izezumi2.webp",
+            "linkVideo":"https://www.youtube.com/watch?v=WlxRkrGiCBg"
         }
     ],
     "artiste":[
@@ -74,16 +74,16 @@
     "name":"Old-school",
     "film":[
         {
-            "nameFilm":"IREZUMI LE TATOUAGE JAPONAIS & LA FRANCE 1850 - 1980",
-            "author":"MIKAEL DE POISSY",
-            "urlImg":"",
-            "linkVideo":"https://youtu.be/EcMoyT1XnzU"
+            "nameFilm":"Ed Hardy: The Godfather of Modern Tattooing",
+            "author":"Vice",
+            "urlImg":"http://antoni-dumont.be/projets/tfe/imgVideo/old2.webp",
+            "linkVideo":"https://youtu.be/x-Cl-t6iyAM"
         },
         {
-            "nameFilm":"",
-            "author":"",
-            "urlImg":"",
-            "linkVideo":""
+            "nameFilm":"Hori Smoku Sailor Jerry The Life ",
+            "author":"TattooNOW",
+            "urlImg":"http://antoni-dumont.be/projets/tfe/imgVideo/old1.webp",
+            "linkVideo":"https://www.youtube.com/watch?v=jPiAT0a-c-I"
         }
     ],
     "book":[
@@ -149,17 +149,12 @@
     "name":"Prison Russe",
     "film":[
         {
-            "nameFilm":"IREZUMI LE TATOUAGE JAPONAIS & LA FRANCE 1850 - 1980",
-            "author":"MIKAEL DE POISSY",
-            "urlImg":"",
-            "linkVideo":"https://youtu.be/EcMoyT1XnzU"
-        },
-        {
-            "nameFilm":"",
-            "author":"",
-            "urlImg":"",
-            "linkVideo":""
+            "nameFilm":"The Mark of Cain - Russian Prison Tattoo",
+            "author":"Alix Lambert",
+            "urlImg":"http://antoni-dumont.be/projets/tfe/imgVideo/russie1.webp",
+            "linkVideo":"https://www.youtube.com/watch?v=vj-fccwTjuI"
         }
+ 
     ],
     "book":[
         {
@@ -192,17 +187,12 @@
 {
     "name":"Nordique",
     "film":[
+        
         {
-            "nameFilm":"IREZUMI LE TATOUAGE JAPONAIS & LA FRANCE 1850 - 1980",
-            "author":"MIKAEL DE POISSY",
-            "urlImg":"",
-            "linkVideo":"https://youtu.be/EcMoyT1XnzU"
-        },
-        {
-            "nameFilm":"",
-            "author":"",
-            "urlImg":"",
-            "linkVideo":""
+            "nameFilm":"Le Tatouage Traditionnel Celtique",
+            "author":"thINK tattoo",
+            "urlImg":"http://antoni-dumont.be/projets/tfe/imgVideo/celtic1.webp",
+            "linkVideo":"https://www.youtube.com/watch?v=0GLiOP6MlYw&t=21s"
         }
     ],
     "book":[
@@ -220,10 +210,16 @@
         }
     ],
     "artiste":[
-        { "name":"HORISUMI",
-         "style":"Irezumi",
-         "urlImg":"https://instagram.fcrl2-1.fna.fbcdn.net/v/t51.2885…omSByuD_GUqjDwDRfod2VQ&oe=647EEE31&_nc_sid=a1ad6c",
-         "linkInsta": "https://www.instagram.com/horisumi/"
+        { "name":"morrigantattooartist",
+         "style":"Nordique & celtique",
+         "urlImg":"http://antoni-dumont.be/projets/tfe/imgArtist/celtic1.jpg",
+         "linkInsta": "https://www.instagram.com/morrigantattooartist/"
+         },
+         {
+            "name":"Kaija Bodyart",
+            "style":"Nordique",
+            "urlImg":"http://antoni-dumont.be/projets/tfe/imgArtist/nordic1.jpg",
+            "linkInsta":"https://www.instagram.com/kaija_bodyart/"
          }
      ]
 }
