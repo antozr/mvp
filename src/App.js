@@ -19,7 +19,7 @@ function App() {
       <div className="pageChangeSet">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/les-styles" element={<LesStyles />} />
+          <Route path="/plus-dinfos" element={<LesStyles />} />
           <Route path="/oldschool" element={<OldSchoolUS />} />
           <Route path="/japon" element={<JapanPage />} />
           <Route path="/nordic" element={<NordicPage />} />

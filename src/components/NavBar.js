@@ -81,7 +81,7 @@ function NavBar() {
               {/* <Link rel="stylesheet" to='#' className="nav__a" onClick={animateChangePage} title='/'> La découverte </Link> */}
             </li>
             <li className="nav__el">
-              <NavLink to="/les-styles" className={({ isActive, isPending }) => isPending ? "nav__a" : isActive ? "nav__a " : "nav__a"} title='/les-styles' onClick={animateChangePage} > Les styles </NavLink>
+              <NavLink to="/plus-dinfos" className={({ isActive, isPending }) => isPending ? "nav__a" : isActive ? "nav__a " : "nav__a"} title='plus-dinfos' onClick={animateChangePage} > Plus d'infos </NavLink>
               {/* <Link rel="stylesheet" href="#" className="nav__a" onClick={animateChangePage} title='#'> Les Styles </Link> */}
             </li>
             {/* <li className="nav__el" onClick={loadDataMapAdventure}> */}

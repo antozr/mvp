@@ -166,7 +166,7 @@ function HomePage() {
               linkHref={true}
               nameBtn={"Tous en musique"}
               linkBtn={
-                "https://open.spotify.com/playlist/5bdQoZomjCWxHB5wbNYM4w?si=dd8a791bcaaf43af"
+                "https://open.spotify.com/playlist/5bdQoZomjCWxHB5wbNYM4w?si=5f7fea90088f4991"
               }
               ClassColor={"sect__btn sect__btn--yellow sect__btn--small"}
             />
