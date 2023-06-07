@@ -38,7 +38,16 @@
         bottom: 0px;
     }
 }
+@keyframes closeNavLink{
+    from{
+        bottom: 0px;
+    }
+    
+    to{
+        bottom: -100vh;
 
+    }
+}
 @keyframes animeChangePage {
     0% {
         z-index: 20;

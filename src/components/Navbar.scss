@@ -52,10 +52,14 @@
             font-size: 8vw;
             font-family: "JosefinVariable";
             font-weight: 400;
-            animation: openNavLink 3s both;
+            animation: openNavLink 0.8s both;
             }//
-
+            &--animClose{
+                animation: closeNavLink  0.3s  both;
+            }
     }
+
+   
 
     &__el {
         color: #FDF2DE;

@@ -4,16 +4,16 @@ import { motion } from "framer-motion";
 /// les images
 import MusicHome from "../assets/img/oldSchool/musicHome.jpg";
 import BateauHome from "../assets/img/oldSchool/bateauHome.jpg";
-import ImageHome2 from "../assets/img/homeImg.jpg";
+//import ImageHome2 from "../assets/img/homeImg.jpg";
 import BoutonNormal from "../components/BoutonComp";
 import MapBox from "../components/MapBox";
-import { initStatDataView } from "../logic/_status-map.js";
+//import { initStatDataView } from "../logic/_status-map.js";
 import ListMapMobile from "../components/ListMapMobile";
 import InterSectionBox from "../components/InterSectionBox";
 import Footer from "../components/Footer";
 import TextColDroite from "../components/TextColDroite";
 import { Link } from "react-router-dom";
-import BoxImageAnim from "../components/BoxImageAnim";
+//import BoxImageAnim from "../components/BoxImageAnim";
 
 function HomePage() {
   if (window.location.pathname !== "/japon") {
