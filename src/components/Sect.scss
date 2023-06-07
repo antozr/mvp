@@ -112,7 +112,7 @@
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
-            padding: 40vh 5vw 10vh;
+            padding: 40vh 0vw 10vh;
             color: #FFF5E2;
         }
 
@@ -131,10 +131,10 @@
         
         &--bgNoir{
             background-color: #1d1d1d;
-            transform: translateX(5vw) translateY(-14vh);
+            transform: translateX(0vw) translateY(0vh);
             padding: 8vh 3vw;
-            height: 100vh;
-            width: clamp(650px, 25vw, 100%);
+            height: 110vh;
+            width: 100vw;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -415,6 +415,17 @@
         &__boxTxt {
             // max-width: 500px;
             margin: 3cqh 0 0 -5vw;
+                
+                &--bgNoir{
+                    background-color: #1d1d1d;
+                    transform: translateX(5vw) translateY(-14vh);
+                    height: 100vh;
+                    width: clamp(650px, 25vw, 100%);
+
+        
+                    // color: #000;
+                }
+            
         }
 
         &__titre {

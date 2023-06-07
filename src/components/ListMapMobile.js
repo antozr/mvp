@@ -32,7 +32,7 @@ function ListMapMobile() {
 
                 {arrayAllName.map((nameLand, index) =>
 
-                    <Link to={arrayLinkName[index]} className='listMapMob__link listMapMob__el'>
+                    <Link to={arrayLinkName[index]} className='listMapMob__link listMapMob__el' aria-label={nameLand}>
                         <img src={arraySvgLand[index]} alt="Illustration d'un hirondelle, dans un style oldschool. " loading='lazy' title='Hirondelle' className="listMapMob__img" />
                         <p className=" sect__title listMapMob__title">{nameLand} </p>
                     </Link>

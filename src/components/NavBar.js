@@ -100,6 +100,7 @@ function NavBar() {
             <li className="nav__el">
               <NavLink
                 to="/"
+                aria-label="Home page"
                 className={({ isActive, isPending }) =>
                   isPending
                     ? "nav__a"
@@ -118,6 +119,7 @@ function NavBar() {
             <li className="nav__el">
               <NavLink
                 to="/plus-dinfos"
+                aria-label="Plus d'info  page"
                 className={({ isActive, isPending }) =>
                   isPending ? "nav__a" : isActive ? "nav__a " : "nav__a"
                 }
@@ -133,6 +135,7 @@ function NavBar() {
             <li className="nav__el">
               <NavLink
                 to="/ton-aventure"
+                aria-label="Ton aventure  page"
                 className={({ isActive, isPending }) =>
                   isPending
                     ? "nav__a"

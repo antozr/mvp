@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 import InterSectionBox from '../components/InterSectionBox'
 import backInterOld from '../assets/img/svg/oldSchool/paternOldSchool.svg';
 import BoutonNormal from '../components/BoutonComp';

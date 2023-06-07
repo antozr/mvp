@@ -367,6 +367,7 @@ function TonAventure() {
                 to={dataBoxInfo[3]}
                 className="adventure__linkBox"
                 onClick={animateChangePage}
+                aria-label="Vers la carte"
               >
                 <p className="sect__txt">Visite {dataBoxInfo[2]}</p>
                 <img
@@ -399,6 +400,7 @@ function TonAventure() {
                     alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel."
                     className="adventure__imgSlider"
                     onClick={openImgBox}
+                    loading="lazy"
                   />
                 </animated.div>
                 <animated.div

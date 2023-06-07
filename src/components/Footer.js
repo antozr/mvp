@@ -8,7 +8,7 @@ function Footer() {
       <div className="footer__startBox">
         <ul className="footer__list">
           <li className="footer__el">
-            <a href="https://dwt.heaj.be/" target="blank" className="footer__link sect__txt">
+            <a href="https://dwt.heaj.be/" target="blank" className="footer__link sect__txt" aria-label="DWT">
               DWT
             </a>
           </li>
@@ -16,6 +16,7 @@ function Footer() {
             <a
               href="https://www.instagram.com/zombirev/"
               className="footer__link footer__link--img"
+              aria-label="Instagram"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +31,7 @@ function Footer() {
         </ul>
       </div>
       <div className="footer__endBox">
-        <a href="http://antoni-dumont.be/" className="footer__link sect__txt">
+        <a href="http://antoni-dumont.be/" className="footer__link sect__txt" aria-label="Page web Antoni Dumont">
           By Antoni Dumont
         </a>
         <p className="sect__txt sect__thin">©{dateYear}</p>

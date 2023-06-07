@@ -47,6 +47,7 @@ function HomePage() {
             to="/ton-aventure"
             className=""
             style={{ cursor: "pointer", color: "inherit" }}
+            aria-label="Vers la carte"
           >
             <b>Ton explorations</b>
           </Link>
@@ -132,6 +133,7 @@ function HomePage() {
             whileInView={{ x: 0, opacity: 1}}
             transition={{type: "spring",delay:0.2}}
             className="homepage__imgBox"
+            alt="Tatouage old school sur la musique "
           ></motion.img>
           {window.innerWidth >= 900 ? <motion.img
             src={MusicHome}
@@ -139,6 +141,7 @@ function HomePage() {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{type: "ease",delay:0.6}}
             className="homepage__imgBox"
+            alt="Tatouage old school sur la musique "
           ></motion.img> : <></>}
           </div>
           {/* <motion.img

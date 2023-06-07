@@ -9,11 +9,11 @@ function BoutonNormal({ nameBtn, linkBtn, ClassColor, linkHref }) {
     // </a>
     <>
       {linkHref === true ? <>
-        <a href={linkBtn} className={ClassColor} >
+        <a href={linkBtn} className={ClassColor} aria-label={nameBtn} >
           {nameBtn}
         </a>
       </> : <>
-        <Link to={linkBtn} className={ClassColor}>
+        <Link to={linkBtn} className={ClassColor} aria-label={nameBtn}>
           {nameBtn}
         </Link>
       </>}

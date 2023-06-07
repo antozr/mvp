@@ -96,27 +96,6 @@ function LesStyles() {
     ))
   );
 
-  let i = 0;
-
-  //// faire varier la liste en fonction choix nav secondaire
-
-  function setTableDataImg(key) {
-    if (navSecondActif === "Tous") {
-      let dataS1 = dataStyle[0].artiste.length;
-      console.log("Longeur tab artistes : " + dataS1);
-      console.log("key: " + key);
-
-      if (key <= dataS1 - 1 && i <= dataS1 - 1) {
-        console.log(allLinkImgArtsit[i]);
-        i++;
-        console.log(i);
-        return allLinkImgArtsit[0][key];
-      } else if (i > dataS1 - 1) {
-        i++;
-        return allLinkImgArtsit[1][key];
-      }
-    }
-  }
 
   const cardArtiste = dataCard.map((el) =>
     el.artiste.map((ell, key) => (
