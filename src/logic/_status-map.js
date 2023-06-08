@@ -51,6 +51,7 @@ export function ChangeStateDataVisited() {
     "/russie",
     "/europe",
     "/pacifique",
+    "/celtic"
   ];
   let pathNamePage = window.location.pathname;
   //console.log(pathNamePage);
@@ -89,6 +90,10 @@ export function ChangeStateDataVisited() {
     localStorage.setItem("Maori", true);
     SecondVisiteSelect = true;
     localStorage.setItem("ViewCheckPageStart", true);
+  }else if (pathNamePage === arrayListPathName[6]){
+    localStorage.setItem("Celtic", true);
+    SecondVisiteSelect = true;
+    localStorage.setItem("ViewCheckPageStart", true);
   }
 }
 
@@ -111,6 +116,7 @@ export function loadDataMapAdventure() {
   let EUdataLoad = localStorage.getItem("EU");
   let RussiadataLoad = localStorage.getItem("Russia");
   let MaoridataLoad = localStorage.getItem("Maori");
+  let CelticLoad = localStorage.getItem("Celtic");
   //console.log(USdataLoad);
   //// tableau donnee recuperee
   let arrayAllDataLoad = [
@@ -120,6 +126,7 @@ export function loadDataMapAdventure() {
     EUdataLoad,
     RussiadataLoad,
     MaoridataLoad,
+    CelticLoad
   ];
   //console.table(arrayAllDataLoad);
   //// tableau contenant le retour pour les liens
@@ -129,10 +136,11 @@ export function loadDataMapAdventure() {
   let tabLandName = [
     "Old school",
     "Japon",
-    "Nordic & Celte",
+    "Nordic ",
     "Tradi européens",
     "Russie & prisons ",
     "Maori",
+    "Celtes"
   ];
   let i = 0;
 

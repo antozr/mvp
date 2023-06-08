@@ -14,6 +14,7 @@ import CarteUS from "../assets/img/svg/amerique.svg";
 import CarteJapon from "../assets/img/svg/japon.svg";
 import CarteEu from "../assets/img/svg/europe.svg";
 import CarteRussie from "../assets/img/svg/russie.svg";
+import CarteBG from '../assets/img/svg/celte.svg'
 /// motif
 import Hirondelle from "../assets/img/oldSchool/hirondelletat.jpg";
 import Pinup from "../assets/img/oldSchool/pinup1.jpg";
@@ -39,6 +40,16 @@ import BoutonNormal from "../components/BoutonComp.js";
 import Footer from "../components/Footer.js";
 import ImgOpenbig from "../components/ImgOpenbig.js";
 import BateauHome from "../assets/img/boatAdventure.jpg";
+///// celte
+import triskel from '../assets/img/celte/triskel1.webp'
+import triketra from '../assets/img/celte/TRIKETRA1.webp'
+import horse from '../assets/img/celte/epona2.webp'
+import dog from '../assets/img/celte/epona1.webp'
+//// nodic
+import yggdrazil from '../assets/img/nordic/compressed/ygdrazil1.webp';
+import vigvizir from '../assets/img/nordic/compressed/vegvisir.webp';
+import wyrdToile from '../assets/img/nordic/compressed/wyrd.webp';
+import drakar from '../assets/img/nordic/compressed/drakar.webp';
 
 function TonAventure() {
   if (window.location.pathname !== "/japon") {
@@ -94,6 +105,7 @@ function TonAventure() {
     CarteEu,
     CarteRussie,
     CarteNordic,
+    CarteBG
   ];
   function openImgBox(e) {
     let srcImg = e.target.src;
@@ -190,7 +202,45 @@ function TonAventure() {
       ]);
 
       setMapLink(arrayListMapLink[4]);
-    } else {
+    } else if (linkActive === "Celtes"){
+      setDataBoxInfo([
+        dataDiscover[3].name,
+        dataDiscover[3].description,
+        dataDiscover[3].land,
+        dataDiscover[3].link,
+      ]);
+      setDataImgActive([
+        dog,
+        horse,
+        triketra,
+        triskel,
+        "Chien",
+        "Epona",
+        "Triketra",
+        "Triskel",
+      ]);
+      setMapLink(arrayListMapLink[6]);
+    } else if (linkActive === "Nordic "){
+      setDataBoxInfo([
+        dataDiscover[4].name,
+        dataDiscover[4].description,
+        dataDiscover[4].land,
+        dataDiscover[4].link,
+      ]);
+      setDataImgActive([
+        drakar,
+        yggdrazil,
+        vigvizir,
+        wyrdToile,
+        "Drakkar",
+        "Yggdrasil",
+        "Vegvisir",
+        "Wyrd",
+      ]);
+      setMapLink(arrayListMapLink[5]);
+    }
+    
+    else {
       setDataBoxInfo(["Contenu non trouvable"]);
     }
   }
@@ -274,7 +324,44 @@ function TonAventure() {
           "Etoile 8 branches",
         ]);
         setMapLink(arrayListMapLink[4]);
-      } else {
+      } else if (tabDataNameUse[0] === "Celtes"){
+        setDataBoxInfo([
+          dataDiscover[3].name,
+          dataDiscover[3].description,
+          dataDiscover[3].land,
+          dataDiscover[3].link,
+        ]);
+        setDataImgActive([
+          dog,
+          horse,
+          triketra,
+          triskel,
+          "Chien",
+          "Epona",
+          "Triketra",
+          "Triskel",
+        ]);
+        setMapLink(arrayListMapLink[6]);
+      }else if (tabDataNameUse[0] === "Nordic "){
+        setDataBoxInfo([
+          dataDiscover[4].name,
+          dataDiscover[4].description,
+          dataDiscover[4].land,
+          dataDiscover[4].link,
+        ]);
+        setDataImgActive([
+          drakar,
+          yggdrazil,
+          vigvizir,
+          wyrdToile,
+          "Drakkar",
+          "Yggdrasil",
+          "Vegvisir",
+          "Wyrd",
+        ]);
+        setMapLink(arrayListMapLink[5]);
+      }
+      else {
         setDataBoxInfo(["Contenu non trouvable"]);
       }
     }
