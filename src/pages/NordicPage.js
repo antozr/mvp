@@ -29,7 +29,8 @@ import history1 from  '../assets/img/nordic/compressed/histpry1.webp';
 import history2 from  '../assets/img/nordic/compressed/history2.webp';
 import horyMotif from '../assets/img/nordic/compressed/motifHori.webp';
 import motifImgHory from '../assets/img/nordic/compressed/motifBighory.webp'
-
+import wyrdSvg from '../assets/img/svg/nordic/wyrd.svg';
+import valknutScg from '../assets/img/svg/nordic/valknut.svg';
 function NordicPage() {
 
 
@@ -75,6 +76,8 @@ function NordicPage() {
           BTD2={"voyage"}
           title={allTitle[0]}
           txt={allTxt[0]}
+          Img01={wyrdSvg}
+          Img02={valknutScg}
         />
         <InterSectionBox
           WhitThext={true}
