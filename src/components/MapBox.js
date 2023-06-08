@@ -77,13 +77,15 @@ function MapBox() {
         let idMaori = carte.current.childNodes[121];
         let idRussie = carte.current.childNodes[92];
         let idEurope = carte.current.childNodes[109];
+        let idCeltique = carte.current.childNodes[52];
 
-        stateMove(idNordic, "Nordique tradi", '/nordic', 2, 1);
+        stateMove(idNordic, "Nordique ", '/nordic', 2, 1);
         stateMove(idUs, "Old-school Américain", '/oldschool', 3, 1);
         stateMove(idJapon, 'Irezumi, tradi japonais', '/japon', 5, 3);
         stateMove(idMaori, 'Traditionnel des iles pacifiques', '/pacifique', 2, 1);
         stateMove(idRussie, 'Prison russe & URSS', '/russie', 5, 5);
         stateMove(idEurope, 'Traditionnel européen', '/europe', 2, 1);
+        stateMove(idCeltique, 'Celtique', '/celtic', 2, 1);
     }, [])
 
 
