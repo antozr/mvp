@@ -16,7 +16,13 @@ import utils1 from '../assets/img/celte/util1.webp';
 import utils2 from '../assets/img/celte/util2.webp';
 import motifBack1 from '../assets/img/celte/motifentrela.webp';
 import motifBack2 from '../assets/img/celte/backMotif.webp';
-
+//// motif img
+import triskel1 from '../assets/img/celte/triskel1.webp';
+import triskel2 from '../assets/img/celte/triskel2.webp';
+import epona1 from '../assets/img/celte/epona1.webp';
+import epona2 from '../assets/img/celte/epona2.webp';
+import triketra1 from '../assets/img/celte/TRIKETRA1.webp';
+import triketra2 from '../assets/img/celte/triketra2.webp';
 
 function CelticPage() {
 
@@ -101,6 +107,9 @@ function CelticPage() {
         {/*  */}
         <div className="sect--heigth100">
             <SectionMotifHori 
+            Img01={triskel1} Img012={triskel2}
+            Img02={epona1} Img021={epona2}
+            Img03={triketra1} Img032={triketra2}
 
             />
         </div>
