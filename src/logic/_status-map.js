@@ -35,7 +35,7 @@ export function initStatDataView() {
 
 export function ChangeStateDataVisited() {
 
-  //// a changer a l'upload en ligne 
+  // //// a changer a l'upload en ligne 
   // let arrayListPathName = [
   //   "/projets/tfe/suite/oldschool",
   //   "/projets/tfe/suite/japon",

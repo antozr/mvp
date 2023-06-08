@@ -34,9 +34,9 @@ function CelticPage() {
         <>La&nbsp;technique</>,
         <>teknikel</>,
         <>L’origine des motifs </>,
-        <></>,
-        <></>,
-        <></>,
+        <>Le triskel </>,
+        <>Le cheval</>,
+        <>La triketra</>,
         <></>,
     ];
     let allTxt = [
@@ -55,9 +55,10 @@ function CelticPage() {
         <><br/><br/> <span className="sect__txt--thin sect__txt--italic">On sait que le liquide utilisé comme encre était une poudre aux propriétés médicinales de couleur bleu verte une fois encrée. Et l'artiste utilisait une pointe en fer, pour la réalisation des motifs, mais qu'en est-il d'eux ?</span></>,
         <>On retrouve des motifs sur l’art celtes ainsi que sur des abjects du quotidien, comme sur des poutres, des rochers, de l’orfèvrerie et sur des armes. On peut noter une ressemblance avec l’art des peuples nordiques, mais cela est dû à leurs nombreuses rencontre et échange lors des expéditions de ces derniers. </>,
         <><br/><br/><span className="sect__txt--thin">Les motifs vont être tournés vers la représentation de la nature et des animaux les entourant, due à leur connaissance approfondie dans le sujet. Mais ils ont aussi un rôle plus divin, qui permettraient aux hommes de se rapprocher des dieux, suite au signe que les animaux transmettront et donnant sa protection spirituelle à son détenteur. </span></>,
-        <></>,
-        <></>,
-        <></>,
+        <>On lui attribue plusieurs symboliques comme les différentes positions du soleil,  les 3 mondes ( physique, des cieux avec les astres et le monde spirituel avec les dieux, esprit et les morts).<br/> <span className="sect__txt--thin">Le sens des spirales indiquent une signification différente, vers la gauche : la lutte et le combat & vers la droite : la paix & la tranquillité.</span> </>,
+        <>Les animaux ont une grande importance dans la vie et le culte des celtes car d'une part ils étaient utiles lors des batailles et des travaux de champs. Et montrer l'importance de la personne qui le porte avec son rang social. <br/> <span className="sect__txt--thin">On retrouve aussi le cheval divin, Epona, qui est liée à la terre Mère et instaure le pouvoir de régner sur ses terres en donnant autorité et puissance à son porteur. </span></>,
+        <>On retrouve diverse signification en fonction des peuples et des cultes, mais pour les chrétiens, il représente la Sainte trinité et chez les Celtes les différentes étapes de la vie d’un homme ( l’enfance, la vie adulte et la vieillesse). <br/> <span className="sect__txt--thin sect__txt--italic"> Mais comme pour les autres symboles, on retrouve surtout l’importance du 3, qui est un chiffre important dans la culture celtes et bon nombre d’autre cultes, car il se rapproche du nombre divin, celui qui nous lie aux cieux et aux 3 mondes. C’est un symbole fort utilisé mais qui se compose toujours de 3 cercles pour le créer. 
+        </span></>,
         <></>,
     ]
 
@@ -107,9 +108,9 @@ function CelticPage() {
         {/*  */}
         <div className="sect--heigth100">
             <SectionMotifHori 
-            Img01={triskel1} Img012={triskel2}
-            Img02={epona1} Img021={epona2}
-            Img03={triketra1} Img032={triketra2}
+            Img01={triskel1} Img012={triskel2} txt01={allTxt[9]} title01={allTitle[7]} nameIllu1={allTitle[7]}  styleBoxIllu1={{margin : '0px'}}  OneImg1={true}
+            Img02={epona1} Img021={epona2} txt02={allTxt[10]} title02={allTitle[8]} nameIllu2={allTitle[8]}
+            Img03={triketra1} Img032={triketra2} txt03={allTxt[11]} title03={allTitle[9]} nameIllu3={allTitle[9]}
 
             />
         </div>

@@ -1,3 +1,4 @@
+import { Linear } from "gsap";
 import React from "react";
 
 function CardInfoStyle({ urlImg, nameBook, author, video, urlTarget }) {
@@ -9,7 +10,7 @@ function CardInfoStyle({ urlImg, nameBook, author, video, urlTarget }) {
     <>
       {video === true ? (
         <>
-          <el className="stylePage__elBox stylePage__elBox--video" onClick={clickUrl}>
+          <li className="stylePage__elBox stylePage__elBox--video" onClick={clickUrl}>
             <img
               src={urlImg}
               alt="Couverture de livre ayant pour sujet les tatouages."
@@ -20,11 +21,11 @@ function CardInfoStyle({ urlImg, nameBook, author, video, urlTarget }) {
             {/* <p className="sect__txt sect__txt--jaune">
                 {dataStyle[0].name}
               </p> */}
-          </el>
+          </li>
         </>
       ) : (
         <>
-          <el className="stylePage__elBox" onClick={clickUrl}>
+          <li className="stylePage__elBox" onClick={clickUrl}>
             <img
               src={urlImg}
               alt="Couverture de livre ayant pour sujet les tatouages."
@@ -35,7 +36,7 @@ function CardInfoStyle({ urlImg, nameBook, author, video, urlTarget }) {
             {/* <p className="sect__txt sect__txt--jaune">
                   {dataStyle[0].name}
                 </p> */}
-          </el>
+          </li>
         </>
       )}
     </>
