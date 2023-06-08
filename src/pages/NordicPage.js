@@ -42,7 +42,8 @@ function NordicPage() {
         <>Yggdrasil</>,
         <>Vegvisir</>,
         <>La&nbsp;technique</>,
-        <>teknikken</>,
+        // <>teknikken</>,
+        <>ᛚᚨ ᛏᛖᚲᚾᛁᚲᛖ</>,
         <>Des motifs</>,
         <> </>,
     ];

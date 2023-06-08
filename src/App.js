@@ -11,6 +11,7 @@ import RussiePage from "./pages/Russie";
 import Page404 from "./pages/Page404";
 import Standby from "./pages/Standby";
 import LesStyles from "./pages/lesStyles";
+import CelticPage from "./pages/CelticPage";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
           <Route path="/oldschool" element={<OldSchoolUS />} />
           <Route path="/japon" element={<JapanPage />} />
           <Route path="/nordic" element={<NordicPage />} />
-          <Route path='/celtic' element={<Standby />} />
+          <Route path='/celtic' element={<CelticPage />} />
           <Route path="/russie" element={<RussiePage />} />
           <Route path="/europe" element={<Standby />} />
           <Route path="/pacifique" element={<Standby />} />
