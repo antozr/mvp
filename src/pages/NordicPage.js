@@ -16,6 +16,7 @@ import BackImgNordic from '../assets/img/nordic/compressed/interNordicnoir.webp'
 import vegvisir1 from '../assets/img/nordic/compressed/vegvisir.webp'
 import vegvisir2 from '../assets/img/nordic/compressed/vegvisir2.webp'
 import wirm1 from  '../assets/img/nordic/compressed/wyrd.webp';
+import wirm2 from  '../assets/img/nordic/compressed/wyrd2.webp';
 import ygdrasil1 from '../assets/img/nordic/compressed/ygdrazil1.webp';
 import ygdrasil2 from '../assets/img/nordic/compressed/ygdrazil2.webp';
 
@@ -114,7 +115,7 @@ function NordicPage() {
         />
         <div className="sect--heigth100">
           <SectionMotifHori 
-          title01={allTitle[5]} txt01={allTxt[8]} Img01={wirm1} Img012={wirm1} nameIllu1={allTitle[5]}  styleBoxIllu1={{margin : '0px'}}  OneImg1={true}
+          title01={allTitle[5]} txt01={allTxt[8]} Img01={wirm1} Img012={wirm2} nameIllu1={allTitle[5]}  styleBoxIllu1={{margin : '0px'}}  OneImg1={true}
           title02={allTitle[7]} txt02={allTxt[10]} Img02={vegvisir1} Img021={vegvisir2} nameIllu2={allTitle[7]}
           title03={allTitle[6]} txt03={allTxt[9]} Img03={ygdrasil1} Img032={ygdrasil2} nameIllu3={allTitle[6]}
           />
