@@ -3,8 +3,21 @@ import SectionIntroPage from '../components/SectionIntroPage'
 import InterSectionBox from '../components/InterSectionBox'
 import ContentBoxHori from '../components/ContentBoxHori'
 import SectHoriFull from '../components/SectHoriFull'
+import SectionMotifHori from '../components/SectionHoriMotif'
 /// img
 import HomeNordiq from '../assets/img/nordic/compressed/vikingHome.webp';
+import backCelte from '../assets/img/celte/backCelte1.webp';
+import backCelte2 from '../assets/img/celte/backCelt2.webp';
+import picts1 from '../assets/img/celte/pictsBig2.webp';
+import picts2 from '../assets/img/celte/picts2.webp';
+import ptolomee1 from '../assets/img/celte/ptolome1.webp';
+import ptolomee2 from '../assets/img/celte/ptolome2.webp';
+import utils1 from '../assets/img/celte/util1.webp';
+import utils2 from '../assets/img/celte/util2.webp';
+import motifBack1 from '../assets/img/celte/motifentrela.webp';
+import motifBack2 from '../assets/img/celte/backMotif.webp';
+
+
 function CelticPage() {
 
     let allTitle = [
@@ -51,20 +64,20 @@ function CelticPage() {
             txt={allTxt[0]} />
             <InterSectionBox WhitThext={true}
             textTitle={<>Dans&nbsp;les plaines&nbsp;celtes</>}
-            //backImg={{ backgroundImage: `url(${BackImgNordic})`}}
+            backImg={{ backgroundImage: `url(${backCelte})`}}
              />
             {/*  */}
             <div className="sect__historyLand">
                 <div className="hori__grid hori__box--black">
-                    <ContentBoxHori title01={allTitle[1]} text01={allTxt[1]} text02={allTxt[2]} animImg={true} historicBox={true} linkImg01={HomeNordiq} linkImg02={HomeNordiq}  colorTxt={{ color: '#FDF2DE' }}/>
+                    <ContentBoxHori title01={allTitle[1]} text01={allTxt[1]} text02={allTxt[2]} animImg={true} historicBox={true} linkImg01={picts1} linkImg02={picts2}  colorTxt={{ color: '#FDF2DE' }}/>
                 </div>
 
                 <div className="hori__grid hori__box--black">
-                    <ContentBoxHori title01={allTitle[2]} text01={allTxt[3]} animImg={true} historicBox={true} linkImg01={HomeNordiq} linkImg02={HomeNordiq}  colorTxt={{ color: '#FDF2DE' }}/>
+                    <ContentBoxHori title01={allTitle[2]} text01={allTxt[3]} animImg={true} historicBox={true} linkImg01={ptolomee1} linkImg02={ptolomee2}  colorTxt={{ color: '#FDF2DE' }}/>
                 </div>
 
                 <div className="hori__grid hori__box--black">
-                    <ContentBoxHori title01={allTitle[3]} text01={allTxt[4]}  animImg={true} historicBox={true} linkImg01={HomeNordiq} linkImg02={HomeNordiq}  colorTxt={{ color: '#FDF2DE' }}/>
+                    <ContentBoxHori title01={allTitle[3]} text01={allTxt[4]}  animImg={true} historicBox={true} linkImg01={utils1} linkImg02={utils2}  colorTxt={{ color: '#FDF2DE' }}/>
                 </div>
 
                 {/* <div className="hori__grid hori__box--black">
@@ -72,18 +85,25 @@ function CelticPage() {
                 </div> */}
             </div>
         </div>
-        <InterSectionBox  />
+        <InterSectionBox  
+        />
 
         {/*  */}
         <div className="sect--heigth100">
             <SectHoriFull  BigTitle1={allTitle[4]} BigTitle12={allTitle[5]} 
-          textcol1={allTxt[5]} textcol2={allTxt[6]} imgArtiste1={HomeNordiq} smallTitle1={"Du point fait main"}
+          textcol1={allTxt[5]} textcol2={allTxt[6]} imgArtiste1={motifBack2} smallTitle1={"Du point fait main"}
           BigTitle2={allTitle[6]}
-          textcol4={allTxt[7]} textcol5={allTxt[8]} imgArtiste2={HomeNordiq} fullImgs={true} smallTitle3={"Des motifs "} smallTitle4={"riche de mythologie"}
+          textcol4={allTxt[7]} textcol5={allTxt[8]} imgArtiste2={motifBack1} fullImgs={true} smallTitle3={"Des motifs "} smallTitle4={"riche de mythologie"}
            />
         </div>
-        <InterSectionBox  />
+        <InterSectionBox  
+        backImg={{ backgroundImage: `url(${backCelte2})`}}/>
         {/*  */}
+        <div className="sect--heigth100">
+            <SectionMotifHori 
+
+            />
+        </div>
     </>
   )
 }
