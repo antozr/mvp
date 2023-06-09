@@ -8,6 +8,11 @@ import backImg from "../assets/img/oldSchool/fondPeauNoir.webp";
 import Footer from "../components/Footer";
 
 function UikitPage() {
+  if (window.location.pathname !== '/uikit') {
+    document.querySelector('body').classList.add('App--hidden')
+} else {
+    document.querySelector('body').classList.remove('App--hidden')
+}
   const [copyColor, setCopyColor] = useState(false);
   const [nameColor, setNameColor] = useState("");
 
