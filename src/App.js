@@ -12,6 +12,7 @@ import Page404 from "./pages/Page404";
 import Standby from "./pages/Standby";
 import LesStyles from "./pages/lesStyles";
 import CelticPage from "./pages/CelticPage";
+import CrediPage from "./pages/CrediPage";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/pacifique" element={<Standby />} />
           <Route path="/ton-aventure" element={<TonAventure />} />
           <Route path="/*" element={<Page404 />} />
+          <Route path="/credit" element={<CrediPage />} />
         </Routes>
       </div>
       <div className="sect__changePage"></div>

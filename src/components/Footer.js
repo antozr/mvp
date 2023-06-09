@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.scss";
+import { Link } from "react-router-dom";
 
 function Footer() {
   let dateYear = new Date().getFullYear();
@@ -8,7 +9,12 @@ function Footer() {
       <div className="footer__startBox">
         <ul className="footer__list">
           <li className="footer__el">
-            <a href="https://dwt.heaj.be/" target="blank" className="footer__link sect__txt" aria-label="DWT">
+            <a
+              href="https://dwt.heaj.be/"
+              target="blank"
+              className="footer__link sect__txt"
+              aria-label="DWT"
+            >
               DWT
             </a>
           </li>
@@ -31,10 +37,37 @@ function Footer() {
         </ul>
       </div>
       <div className="footer__endBox">
-        <a href="http://antoni-dumont.be/" className="footer__link sect__txt" aria-label="Page web Antoni Dumont">
+        <a
+          href="http://antoni-dumont.be/"
+          className="footer__link sect__txt"
+          aria-label="Page web Antoni Dumont"
+        >
           By Antoni Dumont
         </a>
         <p className="sect__txt sect__thin">©{dateYear}</p>
+      </div>
+      {/*  */}
+      <div className="footer__startBox">
+        <ul className="footer__list">
+          <li className="footer__el">
+            <Link
+              to="/credit"
+              className="footer__link sect__txt"
+              aria-label="Page crédits"
+            >
+              Crédits
+            </Link>
+          </li>
+          <li className="footer__el">
+            <a
+              href="https://www.instagram.com/zombirev/"
+              className="footer__link footer__link--img"
+              aria-label="Instagram"
+            >
+              UI-kit
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );
