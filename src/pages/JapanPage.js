@@ -17,12 +17,12 @@ import Meiji2 from '../assets/img/japan/meiji2-min.webp';
 import BackImgJap from '../assets/img/japan/irezumiBack2-min.webp';
 import backImgjap02 from '../assets/img/japan/arrierePlanYakuza.jpg';
 import BackImg3 from '../assets/img/japan/horishiFullWork-min.webp';
-import Ryu01 from "../assets/img/japan/dragon2-min.webp";
-import Ryu02 from "../assets/img/japan/dragon02-min.webp";
-import Koi01 from "../assets/img/japan/koi1-min.webp";
-import Koi02 from "../assets/img/japan/koi2-min.webp";
-import Jigoku1 from '../assets/img/japan/jigoku1-min.webp'
-import Jigoku2 from '../assets/img/japan/jigoku2-min.webp'
+import Ryu01 from "../assets/img/japan/dragon2.webp";
+import Ryu02 from "../assets/img/japan/dragon02.webp";
+import Koi01 from "../assets/img/japan/koi1.webp";
+import Koi02 from "../assets/img/japan/koi2.webp";
+import Jigoku1 from '../assets/img/japan/jigoku1.webp'
+import Jigoku2 from '../assets/img/japan/jigoku2.webp'
 
 function JapanPage() {
     if (window.location.pathname === '/japon') {
