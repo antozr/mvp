@@ -23,6 +23,9 @@ import epona1 from '../assets/img/celte/epona1.webp';
 import epona2 from '../assets/img/celte/epona2.webp';
 import triketra1 from '../assets/img/celte/TRIKETRA1.webp';
 import triketra2 from '../assets/img/celte/triketra2.webp';
+import croixSvg from '../assets/img/svg/celtic/croixCelte.svg';
+import triskelSvg from '../assets/img/svg/celtic/triskel.svg';
+
 
 function CelticPage() {
 
@@ -68,7 +71,9 @@ function CelticPage() {
             <SectionIntroPage BTD1={"Peuple celtes"}
             BTD2={"nature"}
             title={allTitle[0]}
-            txt={allTxt[0]} />
+            txt={allTxt[0]}
+            Img01={croixSvg}
+            Img02={triskelSvg} />
             <InterSectionBox WhitThext={true}
             textTitle={<>Dans&nbsp;les plaines&nbsp;celtes</>}
             backImg={{ backgroundImage: `url(${backCelte})`}}
