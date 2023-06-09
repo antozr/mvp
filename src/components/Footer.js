@@ -59,13 +59,13 @@ function Footer() {
             </Link>
           </li>
           <li className="footer__el">
-            <a
-              href="https://www.instagram.com/zombirev/"
-              className="footer__link footer__link--img"
-              aria-label="Instagram"
+          <Link
+              to="/uikit"
+              className="footer__link sect__txt"
+              aria-label="Page crédits"
             >
-              UI-kit
-            </a>
+              Ui-Kit
+            </Link>
           </li>
         </ul>
       </div>

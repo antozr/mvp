@@ -13,6 +13,7 @@ import Standby from "./pages/Standby";
 import LesStyles from "./pages/lesStyles";
 import CelticPage from "./pages/CelticPage";
 import CrediPage from "./pages/CrediPage";
+import UikitPage from "./pages/Uikitpage";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/ton-aventure" element={<TonAventure />} />
           <Route path="/*" element={<Page404 />} />
           <Route path="/credit" element={<CrediPage />} />
+          <Route path="/uikit" element={<UikitPage />} />
         </Routes>
       </div>
       <div className="sect__changePage"></div>

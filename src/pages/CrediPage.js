@@ -1,5 +1,5 @@
 import React from "react";
-import BoutonNormal from "../components/BoutonComp";
+
 import InterSectionBox from "../components/InterSectionBox";
 import backInterOld from "../assets/img/svg/oldSchool/paternOldSchool.svg";
 import Footer from "../components/Footer";
