@@ -5,6 +5,10 @@ import Ancre from '../assets/img/svg/oldSchool/ancre.svg';
 import RyuHand from '../assets/img/japan/ryu01.svg';
 import KoiFish from '../assets/img/japan/carpeColor.svg';
 import EtoileRusse from '../assets/img/svg/russie/EtoileRusse.svg';
+import crossSvg from '../assets/img/svg/celtic/croixCelte.svg';
+import crossSvg2 from '../assets/img/svg/celtic/triskel.svg';
+import nordicSvg from '../assets/img/svg/nordic/wyrd.svg'
+import nordicSvg2 from '../assets/img/svg/nordic/valknut.svg'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Timeline } from 'gsap/gsap-core';
@@ -79,17 +83,17 @@ function MapBox() {
         let idEurope = carte.current.childNodes[109];
         let idCeltique = carte.current.childNodes[52];
 
-        stateMove(idNordic, "Nordique ", '/nordic', 2, 1);
+        stateMove(idNordic, "Nordique ", '/nordic', 6, 7);
         stateMove(idUs, "Old-school Américain", '/oldschool', 3, 1);
         stateMove(idJapon, 'Irezumi, tradi japonais', '/japon', 5, 3);
         stateMove(idMaori, 'Traditionnel des iles pacifiques', '/pacifique', 2, 1);
         stateMove(idRussie, 'Prison russe & URSS', '/russie', 5, 5);
         stateMove(idEurope, 'Traditionnel européen', '/europe', 2, 1);
-        stateMove(idCeltique, 'Celtique', '/celtic', 2, 1);
+        stateMove(idCeltique, 'Celtique', '/celtic', 8, 9);
     }, [])
 
 
-    var ArrayLinkSvg = ["", Hirondelle, Ancre, RyuHand, KoiFish, EtoileRusse]
+    var ArrayLinkSvg = ["", Hirondelle, Ancre, RyuHand, KoiFish, EtoileRusse, nordicSvg, nordicSvg2, crossSvg, crossSvg2]
     function stateMove(mapName, nameStyle, NamePath, randomnb1, randomnb2) {
         mapName.addEventListener('mouseover', (e) => {
             //console.log('hover');
