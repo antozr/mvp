@@ -70,7 +70,7 @@ function NordicPage() {
 
   return (
     <>
-      <div className="page">
+      <div className="page sect--snap">
         <SectionIntroPage
           BTD1={"Peuple nordique"}
           BTD2={"voyage"}
@@ -85,17 +85,17 @@ function NordicPage() {
           backImg={{ backgroundImage: `url(${BackImgNordic})` }}
         />
 
-        <div className="sect__historyland">
-          <div className="hori__grid hori__box--black">
+        <div className="sect__historyland  sect--snapChild">
+          <div className="hori__grid hori__box--black  sect--snapChild">
             <ContentBoxHori title01={allTitle[1]} text01={allTxt[1]} animImg={true} historicBox={true} linkImg01={HomeNordiq} linkImg02={drakar} colorTxt={{ color: '#FDF2DE' }}/>
           </div>
-          <div className="hori__grid hori__box--black">
+          <div className="hori__grid hori__box--black  sect--snapChild">
             <ContentBoxHori title01={allTitle[2]} text01={allTxt[2]} text02={allTxt[3]} animImg={true} historicBox={true} linkImg01={amad1} linkImg02={amad2} colorTxt={{ color: '#FDF2DE' }}/>
           </div>
-          <div className="hori__grid hori__box--black">
+          <div className="hori__grid hori__box--black  sect--snapChild">
             <ContentBoxHori title01={allTitle[3]} text01={allTxt[4]} text02={allTxt[5]} animImg={true} historicBox={true} linkImg01={history2} linkImg02={history1} colorTxt={{ color: '#FDF2DE' }}/>
           </div>
-          <div className="hori__grid hori__box--black">
+          <div className="hori__grid hori__box--black  sect--snapChild">
             <ContentBoxHori title01={allTitle[4]} text01={allTxt[6]} text02={allTxt[7]}  animImg={true} historicBox={true} linkImg01={momie1} linkImg02={momie2} colorTxt={{ color: '#FDF2DE' }}/>
           </div>
         </div>
@@ -104,7 +104,7 @@ function NordicPage() {
           WhitThext={true}
           textTitle={<>De&nbsp;l'ancien, maintenant</>}
         />
-        <div className="sect--heigth100">
+        <div className="sect--heigth100  sect--snapChild">
           <SectHoriFull BigTitle1={allTitle[8]} BigTitle12={allTitle[9]} 
           textcol1={allTxt[11]} textcol2={allTxt[12]} imgArtiste1={horyMotif} smallTitle1={"Du point fait main"}
           BigTitle2={allTitle[10]}
@@ -116,7 +116,7 @@ function NordicPage() {
           textTitle={<>De&nbsp;la pierre a&nbsp;l'homme</>}
           backImg={{ backgroundImage: `url(${HomeNordiq})` }}
         />
-        <div className="sect--heigth100">
+        <div className="sect--heigth100  sect--snapChild">
           <SectionMotifHori 
           title01={allTitle[5]} txt01={allTxt[8]} Img01={wirm1} Img012={wirm2} nameIllu1={allTitle[5]}  styleBoxIllu1={{margin : '0px'}}  OneImg1={true}
           title02={allTitle[7]} txt02={allTxt[10]} Img02={vegvisir1} Img021={vegvisir2} nameIllu2={allTitle[7]}

@@ -74,7 +74,7 @@ function ContentBoxHori({ linkImg01, title01, title02, text01, text02, text03, c
                                 {/* <img src={linkImg01} alt="Sailor Jerry" className="hori__img" loading='lazy'   onMouseOver={changeImg} onMouseOut={returnImgSrc} onAnimationEnd={changeImgRemove}/> */}
                             </div>
                             {/* <motion.div className="hori__colDroite hori__colDroite--full " style={colorTxt} initial={{ opacity: 0 ,x:'50%', color:"#FDF2DE"}} */}
-                            <motion.div className="hori__colDroite hori__colDroite--full " style={colorTxt} initial={{ opacity: 0 ,x:'50%', color:"#FDF2DE"}}
+                            <motion.div className="hori__colDroite hori__colDroite--full " style={colorTxt} initial={{ opacity: 0.6 ,x:'100%', color:"#FDF2DE"}}
                                 whileInView=
                                     
                                     {window.innerWidth > 900? {opacity: 1,x:'65%', color: "#000"}:{ opacity: 1,x:'5%', color: "#000"}}

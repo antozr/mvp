@@ -32,7 +32,7 @@ function JapanPage() {
     }
 
     /// le contenut texte 
-    let texteTitleCol = ["Les artistes", "Horishi ", " Horiyoshi III", <>La&nbsp;beauté&nbsp;des&nbsp;femmes</>, <>La&nbsp;répression sous&nbsp;Meiji</>, <>L’ouverture&nbsp;au&nbsp;monde, l’ère&nbsp;des&nbsp;Horishi</>, <>La&nbsp;traditions&nbsp;dans un&nbsp;monde&nbsp;moderne</>, " Le dragon, Ryu", " Le Koi", <>Jigoku dayu, <br/>la courtisane de l'enfer. </>, "Les 108 héros"];
+    let texteTitleCol = [<>Les&nbsp;artistes</>, "Horishi ", " Horiyoshi III", <>La&nbsp;beauté&nbsp;des&nbsp;femmes</>, <>La&nbsp;répression sous&nbsp;Meiji</>, <>L’ouverture&nbsp;au&nbsp;monde, l’ère&nbsp;des&nbsp;Horishi</>, <>La&nbsp;traditions&nbsp;dans un&nbsp;monde&nbsp;moderne</>, " Le dragon, Ryu", " Le Koi", <>Jigoku dayu, <br/>la courtisane de l'enfer. </>, "Les 108 héros"];
     let texteCol = [<></>,
     <>On peut retrouver des traces de tatouages allant vers la préhistoire jusqu’à l’ère Meiji dans certaines archipels. Où les femmes se faisaient tatouer les mains, bras pour signifier des moments clés dans leur vie, et pour leur apporter une beauté tout autre, avec une célébration pour la personne, une fois que les motifs furent finis. Les motifs changent d’une région à une autre, comme avec les Aïnous, qui mettaient leurs lèvres en valeur par un tatouage autour, le but était de se mettre en valeur, d’être plus belle même si cette coutume a commencé à se dissiper pour être remplacée par d’autres critères de beauté comme avec des parfums et des vêtements. <br /><br /><br /> <span className="sect__txt--thin">Ainsi la beauté se perpétue par des rythmes différents et des coutumes se font absoudre par des lois répressives. </span></>,
     <>Avec l’ouverture sur le monde à partir de 1868, le gouvernement veut construire son pays comme les autres grandes nations industrielles. En recevant les voyageurs et émissaires du monde entier, elle fit interdire ses mœurs pour correspondre à une image d’un pays comme les autres. De ce fait l’irezumi fut interdit, comme le fait de devoir s’habiller pour sortir, mais le fait de devoir se couvrir va donner un nouvel essor pour le tatouage en le rendant invisible aux yeux de tous mais en perpétuant la tradition en la cachant sous un voile. Le fait d’avoir voulu faire disparaître cette coutume va dépeindre cet art de mystère, d’une beauté renouvelée, mais aussi d'une spiritualité nouvelle, par la main de quelque maître artisan tatoueur <span className="sect__txt--boldsect__txt--italic">qu’on nomme Horishi</span>. </>,
@@ -73,13 +73,13 @@ function JapanPage() {
                 <div className=" hori__grid hori__box--black" id='contentSailor'>
                     <ContentBoxHori linkImg01={Ainu1} title01={texteTitleCol[3]} text01={texteCol[1]} colorTxt={{ color: '#FDF2DE' }} linkImg02={Ainu2} animImg={true} historicBox={true}/>
                 </div>
-                <div className="hori__box hori__box--bigHeight " id='contentSailor'>
+                <div className="hori__box hori__box--bigHeight sect--snapChild" id='contentSailor'>
                     <ContentBoxHori linkImg01={Meiji1} title01={texteTitleCol[4]} text01={texteCol[2]} linkImg02={Meiji2} animImg={true} historicBox={false} fullImg={true}/>
                 </div>
-                <div className=" hori__grid hori__grid--big hori__box--black " id='contentSailor'>
+                <div className=" hori__grid hori__grid--big hori__box--black sect--snapChild" id='contentSailor'>
                     <ContentBoxHori linkImg01={RestartHorishi1} title01={texteTitleCol[5]} text01={texteCol[3]} linkImg02={BackImgJap} animImg={true} historicBox={true} />
                 </div>
-                <div className=" hori__grid  hori__box--black" id='contentSailor'>
+                <div className=" hori__grid  hori__box--black sect--snapChild" id='contentSailor'>
                     <ContentBoxHori linkImg01={BackImg3} title01={texteTitleCol[6]} text01={texteCol[4]} linkImg02={backImgjap02}  colorTxt={{ color: '#FDF2DE' }} animImg={true} historicBox={true}/>
                 </div>
 
