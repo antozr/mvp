@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import InterSectionBox from "../components/InterSectionBox";
 
 import backImg from "../assets/img/oldSchool/fondPeauNoir.webp";
+import Footer from "../components/Footer";
 
 function UikitPage() {
   const [copyColor, setCopyColor] = useState(false);
@@ -100,7 +101,7 @@ function UikitPage() {
         </ul>
       </section>
       <section className="sect__creditBox sect__creditBox--black">
-        <h2 className="sect__title sect__title--2">Les couleurs :</h2>
+        <h2 className="sect__title sect__title--2" >Les couleurs :</h2>
         <ul className="credit__ul credit__ul--uikit credit__ul--row">
           {elColor("#f9b949", "#f9b949")}
           {elColor("#000000", "#000000")}
@@ -108,6 +109,7 @@ function UikitPage() {
         </ul>
       </section>
 
+<Footer />
 
       {copyColor &&
         createPortal(
