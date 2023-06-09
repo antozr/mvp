@@ -54,7 +54,7 @@ function JapanPage() {
 ]
     //
     return (
-        <div className="japan page sect--snap pageChangeSet">
+        <div className="japan page sect--snap pageChangeSet sect--snapBig">
 
             <SectionIntroPage BTD1={"日本"} BTD2={"L'irezumi"} Img01={RyuPatte} Img02={KoiCarpeColor} title={<>Transmission<br />par le sumi</>} txt={<>Le tatouage traditionnel japonais ou plus communément appelé : <b>Irezumi</b>. L’art de pratiquer le tatouage en transmettant les rites et légendes de la culture nippone, en couvrant le corps de son porteur.</>} />
 
