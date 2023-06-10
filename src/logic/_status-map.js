@@ -37,12 +37,13 @@ export function ChangeStateDataVisited() {
 
   // //// a changer a l'upload en ligne 
   let arrayListPathName = [
-    "/projets/tfe/suite/oldschool",
-    "/projets/tfe/suite/japon",
-    "/projets/tfe/suite/nordic",
-    "/projets/tfe/suite/russie",
-    "/projets/tfe/suite/europe",
-    "/projets/tfe/suite/pacifique",
+    "/projets/tfe/oldschool",
+    "/projets/tfe/japon",
+    "/projets/tfe/nordic",
+    "/projets/tfe/russie",
+    "/projets/tfe/europe",
+    "/projets/tfe/pacifique",
+    "/projets/tfe/celtic",
   ];
   // let arrayListPathName = [
   //   "/oldschool",
