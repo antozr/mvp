@@ -12,10 +12,15 @@ import ListMapMobile from "../components/ListMapMobile";
 import InterSectionBox from "../components/InterSectionBox";
 import Footer from "../components/Footer";
 import TextColDroite from "../components/TextColDroite";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import NavBar from "../components/NavBar";
 //import BoxImageAnim from "../components/BoxImageAnim";
 
 function HomePage() {
+
+  const params = useParams()
+  console.log(params);
+
   if (window.location.pathname !== "/japon") {
     document.querySelector("body").classList.remove("App--hidden");
   }
@@ -75,6 +80,7 @@ function HomePage() {
 
   return (
     <>
+    {/* <NavBar/> */}
       <div className="homepage pageChangeSet">
         <div className="homepage__sect1 homepage__sect1--bgImg sect">
           <div className="sect__boxImg--big sect__boxImg">
@@ -115,7 +121,7 @@ function HomePage() {
         {/* info landing */}
         <div className="homepage__boxContent">
           <div className="homepage__boxTxt">
-            <h2 className="sect__title sect__title--jaune sect__title--druzokh">
+            <h2 className="sect__title sect__title--jaune sect__title--druzokh ">
               {titleArray[0]}
             </h2>
             <div className="homepage__colTxt">
@@ -158,7 +164,7 @@ function HomePage() {
             whileInView={{ y: 0, opacity: 1 }}
             className="homepage__imgBox"
           ></motion.img> */}
-          <h2 className="sect__title sect__title--jaune sect__title--druzokh">
+          <h2 className="sect__title sect__title--jaune sect__title--druzokh homepage__titleHome">
             {titleArray[1]}
           </h2>
           <div className="homepage__colTxt">

@@ -4,14 +4,54 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
+// import { createBrowserRouter , RouterProvider } from 'react-router-dom';
+// import HomePage from './pages/HomePage';
+// import Page404 from './pages/Page404';
+// import NavBar from './components/NavBar';
+// import JapanPage from './pages/JapanPage';
+// import OldSchoolUS from './pages/OldSchoolUS';
+// import LesStyles from './pages/lesStyles';
+// import NordicPage from './pages/NordicPage';
+// import CelticPage from './pages/CelticPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <Router basename='/projets/tfe/'> */}
-    <Router basename='/' >
+    <Router basename='/projets/tfe/'>
+    {/* <Router basename='/' > */}
       <App />
     </Router>
+    {/* <RouterProvider router={createBrowserRouter([
+      {
+        path: '/',
+        element: <HomePage />,
+        
+      },{
+        path: 'japon',
+        element: <JapanPage/>
+      },{
+        path: 'oldschool',
+        element: <OldSchoolUS/>
+      },{
+path:'plus-dinfos',
+element: <LesStyles/>
+      },{
+        path:'nordic',
+        element: <NordicPage/>
+      },{
+        path: 'celtic',
+        element : <CelticPage />
+      },
+
+      {
+        path:'/*',
+        element: <Page404 />
+      }
+    ], {
+      basename: '/projets/tfe/'
+    })} >
+      
+      </RouterProvider> */}
   </React.StrictMode>
 );
 

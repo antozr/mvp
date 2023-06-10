@@ -17,8 +17,8 @@ import matt from "../assets/img/artistes/matt.jpg";
 import Footer from "../components/Footer";
 
 function LesStyles() {
-  if (window.location.pathname !== '/plus-dinfos') {
-    document.querySelector('body').classList.add('App--hidden')
+  if (window.location.pathname === '/plus-dinfos') {
+    document.querySelector('body').classList.remove('App--hidden')
 } else {
     document.querySelector('body').classList.remove('App--hidden')
 }

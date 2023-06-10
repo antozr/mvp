@@ -4,9 +4,14 @@ import InterSectionBox from '../components/InterSectionBox'
 import backInterOld from '../assets/img/svg/oldSchool/paternOldSchool.svg';
 import BoutonNormal from '../components/BoutonComp';
 import Footer from '../components/Footer';
+import { useRouteError } from 'react-router';
 
 
 function Page404() {
+
+    const error = useRouteError()
+    console.error(error)
+
     if (window.location.pathname !== '/japon') {
         document.querySelector('body').classList.add('App--hidden')
     } else {

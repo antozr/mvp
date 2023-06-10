@@ -25,6 +25,7 @@ import triketra1 from "../assets/img/celte/TRIKETRA1.webp";
 import triketra2 from "../assets/img/celte/triketra2.webp";
 import croixSvg from "../assets/img/svg/celtic/croixCelte.svg";
 import triskelSvg from "../assets/img/svg/celtic/triskel.svg";
+import NavBar from "../components/NavBar";
 
 function CelticPage() {
   let allTitle = [
@@ -166,6 +167,7 @@ function CelticPage() {
 
   return (
     <>
+    {/* <NavBar /> */}
       <div className="page sect--snap sect--snapBig">
         <SectionIntroPage
           BTD1={"Peuple celtes"}

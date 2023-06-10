@@ -6,8 +6,8 @@ import Footer from "../components/Footer";
 import "./Credit.scss"
 
 function CrediPage() {
-  if (window.location.pathname !== '/credit') {
-    document.querySelector('body').classList.add('App--hidden')
+  if (window.location.pathname === '/credit') {
+    document.querySelector('body').classList.remove('App--hidden')
 } else {
     document.querySelector('body').classList.remove('App--hidden')
 }

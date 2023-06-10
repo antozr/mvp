@@ -23,6 +23,7 @@ import Koi01 from "../assets/img/japan/koi1.webp";
 import Koi02 from "../assets/img/japan/koi2.webp";
 import Jigoku1 from '../assets/img/japan/jigoku1.webp'
 import Jigoku2 from '../assets/img/japan/jigoku2.webp'
+import NavBar from '../components/NavBar';
 
 function JapanPage() {
     if (window.location.pathname === '/japon') {
@@ -54,47 +55,50 @@ function JapanPage() {
 ]
     //
     return (
+       <>
+       <NavBar />
         <div className="japan page sect--snap pageChangeSet sect--snapBig">
 
-            <SectionIntroPage BTD1={"日本"} BTD2={"L'irezumi"} Img01={RyuPatte} Img02={KoiCarpeColor} title={<>Transmission<br />par le sumi</>} txt={<>Le tatouage traditionnel japonais ou plus communément appelé : <b>Irezumi</b>. L’art de pratiquer le tatouage en transmettant les rites et légendes de la culture nippone, en couvrant le corps de son porteur.</>} />
+<SectionIntroPage BTD1={"日本"} BTD2={"L'irezumi"} Img01={RyuPatte} Img02={KoiCarpeColor} title={<>Transmission<br />par le sumi</>} txt={<>Le tatouage traditionnel japonais ou plus communément appelé : <b>Irezumi</b>. L’art de pratiquer le tatouage en transmettant les rites et légendes de la culture nippone, en couvrant le corps de son porteur.</>} />
 
-            <InterSectionBox WhitThext={true} textTitle={<>Une transmission entre <br /><span className=" sect__title--thin sect__title--big">maitre & eleves</span></>} backImg={{ backgroundImage: `url(${BackImg3})` }} />
+<InterSectionBox WhitThext={true} textTitle={<>Une transmission entre <br /><span className=" sect__title--thin sect__title--big">maitre & eleves</span></>} backImg={{ backgroundImage: `url(${BackImg3})` }} />
 
-            <div className="sect--heigth100 sect--snapChild">
-                <SectHoriFull BigTitle1={texteTitleCol[0]} BigTitle12={"芸術家"} BigTitle2={texteTitleCol[1]} imgArtiste1={Horyoshi3} imgArtiste2={HoryoshiSan}
-                    textcol1={texteCol[5]} textcol2={texteCol[6]} textcol3={""} textcol4={texteCol[5]} textcol5={""} textcol6={""}
-                    smallTitle1={texteTitleCol[2]} smallTitle2={""} smallTitle3={"Des conteurs "} smallTitle4={"d'histoires..."} fullImgs={true}
-                />
-            </div>
+<div className="sect--heigth100 sect--snapChild">
+    <SectHoriFull BigTitle1={texteTitleCol[0]} BigTitle12={"芸術家"} BigTitle2={texteTitleCol[1]} imgArtiste1={Horyoshi3} imgArtiste2={HoryoshiSan}
+        textcol1={texteCol[5]} textcol2={texteCol[6]} textcol3={""} textcol4={texteCol[5]} textcol5={""} textcol6={""}
+        smallTitle1={texteTitleCol[2]} smallTitle2={""} smallTitle3={"Des conteurs "} smallTitle4={"d'histoires..."} fullImgs={true}
+    />
+</div>
 
-            <InterSectionBox WhitThext={true} textTitle={"L'histoire de l'Irezumi"} backImg={{ backgroundImage: `url(${BackImgJap})` }} />
+<InterSectionBox WhitThext={true} textTitle={"L'histoire de l'Irezumi"} backImg={{ backgroundImage: `url(${BackImgJap})` }} />
 
-            <section className="sect__historyLand sect--snapChild">
-                <div className=" hori__grid hori__box--black" id='contentSailor'>
-                    <ContentBoxHori linkImg01={Ainu1} title01={texteTitleCol[3]} text01={texteCol[1]} colorTxt={{ color: '#FDF2DE' }} linkImg02={Ainu2} animImg={true} historicBox={true}/>
-                </div>
-                <div className="hori__box hori__box--bigHeight sect--snapChild" id='contentSailor'>
-                    <ContentBoxHori linkImg01={Meiji1} title01={texteTitleCol[4]} text01={texteCol[2]} linkImg02={Meiji2} animImg={true} historicBox={false} fullImg={true}/>
-                </div>
-                <div className=" hori__grid hori__grid--big hori__box--black sect--snapChild" id='contentSailor'>
-                    <ContentBoxHori linkImg01={RestartHorishi1} title01={texteTitleCol[5]} text01={texteCol[3]} linkImg02={BackImgJap} animImg={true} historicBox={true} />
-                </div>
-                <div className=" hori__grid  hori__box--black sect--snapChild" id='contentSailor'>
-                    <ContentBoxHori linkImg01={BackImg3} title01={texteTitleCol[6]} text01={texteCol[4]} linkImg02={backImgjap02}  colorTxt={{ color: '#FDF2DE' }} animImg={true} historicBox={true}/>
-                </div>
+<section className="sect__historyLand sect--snapChild">
+    <div className=" hori__grid hori__box--black" id='contentSailor'>
+        <ContentBoxHori linkImg01={Ainu1} title01={texteTitleCol[3]} text01={texteCol[1]} colorTxt={{ color: '#FDF2DE' }} linkImg02={Ainu2} animImg={true} historicBox={true}/>
+    </div>
+    <div className="hori__box hori__box--bigHeight sect--snapChild" id='contentSailor'>
+        <ContentBoxHori linkImg01={Meiji1} title01={texteTitleCol[4]} text01={texteCol[2]} linkImg02={Meiji2} animImg={true} historicBox={false} fullImg={true}/>
+    </div>
+    <div className=" hori__grid hori__grid--big hori__box--black sect--snapChild" id='contentSailor'>
+        <ContentBoxHori linkImg01={RestartHorishi1} title01={texteTitleCol[5]} text01={texteCol[3]} linkImg02={BackImgJap} animImg={true} historicBox={true} />
+    </div>
+    <div className=" hori__grid  hori__box--black sect--snapChild" id='contentSailor'>
+        <ContentBoxHori linkImg01={BackImg3} title01={texteTitleCol[6]} text01={texteCol[4]} linkImg02={backImgjap02}  colorTxt={{ color: '#FDF2DE' }} animImg={true} historicBox={true}/>
+    </div>
 
-            </section>
-            <InterSectionBox WhitThext={true} textTitle={"Les motifs amblematiques"} backImg={{ backgroundImage: `url(${backImgjap02})` }} />
+</section>
+<InterSectionBox WhitThext={true} textTitle={"Les motifs amblematiques"} backImg={{ backgroundImage: `url(${backImgjap02})` }} />
 
 
-            <div className="sect--heigth100 sect--snapChild" >
-                <SectionMotifHori Img01={Ryu01} Img012={Ryu02} title01={texteTitleCol[7]}  txt01={texteCol[7]} nameIllu={"Ryu / Dragon"} OneImg1={true} styleBoxIllu1={{margin : '0px'}}
-                    Img02={Koi01} Img021={Koi02} title02={texteTitleCol[8]}  txt02={texteCol[8]} nameIllu2={texteTitleCol[8]} 
-                     Img03={Jigoku1} Img032={Jigoku2}  title03={texteTitleCol[9]} txt03={texteCol[9]} nameIllu3={texteTitleCol[9]} />
+<div className="sect--heigth100 sect--snapChild" >
+    <SectionMotifHori Img01={Ryu01} Img012={Ryu02} title01={texteTitleCol[7]}  txt01={texteCol[7]} nameIllu={"Ryu / Dragon"} OneImg1={true} styleBoxIllu1={{margin : '0px'}}
+        Img02={Koi01} Img021={Koi02} title02={texteTitleCol[8]}  txt02={texteCol[8]} nameIllu2={texteTitleCol[8]} 
+         Img03={Jigoku1} Img032={Jigoku2}  title03={texteTitleCol[9]} txt03={texteCol[9]} nameIllu3={texteTitleCol[9]} />
 
-            </div>
+</div>
 
-        </div>
+</div>
+       </>
     )
 }
 
