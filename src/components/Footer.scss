@@ -73,12 +73,15 @@
     .footer{
         margin: 0;
         flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
 
         &__endBox{
-            width: 50%;
+            width: 33%;
         }
         &__startBox{
-            width: 50%;
+            width: 15%;
+            
         }
         &__el{
             height: 40px;
